@@ -1,0 +1,1539 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第7章_集成方法 · AiLearning 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ApacheCN">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8.html" />
+    
+    
+    <link rel="prev" href="6.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"apachecn","repo":"AiLearning","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    入门须知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    机器学习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    第1章_基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    第2章_K近邻算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    第3章_决策树算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    第4章_朴素贝叶斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    第5章_逻辑回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    第6章_支持向量机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    第7章_集成方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    第8章_回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    第9章_树回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    第10章_KMeans聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    第11章_Apriori算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    第12章_FP-growth算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    第13章_PCA降维
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="14.html">
+            
+                <a href="14.html">
+            
+                    
+                    第14章_SVD简化数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="15.html">
+            
+                <a href="15.html">
+            
+                    
+                    第15章_大数据与MapReduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="16.html">
+            
+                <a href="16.html">
+            
+                    
+                    第16章_推荐系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../why-to-record-study-ml-video.html">
+            
+                <a href="../why-to-record-study-ml-video.html">
+            
+                    
+                    为何录制教学版视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../report/2017-04-08.html">
+            
+                <a href="../report/2017-04-08.html">
+            
+                    
+                    2017-04-08_第一期的总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    深度学习入门
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../dl/反向传递.html">
+            
+                <a href="../dl/反向传递.html">
+            
+                    
+                    反向传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../dl/CNN原理.html">
+            
+                <a href="../dl/CNN原理.html">
+            
+                    
+                    CNN原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../dl/RNN原理.html">
+            
+                <a href="../dl/RNN原理.html">
+            
+                    
+                    RNN原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../dl/LSTM原理.html">
+            
+                <a href="../dl/LSTM原理.html">
+            
+                    
+                    LSTM原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    自然语言处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../nlp/1.入门介绍.html">
+            
+                <a href="../nlp/1.入门介绍.html">
+            
+                    
+                    第1章_入门介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../nlp/2.分词.html">
+            
+                <a href="../nlp/2.分词.html">
+            
+                    
+                    第2章_分词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../nlp/3.命名实体识别.html">
+            
+                <a href="../nlp/3.命名实体识别.html">
+            
+                    
+                    第3章_命名实体识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../nlp/3.1.篇章分析-内容概述.html">
+            
+                <a href="../nlp/3.1.篇章分析-内容概述.html">
+            
+                    
+                    第10章_篇章分析-内容概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../nlp/3.2.篇章分析-内容标签.html">
+            
+                <a href="../nlp/3.2.篇章分析-内容标签.html">
+            
+                    
+                    第10章_篇章分析-内容标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../nlp/3.3.篇章分析-情感分析.html">
+            
+                <a href="../nlp/3.3.篇章分析-情感分析.html">
+            
+                    
+                    第10章_篇章分析-情感分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../nlp/3.4.篇章分析-自动摘要.html">
+            
+                <a href="../nlp/3.4.篇章分析-自动摘要.html">
+            
+                    
+                    第10章_篇章分析-自动摘要
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    TensorFlow 2.0 - 教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../TensorFlow2.x/安装指南.html">
+            
+                <a href="../TensorFlow2.x/安装指南.html">
+            
+                    
+                    安装指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../TensorFlow2.x/Keras快速入门.html">
+            
+                <a href="../TensorFlow2.x/Keras快速入门.html">
+            
+                    
+                    Kears 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../TensorFlow2.x/实战项目_1_电影情感分类.html">
+            
+                <a href="../TensorFlow2.x/实战项目_1_电影情感分类.html">
+            
+                    
+                    实战项目 1 电影情感分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../TensorFlow2.x/实战项目_2_汽车燃油效率.html">
+            
+                <a href="../TensorFlow2.x/实战项目_2_汽车燃油效率.html">
+            
+                    
+                    实战项目 2 汽车燃油效率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../TensorFlow2.x/实战项目_3_优化_过拟合和欠拟合.html">
+            
+                <a href="../TensorFlow2.x/实战项目_3_优化_过拟合和欠拟合.html">
+            
+                    
+                    实战项目 3 优化 过拟合和欠拟合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../TensorFlow2.x/实战项目_4_古诗词自动生成.html">
+            
+                <a href="../TensorFlow2.x/实战项目_4_古诗词自动生成.html">
+            
+                    
+                    实战项目 4 古诗词自动生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >第7章_集成方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;7&#x7AE0;-&#x96C6;&#x6210;&#x65B9;&#x6CD5;-ensemble-method">&#x7B2C;7&#x7AE0; &#x96C6;&#x6210;&#x65B9;&#x6CD5; ensemble method</h1>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/7.AdaBoost/adaboost_headPage.jpg" alt="&#x5229;&#x7528;AdaBoost&#x5143;&#x7B97;&#x6CD5;&#x63D0;&#x9AD8;&#x5206;&#x7C7B;" title="&#x5229;&#x7528;AdaBoost&#x5143;&#x7B97;&#x6CD5;&#x63D0;&#x9AD8;&#x5206;&#x7C7B;"></p>
+<h2 id="&#x96C6;&#x6210;&#x65B9;&#x6CD5;-ensemble-method&#xFF08;&#x5143;&#x7B97;&#x6CD5;-meta-algorithm&#xFF09;-&#x6982;&#x8FF0;">&#x96C6;&#x6210;&#x65B9;&#x6CD5;: ensemble method&#xFF08;&#x5143;&#x7B97;&#x6CD5;: meta algorithm&#xFF09; &#x6982;&#x8FF0;</h2>
+<ul>
+<li>&#x6982;&#x5FF5;: &#x662F;&#x5BF9;&#x5176;&#x4ED6;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x7EC4;&#x5408;&#x7684;&#x4E00;&#x79CD;&#x5F62;&#x5F0F;&#x3002;</li>
+<li><p>&#x901A;&#x4FD7;&#x6765;&#x8BF4;:  &#x5F53;&#x505A;&#x91CD;&#x8981;&#x51B3;&#x5B9A;&#x65F6;&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x80FD;&#x90FD;&#x4F1A;&#x8003;&#x8651;&#x5438;&#x53D6;&#x591A;&#x4E2A;&#x4E13;&#x5BB6;&#x800C;&#x4E0D;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x4EBA;&#x7684;&#x610F;&#x89C1;&#x3002;
+  &#x673A;&#x5668;&#x5B66;&#x4E60;&#x5904;&#x7406;&#x95EE;&#x9898;&#x65F6;&#x53C8;&#x4F55;&#x5C1D;&#x4E0D;&#x662F;&#x5982;&#x6B64;&#xFF1F; &#x8FD9;&#x5C31;&#x662F;&#x96C6;&#x6210;&#x65B9;&#x6CD5;&#x80CC;&#x540E;&#x7684;&#x601D;&#x60F3;&#x3002;</p>
+</li>
+<li><p>&#x96C6;&#x6210;&#x65B9;&#x6CD5;:   </p>
+<ol>
+<li>&#x6295;&#x7968;&#x9009;&#x4E3E;(bagging: &#x81EA;&#x4E3E;&#x6C47;&#x805A;&#x6CD5; bootstrap aggregating): &#x662F;&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x968F;&#x673A;&#x91CD;&#x62BD;&#x6837;&#x5206;&#x7C7B;&#x5668;&#x6784;&#x9020;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>&#x518D;&#x5B66;&#x4E60;(boosting): &#x662F;&#x57FA;&#x4E8E;&#x6240;&#x6709;&#x5206;&#x7C7B;&#x5668;&#x7684;&#x52A0;&#x6743;&#x6C42;&#x548C;&#x7684;&#x65B9;&#x6CD5;</li>
+</ol>
+</li>
+</ul>
+<h2 id="&#x96C6;&#x6210;&#x65B9;&#x6CD5;-&#x573A;&#x666F;">&#x96C6;&#x6210;&#x65B9;&#x6CD5; &#x573A;&#x666F;</h2>
+<p>&#x76EE;&#x524D; bagging &#x65B9;&#x6CD5;&#x6700;&#x6D41;&#x884C;&#x7684;&#x7248;&#x672C;&#x662F;: &#x968F;&#x673A;&#x68EE;&#x6797;(random forest)<br>
+&#x9009;&#x7537;&#x53CB;: &#x7F8E;&#x5973;&#x9009;&#x62E9;&#x62E9;&#x5076;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x95EE;&#x51E0;&#x4E2A;&#x95FA;&#x871C;&#x7684;&#x5EFA;&#x8BAE;&#xFF0C;&#x6700;&#x540E;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x7EFC;&#x5408;&#x5F97;&#x5206;&#x6700;&#x9AD8;&#x7684;&#x4E00;&#x4E2A;&#x4F5C;&#x4E3A;&#x7537;&#x670B;&#x53CB;</p>
+<p>&#x76EE;&#x524D; boosting &#x65B9;&#x6CD5;&#x6700;&#x6D41;&#x884C;&#x7684;&#x7248;&#x672C;&#x662F;: AdaBoost<br>
+&#x8FFD;&#x5973;&#x53CB;: 3&#x4E2A;&#x5E05;&#x54E5;&#x8FFD;&#x540C;&#x4E00;&#x4E2A;&#x7F8E;&#x5973;&#xFF0C;&#x7B2C;1&#x4E2A;&#x5E05;&#x54E5;&#x5931;&#x8D25;-&gt;(&#x4F20;&#x6388;&#x7ECF;&#x9A8C;: &#x59D3;&#x540D;&#x3001;&#x5BB6;&#x5EAD;&#x60C5;&#x51B5;) &#x7B2C;2&#x4E2A;&#x5E05;&#x54E5;&#x5931;&#x8D25;-&gt;(&#x4F20;&#x6388;&#x7ECF;&#x9A8C;: &#x5174;&#x8DA3;&#x7231;&#x597D;&#x3001;&#x6027;&#x683C;&#x7279;&#x70B9;) &#x7B2C;3&#x4E2A;&#x5E05;&#x54E5;&#x6210;&#x529F;</p>
+<blockquote>
+<p>bagging &#x548C; boosting &#x533A;&#x522B;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</p>
+</blockquote>
+<ol>
+<li>bagging &#x662F;&#x4E00;&#x79CD;&#x4E0E; boosting &#x5F88;&#x7C7B;&#x4F3C;&#x7684;&#x6280;&#x672F;, &#x6240;&#x4F7F;&#x7528;&#x7684;&#x591A;&#x4E2A;&#x5206;&#x7C7B;&#x5668;&#x7684;&#x7C7B;&#x578B;&#xFF08;&#x6570;&#x636E;&#x91CF;&#x548C;&#x7279;&#x5F81;&#x91CF;&#xFF09;&#x90FD;&#x662F;&#x4E00;&#x81F4;&#x7684;&#x3002;</li>
+<li>bagging &#x662F;&#x7531;&#x4E0D;&#x540C;&#x7684;&#x5206;&#x7C7B;&#x5668;&#xFF08;1.&#x6570;&#x636E;&#x968F;&#x673A;&#x5316; 2.&#x7279;&#x5F81;&#x968F;&#x673A;&#x5316;&#xFF09;&#x7ECF;&#x8FC7;&#x8BAD;&#x7EC3;&#xFF0C;&#x7EFC;&#x5408;&#x5F97;&#x51FA;&#x7684;&#x51FA;&#x73B0;&#x6700;&#x591A;&#x5206;&#x7C7B;&#x7ED3;&#x679C;&#xFF1B;boosting &#x662F;&#x901A;&#x8FC7;&#x8C03;&#x6574;&#x5DF2;&#x6709;&#x5206;&#x7C7B;&#x5668;&#x9519;&#x5206;&#x7684;&#x90A3;&#x4E9B;&#x6570;&#x636E;&#x6765;&#x83B7;&#x5F97;&#x65B0;&#x7684;&#x5206;&#x7C7B;&#x5668;&#xFF0C;&#x5F97;&#x51FA;&#x76EE;&#x524D;&#x6700;&#x4F18;&#x7684;&#x7ED3;&#x679C;&#x3002;</li>
+<li>bagging &#x4E2D;&#x7684;&#x5206;&#x7C7B;&#x5668;&#x6743;&#x91CD;&#x662F;&#x76F8;&#x7B49;&#x7684;&#xFF1B;&#x800C; boosting &#x4E2D;&#x7684;&#x5206;&#x7C7B;&#x5668;&#x52A0;&#x6743;&#x6C42;&#x548C;&#xFF0C;&#x6240;&#x4EE5;&#x6743;&#x91CD;&#x5E76;&#x4E0D;&#x76F8;&#x7B49;&#xFF0C;&#x6BCF;&#x4E2A;&#x6743;&#x91CD;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x5176;&#x5BF9;&#x5E94;&#x5206;&#x7C7B;&#x5668;&#x5728;&#x4E0A;&#x4E00;&#x8F6E;&#x8FED;&#x4EE3;&#x4E2D;&#x7684;&#x6210;&#x529F;&#x5EA6;&#x3002;</li>
+</ol>
+<h2 id="&#x968F;&#x673A;&#x68EE;&#x6797;">&#x968F;&#x673A;&#x68EE;&#x6797;</h2>
+<h3 id="&#x968F;&#x673A;&#x68EE;&#x6797;-&#x6982;&#x8FF0;">&#x968F;&#x673A;&#x68EE;&#x6797; &#x6982;&#x8FF0;</h3>
+<ul>
+<li>&#x968F;&#x673A;&#x68EE;&#x6797;&#x6307;&#x7684;&#x662F;&#x5229;&#x7528;&#x591A;&#x68F5;&#x6811;&#x5BF9;&#x6837;&#x672C;&#x8FDB;&#x884C;&#x8BAD;&#x7EC3;&#x5E76;&#x9884;&#x6D4B;&#x7684;&#x4E00;&#x79CD;&#x5206;&#x7C7B;&#x5668;&#x3002;</li>
+<li>&#x51B3;&#x7B56;&#x6811;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x5927;&#x5E08;&#xFF0C;&#x901A;&#x8FC7;&#x81EA;&#x5DF1;&#x5728;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x5B66;&#x5230;&#x7684;&#x77E5;&#x8BC6;&#x7528;&#x4E8E;&#x65B0;&#x6570;&#x636E;&#x7684;&#x5206;&#x7C7B;&#x3002;&#x4F46;&#x662F;&#x4FD7;&#x8BDD;&#x8BF4;&#x5F97;&#x597D;&#xFF0C;&#x4E00;&#x4E2A;&#x8BF8;&#x845B;&#x4EAE;&#xFF0C;&#x73A9;&#x4E0D;&#x8FC7;&#x4E09;&#x4E2A;&#x81ED;&#x76AE;&#x5320;&#x3002;&#x968F;&#x673A;&#x68EE;&#x6797;&#x5C31;&#x662F;&#x5E0C;&#x671B;&#x6784;&#x5EFA;&#x591A;&#x4E2A;&#x81ED;&#x76AE;&#x5320;&#xFF0C;&#x5E0C;&#x671B;&#x6700;&#x7EC8;&#x7684;&#x5206;&#x7C7B;&#x6548;&#x679C;&#x80FD;&#x591F;&#x8D85;&#x8FC7;&#x5355;&#x4E2A;&#x5927;&#x5E08;&#x7684;&#x4E00;&#x79CD;&#x7B97;&#x6CD5;&#x3002;</li>
+</ul>
+<h3 id="&#x968F;&#x673A;&#x68EE;&#x6797;-&#x539F;&#x7406;">&#x968F;&#x673A;&#x68EE;&#x6797; &#x539F;&#x7406;</h3>
+<p>&#x90A3;&#x968F;&#x673A;&#x68EE;&#x6797;&#x5177;&#x4F53;&#x5982;&#x4F55;&#x6784;&#x5EFA;&#x5462;&#xFF1F;<br>
+&#x6709;&#x4E24;&#x4E2A;&#x65B9;&#x9762;: <br></p>
+<ol>
+<li>&#x6570;&#x636E;&#x7684;&#x968F;&#x673A;&#x6027;&#x5316;<br> </li>
+<li>&#x5F85;&#x9009;&#x7279;&#x5F81;&#x7684;&#x968F;&#x673A;&#x5316;<br></li>
+</ol>
+<p>&#x4F7F;&#x5F97;&#x968F;&#x673A;&#x68EE;&#x6797;&#x4E2D;&#x7684;&#x51B3;&#x7B56;&#x6811;&#x90FD;&#x80FD;&#x591F;&#x5F7C;&#x6B64;&#x4E0D;&#x540C;&#xFF0C;&#x63D0;&#x5347;&#x7CFB;&#x7EDF;&#x7684;&#x591A;&#x6837;&#x6027;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x5347;&#x5206;&#x7C7B;&#x6027;&#x80FD;&#x3002;</p>
+<blockquote>
+<p>&#x6570;&#x636E;&#x7684;&#x968F;&#x673A;&#x5316;: &#x4F7F;&#x5F97;&#x968F;&#x673A;&#x68EE;&#x6797;&#x4E2D;&#x7684;&#x51B3;&#x7B56;&#x6811;&#x66F4;&#x666E;&#x904D;&#x5316;&#x4E00;&#x70B9;&#xFF0C;&#x9002;&#x5408;&#x66F4;&#x591A;&#x7684;&#x573A;&#x666F;&#x3002;</p>
+</blockquote>
+<p>&#xFF08;&#x6709;&#x653E;&#x56DE;&#x7684;&#x51C6;&#x786E;&#x7387;&#x5728;: 70% &#x4EE5;&#x4E0A;&#xFF0C; &#x65E0;&#x653E;&#x56DE;&#x7684;&#x51C6;&#x786E;&#x7387;&#x5728;: 60% &#x4EE5;&#x4E0A;&#xFF09;</p>
+<ol>
+<li>&#x91C7;&#x53D6;&#x6709;&#x653E;&#x56DE;&#x7684;&#x62BD;&#x6837;&#x65B9;&#x5F0F; &#x6784;&#x9020;&#x5B50;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x4FDD;&#x8BC1;&#x4E0D;&#x540C;&#x5B50;&#x96C6;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x91CF;&#x7EA7;&#x4E00;&#x6837;&#xFF08;&#x4E0D;&#x540C;&#x5B50;&#x96C6;&#xFF0F;&#x540C;&#x4E00;&#x5B50;&#x96C6; &#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x91CD;&#x590D;&#xFF09;</li>
+<li>&#x5229;&#x7528;&#x5B50;&#x6570;&#x636E;&#x96C6;&#x6765;&#x6784;&#x5EFA;&#x5B50;&#x51B3;&#x7B56;&#x6811;&#xFF0C;&#x5C06;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x653E;&#x5230;&#x6BCF;&#x4E2A;&#x5B50;&#x51B3;&#x7B56;&#x6811;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B50;&#x51B3;&#x7B56;&#x6811;&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#x3002;</li>
+<li>&#x7136;&#x540E;&#x7EDF;&#x8BA1;&#x5B50;&#x51B3;&#x7B56;&#x6811;&#x7684;&#x6295;&#x7968;&#x7ED3;&#x679C;&#xFF0C;&#x5F97;&#x5230;&#x6700;&#x7EC8;&#x7684;&#x5206;&#x7C7B; &#x5C31;&#x662F; &#x968F;&#x673A;&#x68EE;&#x6797;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x3002;</li>
+<li>&#x5982;&#x4E0B;&#x56FE;&#xFF0C;&#x5047;&#x8BBE;&#x968F;&#x673A;&#x68EE;&#x6797;&#x4E2D;&#x6709;3&#x68F5;&#x5B50;&#x51B3;&#x7B56;&#x6811;&#xFF0C;2&#x68F5;&#x5B50;&#x6811;&#x7684;&#x5206;&#x7C7B;&#x7ED3;&#x679C;&#x662F;A&#x7C7B;&#xFF0C;1&#x68F5;&#x5B50;&#x6811;&#x7684;&#x5206;&#x7C7B;&#x7ED3;&#x679C;&#x662F;B&#x7C7B;&#xFF0C;&#x90A3;&#x4E48;&#x968F;&#x673A;&#x68EE;&#x6797;&#x7684;&#x5206;&#x7C7B;&#x7ED3;&#x679C;&#x5C31;&#x662F;A&#x7C7B;&#x3002;</li>
+</ol>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/7.RandomForest/&#x6570;&#x636E;&#x91CD;&#x62BD;&#x6837;.jpg" alt="&#x6570;&#x636E;&#x91CD;&#x62BD;&#x6837;"></p>
+<blockquote>
+<p>&#x5F85;&#x9009;&#x7279;&#x5F81;&#x7684;&#x968F;&#x673A;&#x5316;</p>
+</blockquote>
+<ol>
+<li>&#x5B50;&#x6811;&#x4ECE;&#x6240;&#x6709;&#x7684;&#x5F85;&#x9009;&#x7279;&#x5F81;&#x4E2D;&#x968F;&#x673A;&#x9009;&#x53D6;&#x4E00;&#x5B9A;&#x7684;&#x7279;&#x5F81;&#x3002;</li>
+<li>&#x5728;&#x9009;&#x53D6;&#x7684;&#x7279;&#x5F81;&#x4E2D;&#x9009;&#x53D6;&#x6700;&#x4F18;&#x7684;&#x7279;&#x5F81;&#x3002;</li>
+</ol>
+<p>&#x4E0B;&#x56FE;&#x4E2D;&#xFF0C;&#x84DD;&#x8272;&#x7684;&#x65B9;&#x5757;&#x4EE3;&#x8868;&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x88AB;&#x9009;&#x62E9;&#x7684;&#x7279;&#x5F81;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x76EE;&#x524D;&#x7684;&#x5F85;&#x9009;&#x7279;&#x5F81;&#xFF1B;&#x9EC4;&#x8272;&#x7684;&#x65B9;&#x5757;&#x662F;&#x5206;&#x88C2;&#x7279;&#x5F81;&#x3002;<br>
+&#x5DE6;&#x8FB9;&#x662F;&#x4E00;&#x68F5;&#x51B3;&#x7B56;&#x6811;&#x7684;&#x7279;&#x5F81;&#x9009;&#x53D6;&#x8FC7;&#x7A0B;&#xFF0C;&#x901A;&#x8FC7;&#x5728;&#x5F85;&#x9009;&#x7279;&#x5F81;&#x4E2D;&#x9009;&#x53D6;&#x6700;&#x4F18;&#x7684;&#x5206;&#x88C2;&#x7279;&#x5F81;&#xFF08;&#x522B;&#x5FD8;&#x4E86;&#x524D;&#x6587;&#x63D0;&#x5230;&#x7684;ID3&#x7B97;&#x6CD5;&#xFF0C;C4.5&#x7B97;&#x6CD5;&#xFF0C;CART&#x7B97;&#x6CD5;&#x7B49;&#x7B49;&#xFF09;&#xFF0C;&#x5B8C;&#x6210;&#x5206;&#x88C2;&#x3002;<br>
+&#x53F3;&#x8FB9;&#x662F;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x68EE;&#x6797;&#x4E2D;&#x7684;&#x5B50;&#x6811;&#x7684;&#x7279;&#x5F81;&#x9009;&#x53D6;&#x8FC7;&#x7A0B;&#x3002;<br></p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/7.RandomForest/&#x7279;&#x5F81;&#x91CD;&#x62BD;&#x6837;.jpg" alt="&#x7279;&#x5F81;&#x91CD;&#x62BD;&#x6837;"></p>
+<blockquote>
+<p>&#x968F;&#x673A;&#x68EE;&#x6797; &#x5F00;&#x53D1;&#x6D41;&#x7A0B;</p>
+</blockquote>
+<pre><code>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x4EFB;&#x4F55;&#x65B9;&#x6CD5;
+&#x51C6;&#x5907;&#x6570;&#x636E;: &#x8F6C;&#x6362;&#x6837;&#x672C;&#x96C6;
+&#x5206;&#x6790;&#x6570;&#x636E;: &#x4EFB;&#x4F55;&#x65B9;&#x6CD5;
+&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: &#x901A;&#x8FC7;&#x6570;&#x636E;&#x968F;&#x673A;&#x5316;&#x548C;&#x7279;&#x5F81;&#x968F;&#x673A;&#x5316;&#xFF0C;&#x8FDB;&#x884C;&#x591A;&#x5B9E;&#x4F8B;&#x7684;&#x5206;&#x7C7B;&#x8BC4;&#x4F30;
+&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x8BA1;&#x7B97;&#x9519;&#x8BEF;&#x7387;
+&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x8F93;&#x5165;&#x6837;&#x672C;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x8FD0;&#x884C; &#x968F;&#x673A;&#x68EE;&#x6797; &#x7B97;&#x6CD5;&#x5224;&#x65AD;&#x8F93;&#x5165;&#x6570;&#x636E;&#x5206;&#x7C7B;&#x5C5E;&#x4E8E;&#x54EA;&#x4E2A;&#x5206;&#x7C7B;&#xFF0C;&#x6700;&#x540E;&#x5BF9;&#x8BA1;&#x7B97;&#x51FA;&#x7684;&#x5206;&#x7C7B;&#x6267;&#x884C;&#x540E;&#x7EED;&#x5904;&#x7406;
+</code></pre><blockquote>
+<p>&#x968F;&#x673A;&#x68EE;&#x6797; &#x7B97;&#x6CD5;&#x7279;&#x70B9;</p>
+</blockquote>
+<pre><code>&#x4F18;&#x70B9;: &#x51E0;&#x4E4E;&#x4E0D;&#x9700;&#x8981;&#x8F93;&#x5165;&#x51C6;&#x5907;&#x3001;&#x53EF;&#x5B9E;&#x73B0;&#x9690;&#x5F0F;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x3001;&#x8BAD;&#x7EC3;&#x901F;&#x5EA6;&#x975E;&#x5E38;&#x5FEB;&#x3001;&#x5176;&#x4ED6;&#x6A21;&#x578B;&#x5F88;&#x96BE;&#x8D85;&#x8D8A;&#x3001;&#x5F88;&#x96BE;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x7CDF;&#x7CD5;&#x7684;&#x968F;&#x673A;&#x68EE;&#x6797;&#x6A21;&#x578B;&#x3001;&#x5927;&#x91CF;&#x4F18;&#x79C0;&#x3001;&#x514D;&#x8D39;&#x4EE5;&#x53CA;&#x5F00;&#x6E90;&#x7684;&#x5B9E;&#x73B0;&#x3002;
+&#x7F3A;&#x70B9;: &#x52A3;&#x52BF;&#x5728;&#x4E8E;&#x6A21;&#x578B;&#x5927;&#x5C0F;&#x3001;&#x662F;&#x4E2A;&#x5F88;&#x96BE;&#x53BB;&#x89E3;&#x91CA;&#x7684;&#x9ED1;&#x76D2;&#x5B50;&#x3002;
+&#x9002;&#x7528;&#x6570;&#x636E;&#x8303;&#x56F4;: &#x6570;&#x503C;&#x578B;&#x548C;&#x6807;&#x79F0;&#x578B;
+</code></pre><h3 id="&#x9879;&#x76EE;&#x6848;&#x4F8B;-&#x58F0;&#x7EB3;&#x4FE1;&#x53F7;&#x5206;&#x7C7B;">&#x9879;&#x76EE;&#x6848;&#x4F8B;: &#x58F0;&#x7EB3;&#x4FE1;&#x53F7;&#x5206;&#x7C7B;</h3>
+<h4 id="&#x9879;&#x76EE;&#x6982;&#x8FF0;">&#x9879;&#x76EE;&#x6982;&#x8FF0;</h4>
+<p>&#x8FD9;&#x662F; Gorman &#x548C; Sejnowski &#x5728;&#x7814;&#x7A76;&#x4F7F;&#x7528;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;&#x58F0;&#x7EB3;&#x4FE1;&#x53F7;&#x5206;&#x7C7B;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x96C6;&#x3002;&#x4EFB;&#x52A1;&#x662F;&#x8BAD;&#x7EC3;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x6765;&#x533A;&#x5206;&#x58F0;&#x7EB3;&#x4FE1;&#x53F7;&#x3002;</p>
+<h4 id="&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">&#x5F00;&#x53D1;&#x6D41;&#x7A0B;</h4>
+<pre><code>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x63D0;&#x4F9B;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;
+&#x51C6;&#x5907;&#x6570;&#x636E;: &#x8F6C;&#x6362;&#x6837;&#x672C;&#x96C6;
+&#x5206;&#x6790;&#x6570;&#x636E;: &#x624B;&#x5DE5;&#x68C0;&#x67E5;&#x6570;&#x636E;
+&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: &#x5728;&#x6570;&#x636E;&#x4E0A;&#xFF0C;&#x5229;&#x7528; random_forest() &#x51FD;&#x6570;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#x8BC4;&#x4F30;&#xFF0C;&#x8FD4;&#x56DE;&#x6A21;&#x578B;&#x7684;&#x7EFC;&#x5408;&#x5206;&#x7C7B;&#x7ED3;&#x679C;
+&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x5728;&#x91C7;&#x7528;&#x81EA;&#x5B9A;&#x4E49; n_folds &#x4EFD;&#x968F;&#x673A;&#x91CD;&#x62BD;&#x6837; &#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x8BC4;&#x4F30;&#xFF0C;&#x5F97;&#x51FA;&#x7EFC;&#x5408;&#x7684;&#x9884;&#x6D4B;&#x8BC4;&#x5206;
+&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x82E5;&#x4F60;&#x611F;&#x5174;&#x8DA3;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;&#x5B8C;&#x6574;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4ECE;&#x6848;&#x4F8B;&#x8FDB;&#x884C;&#x5C01;&#x88C5;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;
+</code></pre><blockquote>
+<p>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x63D0;&#x4F9B;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;</p>
+</blockquote>
+<p>&#x6837;&#x672C;&#x6570;&#x636E;: sonar-all-data.txt</p>
+<pre><code>0.02,0.0371,0.0428,0.0207,0.0954,0.0986,0.1539,0.1601,0.3109,0.2111,0.1609,0.1582,0.2238,0.0645,0.066,0.2273,0.31,0.2999,0.5078,0.4797,0.5783,0.5071,0.4328,0.555,0.6711,0.6415,0.7104,0.808,0.6791,0.3857,0.1307,0.2604,0.5121,0.7547,0.8537,0.8507,0.6692,0.6097,0.4943,0.2744,0.051,0.2834,0.2825,0.4256,0.2641,0.1386,0.1051,0.1343,0.0383,0.0324,0.0232,0.0027,0.0065,0.0159,0.0072,0.0167,0.018,0.0084,0.009,0.0032,R
+0.0453,0.0523,0.0843,0.0689,0.1183,0.2583,0.2156,0.3481,0.3337,0.2872,0.4918,0.6552,0.6919,0.7797,0.7464,0.9444,1,0.8874,0.8024,0.7818,0.5212,0.4052,0.3957,0.3914,0.325,0.32,0.3271,0.2767,0.4423,0.2028,0.3788,0.2947,0.1984,0.2341,0.1306,0.4182,0.3835,0.1057,0.184,0.197,0.1674,0.0583,0.1401,0.1628,0.0621,0.0203,0.053,0.0742,0.0409,0.0061,0.0125,0.0084,0.0089,0.0048,0.0094,0.0191,0.014,0.0049,0.0052,0.0044,R
+0.0262,0.0582,0.1099,0.1083,0.0974,0.228,0.2431,0.3771,0.5598,0.6194,0.6333,0.706,0.5544,0.532,0.6479,0.6931,0.6759,0.7551,0.8929,0.8619,0.7974,0.6737,0.4293,0.3648,0.5331,0.2413,0.507,0.8533,0.6036,0.8514,0.8512,0.5045,0.1862,0.2709,0.4232,0.3043,0.6116,0.6756,0.5375,0.4719,0.4647,0.2587,0.2129,0.2222,0.2111,0.0176,0.1348,0.0744,0.013,0.0106,0.0033,0.0232,0.0166,0.0095,0.018,0.0244,0.0316,0.0164,0.0095,0.0078,R
+</code></pre><blockquote>
+<p>&#x51C6;&#x5907;&#x6570;&#x636E;: &#x8F6C;&#x6362;&#x6837;&#x672C;&#x96C6;</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5BFC;&#x5165;csv&#x6587;&#x4EF6;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loadDataSet</span><span class="hljs-params">(filename)</span>:</span>
+    dataset = []
+    <span class="hljs-keyword">with</span> open(filename, <span class="hljs-string">&apos;r&apos;</span>) <span class="hljs-keyword">as</span> fr:
+        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> fr.readlines():
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> line:
+                <span class="hljs-keyword">continue</span>
+            lineArr = []
+            <span class="hljs-keyword">for</span> featrue <span class="hljs-keyword">in</span> line.split(<span class="hljs-string">&apos;,&apos;</span>):
+                <span class="hljs-comment"># strip()&#x8FD4;&#x56DE;&#x79FB;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x5934;&#x5C3E;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x751F;&#x6210;&#x7684;&#x65B0;&#x5B57;&#x7B26;&#x4E32;</span>
+                str_f = featrue.strip()
+                <span class="hljs-keyword">if</span> str_f.isdigit(): <span class="hljs-comment"># &#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x6570;&#x5B57;</span>
+                    <span class="hljs-comment"># &#x5C06;&#x6570;&#x636E;&#x96C6;&#x7684;&#x7B2C;column&#x5217;&#x8F6C;&#x6362;&#x6210;float&#x5F62;&#x5F0F;</span>
+                    lineArr.append(float(str_f))
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x5206;&#x7C7B;&#x6807;&#x7B7E;</span>
+                    lineArr.append(str_f)
+            dataset.append(lineArr)
+    <span class="hljs-keyword">return</span> dataset
+</code></pre>
+<blockquote>
+<p>&#x5206;&#x6790;&#x6570;&#x636E;: &#x624B;&#x5DE5;&#x68C0;&#x67E5;&#x6570;&#x636E;</p>
+<p>&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: &#x5728;&#x6570;&#x636E;&#x4E0A;&#xFF0C;&#x5229;&#x7528; random_forest() &#x51FD;&#x6570;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#x8BC4;&#x4F30;&#xFF0C;&#x8FD4;&#x56DE;&#x6A21;&#x578B;&#x7684;&#x7EFC;&#x5408;&#x5206;&#x7C7B;&#x7ED3;&#x679C;</p>
+</blockquote>
+<ul>
+<li>&#x6837;&#x672C;&#x6570;&#x636E;&#x968F;&#x673A;&#x65E0;&#x653E;&#x56DE;&#x62BD;&#x6837;-&#x7528;&#x4E8E;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">cross_validation_split</span><span class="hljs-params">(dataset, n_folds)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;cross_validation_split(&#x5C06;&#x6570;&#x636E;&#x96C6;&#x8FDB;&#x884C;&#x62BD;&#x91CD;&#x62BD;&#x6837; n_folds &#x4EFD;&#xFF0C;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x91CD;&#x590D;&#x62BD;&#x53D6;)
+
+    Args:
+        dataset     &#x539F;&#x59CB;&#x6570;&#x636E;&#x96C6;
+        n_folds     &#x6570;&#x636E;&#x96C6;dataset&#x5206;&#x6210;n_flods&#x4EFD;
+    Returns:
+        dataset_split    list&#x96C6;&#x5408;&#xFF0C;&#x5B58;&#x653E;&#x7684;&#x662F;: &#x5C06;&#x6570;&#x636E;&#x96C6;&#x8FDB;&#x884C;&#x62BD;&#x91CD;&#x62BD;&#x6837; n_folds &#x4EFD;&#xFF0C;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x91CD;&#x590D;&#x62BD;&#x53D6;
+    &quot;&quot;&quot;</span>
+    dataset_split = list()
+    dataset_copy = list(dataset)       <span class="hljs-comment"># &#x590D;&#x5236;&#x4E00;&#x4EFD; dataset,&#x9632;&#x6B62; dataset &#x7684;&#x5185;&#x5BB9;&#x6539;&#x53D8;</span>
+    fold_size = len(dataset) / n_folds
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n_folds):
+        fold = list()                  <span class="hljs-comment"># &#x6BCF;&#x6B21;&#x5FAA;&#x73AF; fold &#x6E05;&#x96F6;&#xFF0C;&#x9632;&#x6B62;&#x91CD;&#x590D;&#x5BFC;&#x5165; dataset_split</span>
+        <span class="hljs-keyword">while</span> len(fold) &lt; fold_size:   <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x4E0D;&#x80FD;&#x7528; if&#xFF0C;if &#x53EA;&#x662F;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x5224;&#x65AD;&#x65F6;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;while &#x6267;&#x884C;&#x5FAA;&#x73AF;&#xFF0C;&#x76F4;&#x5230;&#x6761;&#x4EF6;&#x4E0D;&#x6210;&#x7ACB;</span>
+            <span class="hljs-comment"># &#x6709;&#x653E;&#x56DE;&#x7684;&#x968F;&#x673A;&#x91C7;&#x6837;&#xFF0C;&#x6709;&#x4E00;&#x4E9B;&#x6837;&#x672C;&#x88AB;&#x91CD;&#x590D;&#x91C7;&#x6837;&#xFF0C;&#x4ECE;&#x800C;&#x5728;&#x8BAD;&#x7EC3;&#x96C6;&#x4E2D;&#x591A;&#x6B21;&#x51FA;&#x73B0;&#xFF0C;&#x6709;&#x7684;&#x5219;&#x4ECE;&#x672A;&#x5728;&#x8BAD;&#x7EC3;&#x96C6;&#x4E2D;&#x51FA;&#x73B0;&#xFF0C;&#x6B64;&#x4E3A;&#x81EA;&#x52A9;&#x91C7;&#x6837;&#x6CD5;&#x3002;&#x4ECE;&#x800C;&#x4FDD;&#x8BC1;&#x6BCF;&#x68F5;&#x51B3;&#x7B56;&#x6811;&#x8BAD;&#x7EC3;&#x96C6;&#x7684;&#x5DEE;&#x5F02;&#x6027;            </span>
+            index = randrange(len(dataset_copy))
+            <span class="hljs-comment"># &#x5C06;&#x5BF9;&#x5E94;&#x7D22;&#x5F15; index &#x7684;&#x5185;&#x5BB9;&#x4ECE; dataset_copy &#x4E2D;&#x5BFC;&#x51FA;&#xFF0C;&#x5E76;&#x5C06;&#x8BE5;&#x5185;&#x5BB9;&#x4ECE; dataset_copy &#x4E2D;&#x5220;&#x9664;&#x3002;</span>
+            <span class="hljs-comment"># pop() &#x51FD;&#x6570;&#x7528;&#x4E8E;&#x79FB;&#x9664;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF08;&#x9ED8;&#x8BA4;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x503C;&#x3002;</span>
+            fold.append(dataset_copy.pop(index))  <span class="hljs-comment"># &#x65E0;&#x653E;&#x56DE;&#x7684;&#x65B9;&#x5F0F;</span>
+            <span class="hljs-comment"># fold.append(dataset_copy[index])  # &#x6709;&#x653E;&#x56DE;&#x7684;&#x65B9;&#x5F0F;</span>
+        dataset_split.append(fold)
+    <span class="hljs-comment"># &#x7531;dataset&#x5206;&#x5272;&#x51FA;&#x7684;n_folds&#x4E2A;&#x6570;&#x636E;&#x6784;&#x6210;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x4E3A;&#x4E86;&#x7528;&#x4E8E;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;</span>
+    <span class="hljs-keyword">return</span> dataset_split
+</code></pre>
+<ul>
+<li>&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;&#x968F;&#x673A;&#x5316;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># Create a random subsample from the dataset with replacement</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">subsample</span><span class="hljs-params">(dataset, ratio)</span>:</span>   <span class="hljs-comment"># &#x521B;&#x5EFA;&#x6570;&#x636E;&#x96C6;&#x7684;&#x968F;&#x673A;&#x5B50;&#x6837;&#x672C;</span>
+    <span class="hljs-string">&quot;&quot;&quot;random_forest(&#x8BC4;&#x4F30;&#x7B97;&#x6CD5;&#x6027;&#x80FD;&#xFF0C;&#x8FD4;&#x56DE;&#x6A21;&#x578B;&#x5F97;&#x5206;)
+
+    Args:
+        dataset         &#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;
+        ratio           &#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;&#x7684;&#x6837;&#x672C;&#x6BD4;&#x4F8B;
+    Returns:
+        sample          &#x968F;&#x673A;&#x62BD;&#x6837;&#x7684;&#x8BAD;&#x7EC3;&#x6837;&#x672C;
+    &quot;&quot;&quot;</span>
+
+    sample = list()
+    <span class="hljs-comment"># &#x8BAD;&#x7EC3;&#x6837;&#x672C;&#x7684;&#x6309;&#x6BD4;&#x4F8B;&#x62BD;&#x6837;&#x3002;</span>
+    <span class="hljs-comment"># round() &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x6D6E;&#x70B9;&#x6570;x&#x7684;&#x56DB;&#x820D;&#x4E94;&#x5165;&#x503C;&#x3002;</span>
+    n_sample = round(len(dataset) * ratio)
+    <span class="hljs-keyword">while</span> len(sample) &lt; n_sample:
+        <span class="hljs-comment"># &#x6709;&#x653E;&#x56DE;&#x7684;&#x968F;&#x673A;&#x91C7;&#x6837;&#xFF0C;&#x6709;&#x4E00;&#x4E9B;&#x6837;&#x672C;&#x88AB;&#x91CD;&#x590D;&#x91C7;&#x6837;&#xFF0C;&#x4ECE;&#x800C;&#x5728;&#x8BAD;&#x7EC3;&#x96C6;&#x4E2D;&#x591A;&#x6B21;&#x51FA;&#x73B0;&#xFF0C;&#x6709;&#x7684;&#x5219;&#x4ECE;&#x672A;&#x5728;&#x8BAD;&#x7EC3;&#x96C6;&#x4E2D;&#x51FA;&#x73B0;&#xFF0C;&#x6B64;&#x4E3A;&#x81EA;&#x52A9;&#x91C7;&#x6837;&#x6CD5;&#x3002;&#x4ECE;&#x800C;&#x4FDD;&#x8BC1;&#x6BCF;&#x68F5;&#x51B3;&#x7B56;&#x6811;&#x8BAD;&#x7EC3;&#x96C6;&#x7684;&#x5DEE;&#x5F02;&#x6027;</span>
+        index = randrange(len(dataset))
+        sample.append(dataset[index])
+    <span class="hljs-keyword">return</span> sample
+</code></pre>
+<ul>
+<li>&#x7279;&#x5F81;&#x968F;&#x673A;&#x5316;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x627E;&#x51FA;&#x5206;&#x5272;&#x6570;&#x636E;&#x96C6;&#x7684;&#x6700;&#x4F18;&#x7279;&#x5F81;&#xFF0C;&#x5F97;&#x5230;&#x6700;&#x4F18;&#x7684;&#x7279;&#x5F81; index&#xFF0C;&#x7279;&#x5F81;&#x503C; row[index]&#xFF0C;&#x4EE5;&#x53CA;&#x5206;&#x5272;&#x5B8C;&#x7684;&#x6570;&#x636E; groups&#xFF08;left, right&#xFF09;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_split</span><span class="hljs-params">(dataset, n_features)</span>:</span>
+    class_values = list(set(row[<span class="hljs-number">-1</span>] <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> dataset))  <span class="hljs-comment"># class_values =[0, 1]</span>
+    b_index, b_value, b_score, b_groups = <span class="hljs-number">999</span>, <span class="hljs-number">999</span>, <span class="hljs-number">999</span>, <span class="hljs-keyword">None</span>
+    features = list()
+    <span class="hljs-keyword">while</span> len(features) &lt; n_features:
+        index = randrange(len(dataset[<span class="hljs-number">0</span>])<span class="hljs-number">-1</span>)  <span class="hljs-comment"># &#x5F80; features &#x6DFB;&#x52A0; n_features &#x4E2A;&#x7279;&#x5F81;&#xFF08; n_feature &#x7B49;&#x4E8E;&#x7279;&#x5F81;&#x6570;&#x7684;&#x4E2A;&#x6570;&#xFF09;&#xFF0C;&#x7279;&#x5F81;&#x7D22;&#x5F15;&#x4ECE; dataset &#x4E2D;&#x968F;&#x673A;&#x53D6;</span>
+        <span class="hljs-keyword">if</span> index <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> features:
+            features.append(index)
+    <span class="hljs-keyword">for</span> index <span class="hljs-keyword">in</span> features:                    <span class="hljs-comment"># &#x5728; n_features &#x4E2A;&#x7279;&#x5F81;&#x4E2D;&#x9009;&#x51FA;&#x6700;&#x4F18;&#x7684;&#x7279;&#x5F81;&#x7D22;&#x5F15;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x904D;&#x5386;&#x6240;&#x6709;&#x7279;&#x5F81;&#xFF0C;&#x4ECE;&#x800C;&#x4FDD;&#x8BC1;&#x4E86;&#x6BCF;&#x8BFE;&#x51B3;&#x7B56;&#x6811;&#x7684;&#x5DEE;&#x5F02;&#x6027;</span>
+        <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> dataset:
+            groups = test_split(index, row[index], dataset)  <span class="hljs-comment"># groups=(left, right), row[index] &#x904D;&#x5386;&#x6BCF;&#x4E00;&#x884C; index &#x7D22;&#x5F15;&#x4E0B;&#x7684;&#x7279;&#x5F81;&#x503C;&#x4F5C;&#x4E3A;&#x5206;&#x7C7B;&#x503C; value, &#x627E;&#x51FA;&#x6700;&#x4F18;&#x7684;&#x5206;&#x7C7B;&#x7279;&#x5F81;&#x548C;&#x7279;&#x5F81;&#x503C;</span>
+            gini = gini_index(groups, class_values)
+            <span class="hljs-comment"># &#x5DE6;&#x53F3;&#x4E24;&#x8FB9;&#x7684;&#x6570;&#x91CF;&#x8D8A;&#x4E00;&#x6837;&#xFF0C;&#x8BF4;&#x660E;&#x6570;&#x636E;&#x533A;&#x5206;&#x5EA6;&#x4E0D;&#x9AD8;&#xFF0C;gini&#x7CFB;&#x6570;&#x8D8A;&#x5927;</span>
+            <span class="hljs-keyword">if</span> gini &lt; b_score:
+                b_index, b_value, b_score, b_groups = index, row[index], gini, groups  <span class="hljs-comment"># &#x6700;&#x540E;&#x5F97;&#x5230;&#x6700;&#x4F18;&#x7684;&#x5206;&#x7C7B;&#x7279;&#x5F81; b_index,&#x5206;&#x7C7B;&#x7279;&#x5F81;&#x503C; b_value,&#x5206;&#x7C7B;&#x7ED3;&#x679C; b_groups&#x3002;b_value &#x4E3A;&#x5206;&#x9519;&#x7684;&#x4EE3;&#x4EF7;&#x6210;&#x672C;</span>
+    <span class="hljs-comment"># print b_score</span>
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">&apos;index&apos;</span>: b_index, <span class="hljs-string">&apos;value&apos;</span>: b_value, <span class="hljs-string">&apos;groups&apos;</span>: b_groups}
+</code></pre>
+<ul>
+<li>&#x968F;&#x673A;&#x68EE;&#x6797;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># Random Forest Algorithm</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">random_forest</span><span class="hljs-params">(train, test, max_depth, min_size, sample_size, n_trees, n_features)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;random_forest(&#x8BC4;&#x4F30;&#x7B97;&#x6CD5;&#x6027;&#x80FD;&#xFF0C;&#x8FD4;&#x56DE;&#x6A21;&#x578B;&#x5F97;&#x5206;)
+
+    Args:
+        train           &#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;
+        test            &#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x96C6;
+        max_depth       &#x51B3;&#x7B56;&#x6811;&#x6DF1;&#x5EA6;&#x4E0D;&#x80FD;&#x592A;&#x6DF1;&#xFF0C;&#x4E0D;&#x7136;&#x5BB9;&#x6613;&#x5BFC;&#x81F4;&#x8FC7;&#x62DF;&#x5408;
+        min_size        &#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x5927;&#x5C0F;
+        sample_size     &#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;&#x7684;&#x6837;&#x672C;&#x6BD4;&#x4F8B;
+        n_trees         &#x51B3;&#x7B56;&#x6811;&#x7684;&#x4E2A;&#x6570;
+        n_features      &#x9009;&#x53D6;&#x7684;&#x7279;&#x5F81;&#x7684;&#x4E2A;&#x6570;
+    Returns:
+        predictions     &#x6BCF;&#x4E00;&#x884C;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#xFF0C;bagging &#x9884;&#x6D4B;&#x6700;&#x540E;&#x7684;&#x5206;&#x7C7B;&#x7ED3;&#x679C;
+    &quot;&quot;&quot;</span>
+
+    trees = list()
+    <span class="hljs-comment"># n_trees &#x8868;&#x793A;&#x51B3;&#x7B56;&#x6811;&#x7684;&#x6570;&#x91CF;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n_trees):
+        <span class="hljs-comment"># &#x968F;&#x673A;&#x62BD;&#x6837;&#x7684;&#x8BAD;&#x7EC3;&#x6837;&#x672C;&#xFF0C; &#x968F;&#x673A;&#x91C7;&#x6837;&#x4FDD;&#x8BC1;&#x4E86;&#x6BCF;&#x68F5;&#x51B3;&#x7B56;&#x6811;&#x8BAD;&#x7EC3;&#x96C6;&#x7684;&#x5DEE;&#x5F02;&#x6027;</span>
+        sample = subsample(train, sample_size)
+        <span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x51B3;&#x7B56;&#x6811;</span>
+        tree = build_tree(sample, max_depth, min_size, n_features)
+        trees.append(tree)
+
+    <span class="hljs-comment"># &#x6BCF;&#x4E00;&#x884C;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#xFF0C;bagging &#x9884;&#x6D4B;&#x6700;&#x540E;&#x7684;&#x5206;&#x7C7B;&#x7ED3;&#x679C;</span>
+    predictions = [bagging_predict(trees, row) <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> test]
+    <span class="hljs-keyword">return</span> predictions
+</code></pre>
+<blockquote>
+<p>&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x5728;&#x91C7;&#x7528;&#x81EA;&#x5B9A;&#x4E49; n_folds &#x4EFD;&#x968F;&#x673A;&#x91CD;&#x62BD;&#x6837; &#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x8BC4;&#x4F30;&#xFF0C;&#x5F97;&#x51FA;&#x7EFC;&#x5408;&#x7684;&#x9884;&#x6D4B;&#x8BC4;&#x5206;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x8BA1;&#x7B97;&#x968F;&#x673A;&#x68EE;&#x6797;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x7684;&#x6B63;&#x786E;&#x7387;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x8BC4;&#x4F30;&#x7B97;&#x6CD5;&#x6027;&#x80FD;&#xFF0C;&#x8FD4;&#x56DE;&#x6A21;&#x578B;&#x5F97;&#x5206;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">evaluate_algorithm</span><span class="hljs-params">(dataset, algorithm, n_folds, *args)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;evaluate_algorithm(&#x8BC4;&#x4F30;&#x7B97;&#x6CD5;&#x6027;&#x80FD;&#xFF0C;&#x8FD4;&#x56DE;&#x6A21;&#x578B;&#x5F97;&#x5206;)
+
+    Args:
+        dataset     &#x539F;&#x59CB;&#x6570;&#x636E;&#x96C6;
+        algorithm   &#x4F7F;&#x7528;&#x7684;&#x7B97;&#x6CD5;
+        n_folds     &#x6570;&#x636E;&#x7684;&#x4EFD;&#x6570;
+        *args       &#x5176;&#x4ED6;&#x7684;&#x53C2;&#x6570;
+    Returns:
+        scores      &#x6A21;&#x578B;&#x5F97;&#x5206;
+    &quot;&quot;&quot;</span>
+
+    <span class="hljs-comment"># &#x5C06;&#x6570;&#x636E;&#x96C6;&#x8FDB;&#x884C;&#x968F;&#x673A;&#x62BD;&#x6837;&#xFF0C;&#x5206;&#x6210; n_folds &#x4EFD;&#xFF0C;&#x6570;&#x636E;&#x65E0;&#x91CD;&#x590D;&#x7684;&#x62BD;&#x53D6;</span>
+    folds = cross_validation_split(dataset, n_folds)
+    scores = list()
+    <span class="hljs-comment"># &#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x4ECE; folds &#x4ECE;&#x53D6;&#x51FA;&#x4E00;&#x4E2A; fold &#x4F5C;&#x4E3A;&#x6D4B;&#x8BD5;&#x96C6;&#xFF0C;&#x5176;&#x4F59;&#x4F5C;&#x4E3A;&#x8BAD;&#x7EC3;&#x96C6;&#xFF0C;&#x904D;&#x5386;&#x6574;&#x4E2A; folds &#xFF0C;&#x5B9E;&#x73B0;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;</span>
+    <span class="hljs-keyword">for</span> fold <span class="hljs-keyword">in</span> folds:
+        train_set = list(folds)
+        train_set.remove(fold)
+        <span class="hljs-comment"># &#x5C06;&#x591A;&#x4E2A; fold &#x5217;&#x8868;&#x7EC4;&#x5408;&#x6210;&#x4E00;&#x4E2A; train_set &#x5217;&#x8868;, &#x7C7B;&#x4F3C; union all</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        In [20]: l1=[[1, 2, &apos;a&apos;], [11, 22, &apos;b&apos;]]
+        In [21]: l2=[[3, 4, &apos;c&apos;], [33, 44, &apos;d&apos;]]
+        In [22]: l=[]
+        In [23]: l.append(l1)
+        In [24]: l.append(l2)
+        In [25]: l
+        Out[25]: [[[1, 2, &apos;a&apos;], [11, 22, &apos;b&apos;]], [[3, 4, &apos;c&apos;], [33, 44, &apos;d&apos;]]]
+        In [26]: sum(l, [])
+        Out[26]: [[1, 2, &apos;a&apos;], [11, 22, &apos;b&apos;], [3, 4, &apos;c&apos;], [33, 44, &apos;d&apos;]]
+        &quot;&quot;&quot;</span>
+        train_set = sum(train_set, [])
+        test_set = list()
+        <span class="hljs-comment"># fold &#x8868;&#x793A;&#x4ECE;&#x539F;&#x59CB;&#x6570;&#x636E;&#x96C6; dataset &#x63D0;&#x53D6;&#x51FA;&#x6765;&#x7684;&#x6D4B;&#x8BD5;&#x96C6;</span>
+        <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> fold:
+            row_copy = list(row)
+            row_copy[<span class="hljs-number">-1</span>] = <span class="hljs-keyword">None</span> 
+            test_set.append(row_copy)
+        predicted = algorithm(train_set, test_set, *args)
+        actual = [row[<span class="hljs-number">-1</span>] <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> fold]
+
+        <span class="hljs-comment"># &#x8BA1;&#x7B97;&#x968F;&#x673A;&#x68EE;&#x6797;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x7684;&#x6B63;&#x786E;&#x7387;</span>
+        accuracy = accuracy_metric(actual, predicted)
+        scores.append(accuracy)
+    <span class="hljs-keyword">return</span> scores
+</code></pre>
+<blockquote>
+<p>&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x82E5;&#x4F60;&#x611F;&#x5174;&#x8DA3;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;&#x5B8C;&#x6574;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4ECE;&#x6848;&#x4F8B;&#x8FDB;&#x884C;&#x5C01;&#x88C5;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;</p>
+</blockquote>
+<p><a href="https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/7.RandomForest/randomForest.py" target="_blank">&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x5730;&#x5740;</a>: <a href="https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/7.RandomForest/randomForest.py" target="_blank">https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/7.RandomForest/randomForest.py</a></p>
+<h2 id="adaboost">AdaBoost</h2>
+<h3 id="adaboost-adaptive-boosting-&#x81EA;&#x9002;&#x5E94;-boosting-&#x6982;&#x8FF0;">AdaBoost (adaptive boosting: &#x81EA;&#x9002;&#x5E94; boosting) &#x6982;&#x8FF0;</h3>
+<p><code>&#x80FD;&#x5426;&#x4F7F;&#x7528;&#x5F31;&#x5206;&#x7C7B;&#x5668;&#x548C;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&#x6765;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x5F3A;&#x5206;&#x7C7B;&#x5668;&#xFF1F; &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x6709;&#x8DA3;&#x7684;&#x7406;&#x8BBA;&#x95EE;&#x9898;&#x3002;</code></p>
+<h3 id="adaboost-&#x539F;&#x7406;">AdaBoost &#x539F;&#x7406;</h3>
+<blockquote>
+<p>AdaBoost &#x5DE5;&#x4F5C;&#x539F;&#x7406;</p>
+</blockquote>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/7.AdaBoost/adaboost_illustration.png" alt="AdaBoost &#x5DE5;&#x4F5C;&#x539F;&#x7406;" title="AdaBoost &#x5DE5;&#x4F5C;&#x539F;&#x7406;"></p>
+<blockquote>
+<p>AdaBoost &#x5F00;&#x53D1;&#x6D41;&#x7A0B;</p>
+</blockquote>
+<pre><code>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x65B9;&#x6CD5;
+&#x51C6;&#x5907;&#x6570;&#x636E;: &#x4F9D;&#x8D56;&#x4E8E;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x5F31;&#x5206;&#x7C7B;&#x5668;&#x7C7B;&#x578B;&#xFF0C;&#x672C;&#x7AE0;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5355;&#x5C42;&#x51B3;&#x7B56;&#x6811;&#xFF0C;&#x8FD9;&#x79CD;&#x5206;&#x7C7B;&#x5668;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;
+    &#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x5206;&#x7C7B;&#x5668;&#x4F5C;&#x4E3A;&#x5F31;&#x5206;&#x7C7B;&#x5668;&#xFF0C;&#x7B2C;2&#x7AE0;&#x5230;&#x7B2C;6&#x7AE0;&#x4E2D;&#x7684;&#x4EFB;&#x4E00;&#x5206;&#x7C7B;&#x5668;&#x90FD;&#x53EF;&#x4EE5;&#x5145;&#x5F53;&#x5F31;&#x5206;&#x7C7B;&#x5668;&#x3002;
+    &#x4F5C;&#x4E3A;&#x5F31;&#x5206;&#x7C7B;&#x5668;&#xFF0C;&#x7B80;&#x5355;&#x5206;&#x7C7B;&#x5668;&#x7684;&#x6548;&#x679C;&#x66F4;&#x597D;&#x3002;
+&#x5206;&#x6790;&#x6570;&#x636E;: &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x65B9;&#x6CD5;&#x3002;
+&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: AdaBoost &#x7684;&#x5927;&#x90E8;&#x5206;&#x65F6;&#x95F4;&#x90FD;&#x7528;&#x5728;&#x8BAD;&#x7EC3;&#x4E0A;&#xFF0C;&#x5206;&#x7C7B;&#x5668;&#x5C06;&#x591A;&#x6B21;&#x5728;&#x540C;&#x4E00;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#x8BAD;&#x7EC3;&#x5F31;&#x5206;&#x7C7B;&#x5668;&#x3002;
+&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x8BA1;&#x7B97;&#x5206;&#x7C7B;&#x7684;&#x9519;&#x8BEF;&#x7387;&#x3002;
+&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x901A;SVM&#x4E00;&#x6837;&#xFF0C;AdaBoost &#x9884;&#x6D4B;&#x4E24;&#x4E2A;&#x7C7B;&#x522B;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x3002;&#x5982;&#x679C;&#x60F3;&#x628A;&#x5B83;&#x5E94;&#x7528;&#x5230;&#x591A;&#x4E2A;&#x7C7B;&#x522B;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8981;&#x50CF;&#x591A;&#x7C7B; SVM &#x4E2D;&#x7684;&#x505A;&#x6CD5;&#x4E00;&#x6837;&#x5BF9; AdaBoost &#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;
+</code></pre><blockquote>
+<p>AdaBoost &#x7B97;&#x6CD5;&#x7279;&#x70B9;</p>
+</blockquote>
+<pre><code>* &#x4F18;&#x70B9;: &#x6CDB;&#x5316;&#xFF08;&#x7531;&#x5177;&#x4F53;&#x7684;&#x3001;&#x4E2A;&#x522B;&#x7684;&#x6269;&#x5927;&#x4E3A;&#x4E00;&#x822C;&#x7684;&#xFF09;&#x9519;&#x8BEF;&#x7387;&#x4F4E;&#xFF0C;&#x6613;&#x7F16;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x5728;&#x5927;&#x90E8;&#x5206;&#x5206;&#x7C7B;&#x5668;&#x4E0A;&#xFF0C;&#x65E0;&#x53C2;&#x6570;&#x8C03;&#x8282;&#x3002;
+* &#x7F3A;&#x70B9;: &#x5BF9;&#x79BB;&#x7FA4;&#x70B9;&#x654F;&#x611F;&#x3002;
+* &#x9002;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;: &#x6570;&#x503C;&#x578B;&#x548C;&#x6807;&#x79F0;&#x578B;&#x6570;&#x636E;&#x3002;
+</code></pre><h3 id="&#x9879;&#x76EE;&#x6848;&#x4F8B;-&#x9A6C;&#x759D;&#x75C5;&#x7684;&#x9884;&#x6D4B;">&#x9879;&#x76EE;&#x6848;&#x4F8B;: &#x9A6C;&#x759D;&#x75C5;&#x7684;&#x9884;&#x6D4B;</h3>
+<blockquote>
+<p>&#x9879;&#x76EE;&#x6D41;&#x7A0B;&#x56FE;</p>
+</blockquote>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/7.AdaBoost/adaboost_code-flow-chart.jpg" alt="AdaBoost&#x4EE3;&#x7801;&#x6D41;&#x7A0B;&#x56FE;" title="AdaBoost&#x4EE3;&#x7801;&#x6D41;&#x7A0B;&#x56FE;"></p>
+<p>&#x57FA;&#x4E8E;&#x5355;&#x5C42;&#x51B3;&#x7B56;&#x6811;&#x6784;&#x5EFA;&#x5F31;&#x5206;&#x7C7B;&#x5668;</p>
+<ul>
+<li>&#x5355;&#x5C42;&#x51B3;&#x7B56;&#x6811;(decision stump, &#x4E5F;&#x79F0;&#x51B3;&#x7B56;&#x6811;&#x6869;)&#x662F;&#x4E00;&#x79CD;&#x7B80;&#x5355;&#x7684;&#x51B3;&#x7B56;&#x6811;&#x3002;</li>
+</ul>
+<h4 id="&#x9879;&#x76EE;&#x6982;&#x8FF0;">&#x9879;&#x76EE;&#x6982;&#x8FF0;</h4>
+<p>&#x9884;&#x6D4B;&#x60A3;&#x6709;&#x759D;&#x6C14;&#x75C5;&#x7684;&#x9A6C;&#x7684;&#x5B58;&#x6D3B;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x6570;&#x636E;&#x5305;&#x62EC;368&#x4E2A;&#x6837;&#x672C;&#x548C;28&#x4E2A;&#x7279;&#x5F81;&#xFF0C;&#x759D;&#x6C14;&#x75C5;&#x662F;&#x63CF;&#x8FF0;&#x9A6C;&#x80C3;&#x80A0;&#x75DB;&#x7684;&#x672F;&#x8BED;&#xFF0C;&#x7136;&#x800C;&#xFF0C;&#x8FD9;&#x79CD;&#x75C5;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x6E90;&#x81EA;&#x9A6C;&#x7684;&#x80C3;&#x80A0;&#x95EE;&#x9898;&#xFF0C;&#x5176;&#x4ED6;&#x95EE;&#x9898;&#x4E5F;&#x53EF;&#x80FD;&#x5F15;&#x53D1;&#x759D;&#x6C14;&#x75C5;&#xFF0C;&#x8BE5;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x533B;&#x9662;&#x68C0;&#x6D4B;&#x9A6C;&#x759D;&#x6C14;&#x75C5;&#x7684;&#x4E00;&#x4E9B;&#x6307;&#x6807;&#xFF0C;&#x6709;&#x7684;&#x6307;&#x6807;&#x6BD4;&#x8F83;&#x4E3B;&#x89C2;&#xFF0C;&#x6709;&#x7684;&#x6307;&#x6807;&#x96BE;&#x4EE5;&#x6D4B;&#x91CF;&#xFF0C;&#x4F8B;&#x5982;&#x9A6C;&#x7684;&#x75BC;&#x75DB;&#x7EA7;&#x522B;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x9664;&#x4E86;&#x90E8;&#x5206;&#x6307;&#x6807;&#x4E3B;&#x89C2;&#x548C;&#x96BE;&#x4EE5;&#x6D4B;&#x91CF;&#x4E4B;&#x5916;&#xFF0C;&#x8BE5;&#x6570;&#x636E;&#x8FD8;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x6709;30%&#x7684;&#x503C;&#x662F;&#x7F3A;&#x5931;&#x7684;&#x3002;</p>
+<h4 id="&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">&#x5F00;&#x53D1;&#x6D41;&#x7A0B;</h4>
+<pre><code>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x63D0;&#x4F9B;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;
+&#x51C6;&#x5907;&#x6570;&#x636E;: &#x786E;&#x4FDD;&#x7C7B;&#x522B;&#x6807;&#x7B7E;&#x662F;+1&#x548C;-1&#xFF0C;&#x800C;&#x975E;1&#x548C;0
+&#x5206;&#x6790;&#x6570;&#x636E;: &#x7EDF;&#x8BA1;&#x5206;&#x6790;
+&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: &#x5728;&#x6570;&#x636E;&#x4E0A;&#xFF0C;&#x5229;&#x7528; adaBoostTrainDS() &#x51FD;&#x6570;&#x8BAD;&#x7EC3;&#x51FA;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5206;&#x7C7B;&#x5668;
+&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x6211;&#x4EEC;&#x62E5;&#x6709;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x3002;&#x5728;&#x4E0D;&#x91C7;&#x7528;&#x968F;&#x673A;&#x62BD;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4F1A;&#x5BF9; AdaBoost &#x548C; Logistic &#x56DE;&#x5F52;&#x7684;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5B8C;&#x5168;&#x5BF9;&#x7B49;&#x7684;&#x6BD4;&#x8F83;
+&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x89C2;&#x5BDF;&#x8BE5;&#x4F8B;&#x5B50;&#x4E0A;&#x7684;&#x9519;&#x8BEF;&#x7387;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;&#x4E00;&#x4E2A; Web &#x7F51;&#x7AD9;&#xFF0C;&#x8BA9;&#x9A6F;&#x9A6C;&#x5E08;&#x8F93;&#x5165;&#x9A6C;&#x7684;&#x75C7;&#x72B6;&#x7136;&#x540E;&#x9884;&#x6D4B;&#x9A6C;&#x662F;&#x5426;&#x4F1A;&#x6B7B;&#x53BB;
+</code></pre><blockquote>
+<p>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x63D0;&#x4F9B;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;</p>
+</blockquote>
+<p>&#x8BAD;&#x7EC3;&#x6570;&#x636E;: horseColicTraining.txt<br>
+&#x6D4B;&#x8BD5;&#x6570;&#x636E;: horseColicTest.txt</p>
+<pre><code>2.000000    1.000000    38.500000    66.000000    28.000000    3.000000    3.000000    0.000000    2.000000    5.000000    4.000000    4.000000    0.000000    0.000000    0.000000    3.000000    5.000000    45.000000    8.400000    0.000000    0.000000    -1.000000
+1.000000    1.000000    39.200000    88.000000    20.000000    0.000000    0.000000    4.000000    1.000000    3.000000    4.000000    2.000000    0.000000    0.000000    0.000000    4.000000    2.000000    50.000000    85.000000    2.000000    2.000000    -1.000000
+2.000000    1.000000    38.300000    40.000000    24.000000    1.000000    1.000000    3.000000    1.000000    3.000000    3.000000    1.000000    0.000000    0.000000    0.000000    1.000000    1.000000    33.000000    6.700000    0.000000    0.000000    1.000000
+</code></pre><blockquote>
+<p>&#x51C6;&#x5907;&#x6570;&#x636E;: &#x786E;&#x4FDD;&#x7C7B;&#x522B;&#x6807;&#x7B7E;&#x662F;+1&#x548C;-1&#xFF0C;&#x800C;&#x975E;1&#x548C;0</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loadDataSet</span><span class="hljs-params">(fileName)</span>:</span>
+    <span class="hljs-comment"># &#x83B7;&#x53D6; feature &#x7684;&#x6570;&#x91CF;, &#x4FBF;&#x4E8E;&#x83B7;&#x53D6;</span>
+    numFeat = len(open(fileName).readline().split(<span class="hljs-string">&apos;\t&apos;</span>))
+    dataArr = []
+    labelArr = []
+    fr = open(fileName)
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> fr.readlines():
+        lineArr = []
+        curLine = line.strip().split(<span class="hljs-string">&apos;\t&apos;</span>)
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(numFeat<span class="hljs-number">-1</span>):
+            lineArr.append(float(curLine[i]))
+        dataArr.append(lineArr)
+        labelArr.append(float(curLine[<span class="hljs-number">-1</span>]))
+    <span class="hljs-keyword">return</span> dataArr, labelArr
+</code></pre>
+<blockquote>
+<p>&#x5206;&#x6790;&#x6570;&#x636E;: &#x7EDF;&#x8BA1;&#x5206;&#x6790;</p>
+</blockquote>
+<p>&#x8FC7;&#x62DF;&#x5408;(overfitting, &#x4E5F;&#x79F0;&#x4E3A;&#x8FC7;&#x5B66;&#x4E60;)</p>
+<ul>
+<li>&#x53D1;&#x73B0;&#x6D4B;&#x8BD5;&#x9519;&#x8BEF;&#x7387;&#x5728;&#x8FBE;&#x5230;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x503C;&#x4E4B;&#x540E;&#x6709;&#x5F00;&#x59CB;&#x4E0A;&#x5347;&#xFF0C;&#x8FD9;&#x79CD;&#x73B0;&#x8C61;&#x79F0;&#x4E3A;&#x8FC7;&#x62DF;&#x5408;&#x3002;</li>
+</ul>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/7.AdaBoost/&#x8FC7;&#x62DF;&#x5408;.png" alt="&#x8FC7;&#x62DF;&#x5408;"></p>
+<ul>
+<li>&#x901A;&#x4FD7;&#x6765;&#x8BF4;: &#x5C31;&#x662F;&#x628A;&#x4E00;&#x4E9B;&#x566A;&#x97F3;&#x6570;&#x636E;&#x4E5F;&#x62DF;&#x5408;&#x8FDB;&#x53BB;&#x7684;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x3002;</li>
+</ul>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/7.AdaBoost/&#x8FC7;&#x62DF;&#x5408;&#x56FE;&#x89E3;.png" alt="&#x8FC7;&#x62DF;&#x5408;"></p>
+<blockquote>
+<p>&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: &#x5728;&#x6570;&#x636E;&#x4E0A;&#xFF0C;&#x5229;&#x7528; adaBoostTrainDS() &#x51FD;&#x6570;&#x8BAD;&#x7EC3;&#x51FA;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5206;&#x7C7B;&#x5668;</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">adaBoostTrainDS</span><span class="hljs-params">(dataArr, labelArr, numIt=<span class="hljs-number">40</span>)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;adaBoostTrainDS(adaBoost&#x8BAD;&#x7EC3;&#x8FC7;&#x7A0B;&#x653E;&#x5927;)
+    Args:
+        dataArr   &#x7279;&#x5F81;&#x6807;&#x7B7E;&#x96C6;&#x5408;
+        labelArr  &#x5206;&#x7C7B;&#x6807;&#x7B7E;&#x96C6;&#x5408;
+        numIt     &#x5B9E;&#x4F8B;&#x6570;
+    Returns:
+        weakClassArr  &#x5F31;&#x5206;&#x7C7B;&#x5668;&#x7684;&#x96C6;&#x5408;
+        aggClassEst   &#x9884;&#x6D4B;&#x7684;&#x5206;&#x7C7B;&#x7ED3;&#x679C;&#x503C;
+    &quot;&quot;&quot;</span>
+    weakClassArr = []
+    m = shape(dataArr)[<span class="hljs-number">0</span>]
+    <span class="hljs-comment"># &#x521D;&#x59CB;&#x5316; D&#xFF0C;&#x8BBE;&#x7F6E;&#x6BCF;&#x4E2A;&#x6837;&#x672C;&#x7684;&#x6743;&#x91CD;&#x503C;&#xFF0C;&#x5E73;&#x5747;&#x5206;&#x4E3A;m&#x4EFD;</span>
+    D = mat(ones((m, <span class="hljs-number">1</span>))/m)
+    aggClassEst = mat(zeros((m, <span class="hljs-number">1</span>)))
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(numIt):
+        <span class="hljs-comment"># &#x5F97;&#x5230;&#x51B3;&#x7B56;&#x6811;&#x7684;&#x6A21;&#x578B;</span>
+        bestStump, error, classEst = buildStump(dataArr, labelArr, D)
+
+        <span class="hljs-comment"># alpha&#x76EE;&#x7684;&#x4E3B;&#x8981;&#x662F;&#x8BA1;&#x7B97;&#x6BCF;&#x4E00;&#x4E2A;&#x5206;&#x7C7B;&#x5668;&#x5B9E;&#x4F8B;&#x7684;&#x6743;&#x91CD;(&#x7EC4;&#x5408;&#x5C31;&#x662F;&#x5206;&#x7C7B;&#x7ED3;&#x679C;)</span>
+        <span class="hljs-comment"># &#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x5206;&#x7C7B;&#x5668;&#x7684;alpha&#x6743;&#x91CD;&#x503C;</span>
+        alpha = float(<span class="hljs-number">0.5</span>*log((<span class="hljs-number">1.0</span>-error)/max(error, <span class="hljs-number">1e-16</span>)))
+        bestStump[<span class="hljs-string">&apos;alpha&apos;</span>] = alpha
+        <span class="hljs-comment"># store Stump Params in Array</span>
+        weakClassArr.append(bestStump)
+
+        <span class="hljs-keyword">print</span> <span class="hljs-string">&quot;alpha=%s, classEst=%s, bestStump=%s, error=%s &quot;</span> % (alpha, classEst.T, bestStump, error)
+        <span class="hljs-comment"># &#x5206;&#x7C7B;&#x6B63;&#x786E;: &#x4E58;&#x79EF;&#x4E3A;1&#xFF0C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x7ED3;&#x679C;&#xFF0C;-1&#x4E3B;&#x8981;&#x662F;&#x4E0B;&#x9762;&#x6C42;e&#x7684;-alpha&#x6B21;&#x65B9;</span>
+        <span class="hljs-comment"># &#x5206;&#x7C7B;&#x9519;&#x8BEF;: &#x4E58;&#x79EF;&#x4E3A; -1&#xFF0C;&#x7ED3;&#x679C;&#x4F1A;&#x53D7;&#x5F71;&#x54CD;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x4E58;&#x4EE5; -1</span>
+        expon = multiply(<span class="hljs-number">-1</span>*alpha*mat(labelArr).T, classEst)
+        <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;(-1&#x53D6;&#x53CD;)&#x9884;&#x6D4B;&#x503C;expon=&apos;</span>, expon.T
+        <span class="hljs-comment"># &#x8BA1;&#x7B97;e&#x7684;expon&#x6B21;&#x65B9;&#xFF0C;&#x7136;&#x540E;&#x8BA1;&#x7B97;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x7EFC;&#x5408;&#x7684;&#x6982;&#x7387;&#x7684;&#x503C;</span>
+        <span class="hljs-comment"># &#x7ED3;&#x679C;&#x53D1;&#x73B0;:  &#x5224;&#x65AD;&#x9519;&#x8BEF;&#x7684;&#x6837;&#x672C;&#xFF0C;D&#x4E2D;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x6837;&#x672C;&#x6743;&#x91CD;&#x503C;&#x4F1A;&#x53D8;&#x5927;&#x3002;</span>
+        D = multiply(D, exp(expon))
+        D = D/D.sum()
+
+        <span class="hljs-comment"># &#x9884;&#x6D4B;&#x7684;&#x5206;&#x7C7B;&#x7ED3;&#x679C;&#x503C;&#xFF0C;&#x5728;&#x4E0A;&#x4E00;&#x8F6E;&#x7ED3;&#x679C;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x8FDB;&#x884C;&#x52A0;&#x548C;&#x64CD;&#x4F5C;</span>
+        <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;&#x5F53;&#x524D;&#x7684;&#x5206;&#x7C7B;&#x7ED3;&#x679C;: &apos;</span>, alpha*classEst.T
+        aggClassEst += alpha*classEst
+        <span class="hljs-keyword">print</span> <span class="hljs-string">&quot;&#x53E0;&#x52A0;&#x540E;&#x7684;&#x5206;&#x7C7B;&#x7ED3;&#x679C;aggClassEst: &quot;</span>, aggClassEst.T
+        <span class="hljs-comment"># sign &#x5224;&#x65AD;&#x6B63;&#x4E3A;1&#xFF0C; 0&#x4E3A;0&#xFF0C; &#x8D1F;&#x4E3A;-1&#xFF0C;&#x901A;&#x8FC7;&#x6700;&#x7EC8;&#x52A0;&#x548C;&#x7684;&#x6743;&#x91CD;&#x503C;&#xFF0C;&#x5224;&#x65AD;&#x7B26;&#x53F7;&#x3002;</span>
+        <span class="hljs-comment"># &#x7ED3;&#x679C;&#x4E3A;: &#x9519;&#x8BEF;&#x7684;&#x6837;&#x672C;&#x6807;&#x7B7E;&#x96C6;&#x5408;&#xFF0C;&#x56E0;&#x4E3A;&#x662F; !=,&#x90A3;&#x4E48;&#x7ED3;&#x679C;&#x5C31;&#x662F;0 &#x6B63;, 1 &#x8D1F;</span>
+        aggErrors = multiply(sign(aggClassEst) != mat(labelArr).T, ones((m, <span class="hljs-number">1</span>)))
+        errorRate = aggErrors.sum()/m
+        <span class="hljs-comment"># print &quot;total error=%s &quot; % (errorRate)</span>
+        <span class="hljs-keyword">if</span> errorRate == <span class="hljs-number">0.0</span>:
+            <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">return</span> weakClassArr, aggClassEst
+</code></pre>
+<pre><code>&#x53D1;&#x73B0;: 
+alpha &#xFF08;&#x6A21;&#x578B;&#x6743;&#x91CD;&#xFF09;&#x76EE;&#x7684;&#x4E3B;&#x8981;&#x662F;&#x8BA1;&#x7B97;&#x6BCF;&#x4E00;&#x4E2A;&#x5206;&#x7C7B;&#x5668;&#x5B9E;&#x4F8B;&#x7684;&#x6743;&#x91CD;(&#x52A0;&#x548C;&#x5C31;&#x662F;&#x5206;&#x7C7B;&#x7ED3;&#x679C;)
+  &#x5206;&#x7C7B;&#x7684;&#x6743;&#x91CD;&#x503C;: &#x6700;&#x5927;&#x7684;&#x503C;= alpha &#x7684;&#x52A0;&#x548C;&#xFF0C;&#x6700;&#x5C0F;&#x503C;=-&#x6700;&#x5927;&#x503C;
+D &#xFF08;&#x6837;&#x672C;&#x6743;&#x91CD;&#xFF09;&#x7684;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x8BA1;&#x7B97;&#x9519;&#x8BEF;&#x6982;&#x7387;:  weightedError = D.T*errArr&#xFF0C;&#x6C42;&#x6700;&#x4F73;&#x5206;&#x7C7B;&#x5668;
+  &#x6837;&#x672C;&#x7684;&#x6743;&#x91CD;&#x503C;: &#x5982;&#x679C;&#x4E00;&#x4E2A;&#x503C;&#x8BEF;&#x5224;&#x7684;&#x51E0;&#x7387;&#x8D8A;&#x5C0F;&#xFF0C;&#x90A3;&#x4E48; D &#x7684;&#x6837;&#x672C;&#x6743;&#x91CD;&#x8D8A;&#x5C0F;
+</code></pre><p><img src="http://data.apachecn.org/img/AiLearning/ml/7.AdaBoost/adaboost_alpha.png" alt="AdaBoost&#x7B97;&#x6CD5;&#x6743;&#x91CD;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;" title="AdaBoost&#x7B97;&#x6CD5;&#x6743;&#x91CD;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;"></p>
+<blockquote>
+<p>&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x6211;&#x4EEC;&#x62E5;&#x6709;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x3002;&#x5728;&#x4E0D;&#x91C7;&#x7528;&#x968F;&#x673A;&#x62BD;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4F1A;&#x5BF9; AdaBoost &#x548C; Logistic &#x56DE;&#x5F52;&#x7684;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5B8C;&#x5168;&#x5BF9;&#x7B49;&#x7684;&#x6BD4;&#x8F83;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">adaClassify</span><span class="hljs-params">(datToClass, classifierArr)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;adaClassify(ada&#x5206;&#x7C7B;&#x6D4B;&#x8BD5;)
+    Args:
+        datToClass     &#x591A;&#x4E2A;&#x5F85;&#x5206;&#x7C7B;&#x7684;&#x6837;&#x4F8B;
+        classifierArr  &#x5F31;&#x5206;&#x7C7B;&#x5668;&#x7684;&#x96C6;&#x5408;
+    Returns:
+        sign(aggClassEst) &#x5206;&#x7C7B;&#x7ED3;&#x679C;
+    &quot;&quot;&quot;</span>
+    <span class="hljs-comment"># do stuff similar to last aggClassEst in adaBoostTrainDS</span>
+    dataMat = mat(datToClass)
+    m = shape(dataMat)[<span class="hljs-number">0</span>]
+    aggClassEst = mat(zeros((m, <span class="hljs-number">1</span>)))
+
+    <span class="hljs-comment"># &#x5FAA;&#x73AF; &#x591A;&#x4E2A;&#x5206;&#x7C7B;&#x5668;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(classifierArr)):
+        <span class="hljs-comment"># &#x524D;&#x63D0;:  &#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x4E86;&#x6700;&#x4F73;&#x7684;&#x5206;&#x7C7B;&#x5668;&#x7684;&#x5B9E;&#x4F8B;</span>
+        <span class="hljs-comment"># &#x901A;&#x8FC7;&#x5206;&#x7C7B;&#x5668;&#x6765;&#x6838;&#x7B97;&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x5206;&#x7C7B;&#x7ED3;&#x679C;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;alpha*&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x7ED3;&#x679C; &#x5F97;&#x5230;&#x6700;&#x540E;&#x7684;&#x6743;&#x91CD;&#x52A0;&#x548C;&#x7684;&#x503C;&#x3002;</span>
+        classEst = stumpClassify(dataMat, classifierArr[i][<span class="hljs-string">&apos;dim&apos;</span>], classifierArr[i][<span class="hljs-string">&apos;thresh&apos;</span>], classifierArr[i][<span class="hljs-string">&apos;ineq&apos;</span>])
+        aggClassEst += classifierArr[i][<span class="hljs-string">&apos;alpha&apos;</span>]*classEst
+    <span class="hljs-keyword">return</span> sign(aggClassEst)
+</code></pre>
+<blockquote>
+<p>&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x89C2;&#x5BDF;&#x8BE5;&#x4F8B;&#x5B50;&#x4E0A;&#x7684;&#x9519;&#x8BEF;&#x7387;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;&#x4E00;&#x4E2A; Web &#x7F51;&#x7AD9;&#xFF0C;&#x8BA9;&#x9A6F;&#x9A6C;&#x5E08;&#x8F93;&#x5165;&#x9A6C;&#x7684;&#x75C7;&#x72B6;&#x7136;&#x540E;&#x9884;&#x6D4B;&#x9A6C;&#x662F;&#x5426;&#x4F1A;&#x6B7B;&#x53BB;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x9A6C;&#x759D;&#x75C5;&#x6570;&#x636E;&#x96C6;</span>
+<span class="hljs-comment"># &#x8BAD;&#x7EC3;&#x96C6;&#x5408;</span>
+dataArr, labelArr = loadDataSet(<span class="hljs-string">&quot;data/7.AdaBoost/horseColicTraining2.txt&quot;</span>)
+weakClassArr, aggClassEst = adaBoostTrainDS(dataArr, labelArr, <span class="hljs-number">40</span>)
+<span class="hljs-keyword">print</span> weakClassArr, <span class="hljs-string">&apos;\n-----\n&apos;</span>, aggClassEst.T
+<span class="hljs-comment"># &#x8BA1;&#x7B97;ROC&#x4E0B;&#x9762;&#x7684;AUC&#x7684;&#x9762;&#x79EF;&#x5927;&#x5C0F;</span>
+plotROC(aggClassEst.T, labelArr)
+<span class="hljs-comment"># &#x6D4B;&#x8BD5;&#x96C6;&#x5408;</span>
+dataArrTest, labelArrTest = loadDataSet(<span class="hljs-string">&quot;data/7.AdaBoost/horseColicTest2.txt&quot;</span>)
+m = shape(dataArrTest)[<span class="hljs-number">0</span>]
+predicting10 = adaClassify(dataArrTest, weakClassArr)
+errArr = mat(ones((m, <span class="hljs-number">1</span>)))
+<span class="hljs-comment"># &#x6D4B;&#x8BD5;: &#x8BA1;&#x7B97;&#x603B;&#x6837;&#x672C;&#x6570;&#xFF0C;&#x9519;&#x8BEF;&#x6837;&#x672C;&#x6570;&#xFF0C;&#x9519;&#x8BEF;&#x7387;</span>
+<span class="hljs-keyword">print</span> m, errArr[predicting10 != mat(labelArrTest).T].sum(), errArr[predicting10 != mat(labelArrTest).T].sum()/m
+</code></pre>
+<p><a href="https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/7.AdaBoost/adaboost.py" target="_blank">&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x5730;&#x5740;</a>: <a href="https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/7.AdaBoost/adaboost.py" target="_blank">https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/7.AdaBoost/adaboost.py</a></p>
+<h4 id="&#x8981;&#x70B9;&#x8865;&#x5145;">&#x8981;&#x70B9;&#x8865;&#x5145;</h4>
+<blockquote>
+<p>&#x975E;&#x5747;&#x8861;&#x73B0;&#x8C61;: </p>
+</blockquote>
+<p><code>&#x5728;&#x5206;&#x7C7B;&#x5668;&#x8BAD;&#x7EC3;&#x65F6;&#xFF0C;&#x6B63;&#x4F8B;&#x6570;&#x76EE;&#x548C;&#x53CD;&#x4F8B;&#x6570;&#x76EE;&#x4E0D;&#x76F8;&#x7B49;&#xFF08;&#x76F8;&#x5DEE;&#x5F88;&#x5927;&#xFF09;&#x3002;&#x6216;&#x8005;&#x53D1;&#x751F;&#x5728;&#x6B63;&#x8D1F;&#x4F8B;&#x5206;&#x7C7B;&#x9519;&#x8BEF;&#x7684;&#x6210;&#x672C;&#x4E0D;&#x540C;&#x7684;&#x65F6;&#x5019;&#x3002;</code></p>
+<ul>
+<li>&#x5224;&#x65AD;&#x9A6C;&#x662F;&#x5426;&#x80FD;&#x7EE7;&#x7EED;&#x751F;&#x5B58;(&#x4E0D;&#x53EF;&#x8BEF;&#x6740;)</li>
+<li>&#x8FC7;&#x6EE4;&#x5783;&#x573E;&#x90AE;&#x4EF6;(&#x4E0D;&#x53EF;&#x6F0F;&#x5224;)</li>
+<li>&#x4E0D;&#x80FD;&#x653E;&#x8FC7;&#x4F20;&#x67D3;&#x75C5;&#x7684;&#x4EBA;</li>
+<li>&#x4E0D;&#x80FD;&#x968F;&#x4FBF;&#x8BA4;&#x4E3A;&#x522B;&#x4EBA;&#x72AF;&#x7F6A;</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x6709;&#x591A;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;:  &#x5177;&#x4F53;&#x53EF;&#x53C2;&#x8003;<a href="https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/" target="_blank">&#x6B64;&#x94FE;&#x63A5;</a></p>
+<p>&#x518D;&#x7ED3;&#x5408;&#x4E66;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5F52;&#x4E3A;&#x516B;&#x5927;&#x7C7B;: </p>
+<h5 id="1&#x80FD;&#x5426;&#x6536;&#x96C6;&#x5230;&#x66F4;&#x591A;&#x7684;&#x6570;&#x636E;&#xFF1F;">1.&#x80FD;&#x5426;&#x6536;&#x96C6;&#x5230;&#x66F4;&#x591A;&#x7684;&#x6570;&#x636E;&#xFF1F;</h5>
+<p>&#x8FD9;&#x4E2A;&#x63AA;&#x65BD;&#x5F80;&#x5F80;&#x88AB;&#x4EBA;&#x4EEC;&#x6240;&#x5FFD;&#x7565;&#xFF0C;&#x88AB;&#x8BA4;&#x4E3A;&#x5F88;&#x8822;&#x3002;&#x4F46;&#x662F;&#x66F4;&#x5927;&#x7684;&#x6570;&#x636E;&#x96C6;&#x66F4;&#x80FD;&#x4F53;&#x73B0;&#x6837;&#x672C;&#x7684;&#x5206;&#x5E03;&#xFF0C;&#x591A;&#x6837;&#x6027;&#x3002;</p>
+<h5 id="2&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x7684;&#x8BC4;&#x4EF7;&#x6307;&#x6807;">2.&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x7684;&#x8BC4;&#x4EF7;&#x6307;&#x6807;</h5>
+<p>Accuracy &#x6216;&#x8005;error rate &#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x975E;&#x5747;&#x8861;&#x7684;&#x6570;&#x636E;&#x96C6;&#x3002;&#x8FD9;&#x4F1A;&#x8BEF;&#x5BFC;&#x4EBA;&#x3002;&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x5176;&#x4ED6;&#x7684;&#x8BC4;&#x4EF7;&#x6307;&#x6807;&#x3002;</p>
+<p>Confusion Matrix &#x6DF7;&#x6DC6;&#x77E9;&#x9635;: &#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x8868;&#x683C;&#x5BF9;&#x5206;&#x7C7B;&#x5668;&#x6240;&#x9884;&#x6D4B;&#x7684;&#x7C7B;&#x522B;&#x4E0E;&#x5176;&#x771F;&#x5B9E;&#x7684;&#x7C7B;&#x522B;&#x7684;&#x6837;&#x672C;&#x7EDF;&#x8BA1;&#xFF0C;&#x5206;&#x522B;&#x4E3A;: TP&#x3001;FN&#x3001;FP&#x4E0E;TN&#x3002;</p>
+<p>Precision: &#x7CBE;&#x786E;&#x5EA6;</p>
+<p>Recall:  &#x53EC;&#x56DE;&#x7387;</p>
+<p>F1 Score (or F-Score):  &#x7CBE;&#x786E;&#x5EA6;&#x548C;&#x53EC;&#x56DE;&#x7387;&#x7684;&#x52A0;&#x6743;&#x5E73;&#x5747;</p>
+<p>&#x6216;&#x8005;&#x4F7F;&#x7528;</p>
+<p>Kappa (Cohen&apos;s kappa)</p>
+<p>ROC Curves</p>
+<blockquote>
+<p>ROC &#x8BC4;&#x4F30;&#x65B9;&#x6CD5;</p>
+</blockquote>
+<ul>
+<li>ROC &#x66F2;&#x7EBF;: &#x6700;&#x4F73;&#x7684;&#x5206;&#x7C7B;&#x5668;&#x5E94;&#x8BE5;&#x5C3D;&#x53EF;&#x80FD;&#x5730;&#x5904;&#x4E8E;&#x5DE6;&#x4E0A;&#x89D2;</li>
+</ul>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/7.AdaBoost/ROC&#x66F2;&#x7EBF;.png" alt="ROC&#x66F2;&#x7EBF;"></p>
+<ul>
+<li><p>&#x5BF9;&#x4E0D;&#x540C;&#x7684; ROC &#x66F2;&#x7EBF;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x7684;&#x4E00;&#x4E2A;&#x6307;&#x6807;&#x662F;&#x66F2;&#x7EBF;&#x4E0B;&#x7684;&#x9762;&#x79EF;(Area Unser the Curve, AUC). </p>
+</li>
+<li><p>AUC &#x7ED9;&#x51FA;&#x7684;&#x662F;&#x5206;&#x7C7B;&#x5668;&#x7684;&#x5E73;&#x5747;&#x6027;&#x80FD;&#x503C;&#xFF0C;&#x5F53;&#x7136;&#x5B83;&#x5E76;&#x4E0D;&#x80FD;&#x5B8C;&#x5168;&#x4EE3;&#x66FF;&#x5BF9;&#x6574;&#x6761;&#x66F2;&#x7EBF;&#x7684;&#x89C2;&#x5BDF;&#x3002;</p>
+</li>
+<li><p>&#x4E00;&#x4E2A;&#x5B8C;&#x7F8E;&#x5206;&#x7C7B;&#x5668;&#x7684; AUC &#x4E3A;1&#xFF0C;&#x800C;&#x968F;&#x673A;&#x731C;&#x6D4B;&#x7684; AUC &#x5219;&#x4E3A;0.5&#x3002;</p>
+</li>
+</ul>
+<h5 id="3&#x5C1D;&#x8BD5;&#x5BF9;&#x6837;&#x672C;&#x91CD;&#x62BD;&#x6837;">3.&#x5C1D;&#x8BD5;&#x5BF9;&#x6837;&#x672C;&#x91CD;&#x62BD;&#x6837;</h5>
+<p>&#x6B20;&#x62BD;&#x6837;(undersampling)&#x6216;&#x8005;&#x8FC7;&#x62BD;&#x6837;(oversampling)</p>
+<pre><code>- &#x6B20;&#x62BD;&#x6837;: &#x610F;&#x5473;&#x7740;&#x5220;&#x9664;&#x6837;&#x4F8B;
+- &#x8FC7;&#x62BD;&#x6837;: &#x610F;&#x5473;&#x7740;&#x590D;&#x5236;&#x6837;&#x4F8B;(&#x91CD;&#x590D;&#x4F7F;&#x7528;)
+</code></pre><p>&#x5BF9;&#x5927;&#x7C7B;&#x8FDB;&#x884C;&#x6B20;&#x62BD;&#x6837;</p>
+<p>&#x5BF9;&#x5C0F;&#x7C7B;&#x8FDB;&#x884C;&#x8FC7;&#x62BD;&#x6837;</p>
+<p>&#x6216;&#x8005;&#x7ED3;&#x5408;&#x4E0A;&#x8FF0;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x62BD;&#x6837;</p>
+<p>&#x4E00;&#x4E9B;&#x7ECF;&#x9A8C;&#x6CD5;&#x5219;: </p>
+<ul>
+<li><p>&#x8003;&#x8651;&#x6837;&#x672C;&#xFF08;&#x8D85;&#x8FC7;1&#x4E07;&#x3001;&#x5341;&#x4E07;&#x751A;&#x81F3;&#x66F4;&#x591A;&#xFF09;&#x8FDB;&#x884C;&#x6B20;&#x91C7;&#x6837;&#xFF0C;&#x5373;&#x5220;&#x9664;&#x90E8;&#x5206;&#x6837;&#x672C;&#xFF1B;</p>
+</li>
+<li><p>&#x8003;&#x8651;&#x6837;&#x672C;&#xFF08;&#x4E0D;&#x8DB3;1&#x4E3A;&#x751A;&#x81F3;&#x66F4;&#x5C11;&#xFF09;&#x8FDB;&#x884C;&#x8FC7;&#x91C7;&#x6837;&#xFF0C;&#x5373;&#x6DFB;&#x52A0;&#x90E8;&#x5206;&#x6837;&#x672C;&#x7684;&#x526F;&#x672C;&#xFF1B;</p>
+</li>
+<li><p>&#x8003;&#x8651;&#x5C1D;&#x8BD5;&#x968F;&#x673A;&#x91C7;&#x6837;&#x4E0E;&#x975E;&#x968F;&#x673A;&#x91C7;&#x6837;&#x4E24;&#x79CD;&#x91C7;&#x6837;&#x65B9;&#x6CD5;&#xFF1B;</p>
+</li>
+<li><p>&#x8003;&#x8651;&#x5BF9;&#x5404;&#x7C7B;&#x522B;&#x5C1D;&#x8BD5;&#x4E0D;&#x540C;&#x7684;&#x91C7;&#x6837;&#x6BD4;&#x4F8B;&#xFF0C;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;1:1</p>
+</li>
+<li><p>&#x8003;&#x8651;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x8FC7;&#x91C7;&#x6837;&#x4E0E;&#x6B20;&#x91C7;&#x6837;</p>
+</li>
+</ul>
+<h5 id="4&#x5C1D;&#x8BD5;&#x4EA7;&#x751F;&#x4EBA;&#x5DE5;&#x751F;&#x6210;&#x7684;&#x6837;&#x672C;">4.&#x5C1D;&#x8BD5;&#x4EA7;&#x751F;&#x4EBA;&#x5DE5;&#x751F;&#x6210;&#x7684;&#x6837;&#x672C;</h5>
+<p>&#x4E00;&#x79CD;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x968F;&#x673A;&#x62BD;&#x6837;&#x5C0F;&#x7C7B;&#x6837;&#x672C;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x7279;&#x5F81;&#xFF09;&#x6765;&#x7EC4;&#x6210;&#x65B0;&#x7684;&#x6837;&#x672C;&#x5373;&#x5C5E;&#x6027;&#x503C;&#x968F;&#x673A;&#x91C7;&#x6837;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7ECF;&#x9A8C;&#x8FDB;&#x884C;&#x62BD;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x6BD4;&#x5982;&#x6734;&#x7D20;&#x8D1D;&#x53F6;&#x65AF;&#x65B9;&#x6CD5;&#x5047;&#x8BBE;&#x5404;&#x5C5E;&#x6027;&#x4E4B;&#x95F4;&#x4E92;&#x76F8;&#x72EC;&#x7ACB;&#x8FDB;&#x884C;&#x91C7;&#x6837;&#xFF0C;&#x8FD9;&#x6837;&#x4FBF;&#x53EF;&#x5F97;&#x5230;&#x66F4;&#x591A;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F46;&#x662F;&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x5C5E;&#x6027;&#x4E4B;&#x95F4;&#x7684;&#x975E;&#x7EBF;&#x6027;&#x5173;&#x7CFB;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#x4E5F;&#x6709;&#x7CFB;&#x7EDF;&#x6027;&#x7684;&#x7B97;&#x6CD5;&#x3002;&#x6700;&#x5E38;&#x7528;&#x7684;SMOTE(Synthetic Minority Over-Sampling Technique)&#x3002; &#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x79CD;over sampling&#xFF08;&#x8FC7;&#x62BD;&#x6837;&#xFF09;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x5B83;&#x662F;&#x4EA7;&#x751F;&#x4EBA;&#x4E3A;&#x7684;&#x6837;&#x672C;&#x800C;&#x4E0D;&#x662F;&#x5236;&#x9020;&#x6837;&#x672C;&#x526F;&#x672C;&#x3002;&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x662F;&#x9009;&#x53D6;2&#x4E2A;&#x6216;&#x8005;2&#x4E2A;&#x4EE5;&#x4E0A;&#x76F8;&#x4F3C;&#x7684;&#x6837;&#x672C;&#xFF08;&#x6839;&#x636E;&#x8DDD;&#x79BB;&#x5EA6;&#x91CF; distance measure&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x6BCF;&#x6B21;&#x9009;&#x62E9;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x6837;&#x672C;&#xFF0C;&#x5E76;&#x968F;&#x673A;&#x9009;&#x62E9;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x90BB;&#x5C45;&#x6837;&#x672C;&#x5BF9;&#x9009;&#x62E9;&#x7684;&#x90A3;&#x4E2A;&#x6837;&#x672C;&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x589E;&#x52A0;&#x566A;&#x58F0;(&#x6BCF;&#x6B21;&#x53EA;&#x5904;&#x7406;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;)&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x6784;&#x9020;&#x4E86;&#x66F4;&#x591A;&#x7684;&#x65B0;&#x751F;&#x6570;&#x636E;&#x3002;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x53C2;&#x89C1;<a href="http://www.jair.org/papers/paper953.html" target="_blank">&#x539F;&#x59CB;&#x8BBA;&#x6587;</a>&#x3002;</p>
+<p>python&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x67E5;&#x9605;<a href="https://github.com/scikit-learn-contrib/imbalanced-learn" target="_blank">UnbalancedDataset</a></p>
+<h5 id="5&#x5C1D;&#x8BD5;&#x4E0D;&#x540C;&#x7684;&#x7B97;&#x6CD5;">5.&#x5C1D;&#x8BD5;&#x4E0D;&#x540C;&#x7684;&#x7B97;&#x6CD5;</h5>
+<p>&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x5728;&#x6BCF;&#x4E2A;&#x95EE;&#x9898;&#x4E0A;&#x4F7F;&#x7528;&#x4F60;&#x6700;&#x559C;&#x6B22;&#x7684;&#x7B97;&#x6CD5;&#x3002;&#x867D;&#x7136;&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x5E26;&#x6765;&#x8F83;&#x597D;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x4E5F;&#x4F1A;&#x8499;&#x853D;&#x4F60;&#x89C2;&#x5BDF;&#x6570;&#x636E;&#x5185;&#x8574;&#x542B;&#x7684;&#x5176;&#x4ED6;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x81F3;&#x5C11;&#x4F60;&#x5F97;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x4E0A;&#x8BD5;&#x8BD5;&#x5404;&#x79CD;&#x7B97;&#x6CD5;&#x3002;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x53C2;&#x9605;<a href="https://machinelearningmastery.com/why-you-should-be-spot-checking-algorithms-on-your-machine-learning-problems/" target="_blank">Why you should be Spot-Checking Algorithms on your Machine Learning Problems</a></p>
+<p>&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x51B3;&#x7B56;&#x6811;&#x7ECF;&#x5E38;&#x5728;&#x975E;&#x5747;&#x8861;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#x8868;&#x73B0;&#x826F;&#x597D;&#x3002;&#x521B;&#x5EFA;&#x5206;&#x7C7B;&#x6811;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;&#x7C7B;&#x53D8;&#x91CF;&#x7684;&#x5212;&#x5206;&#x89C4;&#x5219;&#x5F3A;&#x5236;&#x4F7F;&#x7C7B;&#x522B;&#x8868;&#x8FBE;&#x51FA;&#x6765;&#x3002;&#x5982;&#x679C;&#x6709;&#x7591;&#x60D1;&#xFF0C;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x4E00;&#x4E9B;&#x6D41;&#x884C;&#x7684;&#x51B3;&#x7B56;&#x6811;&#xFF0C;&#x6BD4;&#x5982;, C4.5, C5.0, CART &#x548C; Random Forrest&#x3002;</p>
+<h5 id="6&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x60E9;&#x7F5A;&#x7684;&#x6A21;&#x578B;">6.&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x60E9;&#x7F5A;&#x7684;&#x6A21;&#x578B;</h5>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x540C;&#x79CD;&#x7B97;&#x6CD5;&#x4F46;&#x662F;&#x4EE5;&#x4E0D;&#x540C;&#x7684;&#x89D2;&#x5EA6;&#x5BF9;&#x5F85;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x60E9;&#x7F5A;&#x7684;&#x6A21;&#x578B;&#x5C31;&#x662F;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x5206;&#x7C7B;&#x9519;&#x8BEF;&#x7ED9;&#x4E88;&#x4E0D;&#x540C;&#x7684;&#x4EE3;&#x4EF7;&#xFF08;&#x60E9;&#x7F5A;&#xFF09;&#x3002;&#x6BD4;&#x5982;&#x5BF9;&#x4E8E;&#x9519;&#x5206;&#x7684;&#x5C0F;&#x7C7B;&#x7ED9;&#x4E88;&#x66F4;&#x9AD8;&#x7684;&#x4EE3;&#x4EF7;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4F1A;&#x4F7F;&#x6A21;&#x578B;&#x504F;&#x5DEE;&#xFF0C;&#x66F4;&#x52A0;&#x5173;&#x6CE8;&#x5C0F;&#x7C7B;&#x3002;</p>
+<p>&#x901A;&#x5E38;&#x6765;&#x8BF4;&#x8FD9;&#x79CD;&#x4EE3;&#x4EF7;/&#x60E9;&#x7F5A;&#x6216;&#x8005;&#x6BD4;&#x91CD;&#x5728;&#x5B66;&#x4E60;&#x4E2D;&#x7B97;&#x6CD5;&#x662F;&#x7279;&#x5B9A;&#x7684;&#x3002;&#x6BD4;&#x5982;&#x4F7F;&#x7528;&#x4EE3;&#x4EF7;&#x51FD;&#x6570;&#x6765;&#x5B9E;&#x73B0;: </p>
+<blockquote>
+<p>&#x4EE3;&#x4EF7;&#x51FD;&#x6570;</p>
+</blockquote>
+<ul>
+<li>&#x57FA;&#x4E8E;&#x4EE3;&#x4EF7;&#x51FD;&#x6570;&#x7684;&#x5206;&#x7C7B;&#x5668;&#x51B3;&#x7B56;&#x63A7;&#x5236;: <code>TP*(-5)+FN*1+FP*50+TN*0</code></li>
+</ul>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/7.AdaBoost/&#x4EE3;&#x4EF7;&#x51FD;&#x6570;.png" alt="&#x4EE3;&#x4EF7;&#x51FD;&#x6570;"></p>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x53EB;&#x505A; cost sensitive learning&#xFF0C;Weka &#x4E2D;&#x76F8;&#x5E94;&#x7684;&#x6846;&#x67B6;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x53EB;<a href="http://weka.sourceforge.net/doc.dev/weka/classifiers/meta/CostSensitiveClassifier.html" target="_blank">CostSensitiveClassifier</a></p>
+<p>&#x5982;&#x679C;&#x5F53;&#x4F60;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x7279;&#x5B9A;&#x7B97;&#x6CD5;&#x800C;&#x4E14;&#x65E0;&#x6CD5;&#x91CD;&#x62BD;&#x6837;&#xFF0C;&#x6216;&#x8005;&#x6A21;&#x578B;&#x6548;&#x679C;&#x4E0D;&#x884C;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x60E9;&#x7F5A;&#xFF08;penalization&#xFF09;&#x662F;&#x53EF;&#x884C;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x63D0;&#x4F9B;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x201C;&#x5E73;&#x8861;&#x201D;&#x7C7B;&#x522B;&#x3002;&#x4F46;&#x662F;&#x8BBE;&#x5B9A;&#x60E9;&#x7F5A;&#x51FD;&#x6570;/&#x4EE3;&#x4EF7;&#x51FD;&#x6570;&#x662F;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#x3002;&#x6700;&#x597D;&#x8FD8;&#x662F;&#x5C1D;&#x8BD5;&#x4E0D;&#x540C;&#x7684;&#x4EE3;&#x4EF7;&#x51FD;&#x6570;&#x7EC4;&#x5408;&#x6765;&#x5F97;&#x5230;&#x6700;&#x4F18;&#x6548;&#x679C;&#x3002;</p>
+<h5 id="7&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x89D2;&#x5EA6;">7.&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x89D2;&#x5EA6;</h5>
+<p>&#x5176;&#x5B9E;&#x6709;&#x5F88;&#x591A;&#x7814;&#x7A76;&#x5173;&#x4E8E;&#x975E;&#x5747;&#x8861;&#x6570;&#x636E;&#x3002;&#x4ED6;&#x4EEC;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x5EA6;&#x91CF;&#xFF0C;&#x672F;&#x8BED;&#x3002;</p>
+<p>&#x4ECE;&#x5B83;&#x4EEC;&#x7684;&#x89D2;&#x5EA6;&#x770B;&#x770B;&#x4F60;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x601D;&#x8003;&#x4F60;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x8BF4;&#x4E0D;&#x5B9A;&#x4F1A;&#x6709;&#x65B0;&#x7684;&#x60F3;&#x6CD5;&#x3002;</p>
+<p>&#x4E24;&#x4E2A;&#x9886;&#x57DF;&#x60A8;&#x53EF;&#x4EE5;&#x8003;&#x8651;:  anomaly detection(&#x5F02;&#x5E38;&#x503C;&#x68C0;&#x6D4B;) &#x548C; change detection&#xFF08;&#x53D8;&#x5316;&#x8D8B;&#x52BF;&#x68C0;&#x6D4B;&#xFF09;&#x3002;</p>
+<p>Anomaly dectection &#x5C31;&#x662F;&#x68C0;&#x6D4B;&#x7A00;&#x6709;&#x4E8B;&#x4EF6;&#x3002; &#x6BD4;&#x5982;&#x901A;&#x8FC7;&#x673A;&#x5668;&#x9707;&#x52A8;&#x6765;&#x8BC6;&#x522B;&#x673A;&#x5668;&#x8C37;&#x4E2D;&#x6216;&#x8005;&#x6839;&#x636E;&#x4E00;&#x7CFB;&#x5217;&#x7CFB;&#x7EDF;&#x7684;&#x8C03;&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x6076;&#x610F;&#x64CD;&#x4F5C;&#x3002;&#x4E0E;&#x5E38;&#x89C4;&#x64CD;&#x4F5C;&#x76F8;&#x6BD4;&#xFF0C;&#x8FD9;&#x4E9B;&#x4E8B;&#x4EF6;&#x662F;&#x7F55;&#x89C1;&#x7684;&#x3002;</p>
+<p>&#x628A;&#x5C0F;&#x7C7B;&#x60F3;&#x6210;&#x5F02;&#x5E38;&#x7C7B;&#x8FD9;&#x79CD;&#x8F6C;&#x53D8;&#x53EF;&#x80FD;&#x4F1A;&#x5E2E;&#x52A9;&#x4F60;&#x60F3;&#x5230;&#x65B0;&#x529E;&#x6CD5;&#x6765;&#x5206;&#x7C7B;&#x6570;&#x636E;&#x6837;&#x672C;&#x3002;</p>
+<p>change detection &#x53D8;&#x5316;&#x8D8B;&#x52BF;&#x68C0;&#x6D4B;&#x7C7B;&#x4F3C;&#x4E8E;&#x5F02;&#x5E38;&#x503C;&#x68C0;&#x6D4B;&#x3002;&#x4F46;&#x662F;&#x4ED6;&#x4E0D;&#x662F;&#x5BFB;&#x627E;&#x5F02;&#x5E38;&#x503C;&#x800C;&#x662F;&#x5BFB;&#x627E;&#x53D8;&#x5316;&#x6216;&#x533A;&#x522B;&#x3002;&#x6BD4;&#x5982;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x6A21;&#x5F0F;&#x6216;&#x8005;&#x94F6;&#x884C;&#x4EA4;&#x6613;&#x8BB0;&#x5F55;&#x6765;&#x89C2;&#x5BDF;&#x7528;&#x6237;&#x884C;&#x4E3A;&#x8F6C;&#x53D8;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x4E24;&#x79CD;&#x8F6C;&#x53D8;&#x53EF;&#x80FD;&#x4F1A;&#x7ED9;&#x4F60;&#x65B0;&#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x601D;&#x8003;&#x4F60;&#x7684;&#x95EE;&#x9898;&#x548C;&#x65B0;&#x7684;&#x6280;&#x672F;&#x53BB;&#x5C1D;&#x8BD5;&#x3002;</p>
+<h5 id="8&#x5C1D;&#x8BD5;&#x53BB;&#x521B;&#x65B0;">8.&#x5C1D;&#x8BD5;&#x53BB;&#x521B;&#x65B0;</h5>
+<p>&#x4ED4;&#x7EC6;&#x601D;&#x8003;&#x4F60;&#x7684;&#x95EE;&#x9898;&#x7136;&#x540E;&#x60F3;&#x60F3;&#x770B;&#x5982;&#x4F55;&#x5C06;&#x8FD9;&#x95EE;&#x9898;&#x7EC6;&#x5206;&#x4E3A;&#x51E0;&#x4E2A;&#x66F4;&#x5207;&#x5B9E;&#x9645;&#x7684;&#x5C0F;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x6BD4;&#x5982;: </p>
+<p>&#x5C06;&#x4F60;&#x7684;&#x5927;&#x7C7B;&#x5206;&#x89E3;&#x6210;&#x591A;&#x4E2A;&#x8F83;&#x5C0F;&#x7684;&#x7C7B;&#xFF1B;</p>
+<p>&#x4F7F;&#x7528;One Class&#x5206;&#x7C7B;&#x5668;&#xFF08;&#x770B;&#x5F85;&#x6210;&#x5F02;&#x5E38;&#x70B9;&#x68C0;&#x6D4B;&#xFF09;&#xFF1B;</p>
+<p>&#x5BF9;&#x6570;&#x636E;&#x96C6;&#x8FDB;&#x884C;&#x62BD;&#x6837;&#x6210;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x4F7F;&#x7528;&#x96C6;&#x6210;&#x65B9;&#x5F0F;&#xFF0C;&#x8BAD;&#x7EC3;&#x591A;&#x4E2A;&#x5206;&#x7C7B;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x8054;&#x5408;&#x8FD9;&#x4E9B;&#x5206;&#x7C7B;&#x5668;&#x8FDB;&#x884C;&#x5206;&#x7C7B;&#xFF1B;</p>
+<p>&#x8FD9;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x3002;&#x66F4;&#x591A;&#x7684;&#x53EF;&#x4EE5;&#x53C2;&#x9605;<a href="http://www.quora.com/In-classification-how-do-you-handle-an-unbalanced-training-set" target="_blank">In classification, how do you handle an unbalanced training set?</a> &#x548C;<a href="https://www.reddit.com/r/MachineLearning/comments/12evgi/classification_when_80_of_my_training_set_is_of/" target="_blank">Classification when 80% of my training set is of one class</a></p>
+<hr>
+<ul>
+<li><strong>&#x4F5C;&#x8005;: <a href="https://github.com/jiangzhonglian" target="_blank">&#x7247;&#x523B;</a></strong></li>
+<li><a href="https://github.com/apachecn/AiLearning" target="_blank">GitHub&#x5730;&#x5740;</a>: <a href="https://github.com/apachecn/AiLearning" target="_blank">https://github.com/apachecn/AiLearning</a></li>
+<li><strong>&#x7248;&#x6743;&#x58F0;&#x660E;: &#x6B22;&#x8FCE;&#x8F6C;&#x8F7D;&#x5B66;&#x4E60; =&gt; &#x8BF7;&#x6807;&#x6CE8;&#x4FE1;&#x606F;&#x6765;&#x6E90;&#x4E8E; <a href="http://www.apachecn.org/" target="_blank">ApacheCN</a></strong></li>
+</ul>
+<p><hr></p>
+<div align="center">
+    <p><a href="http://www.apachecn.org" target="_blank"><font face="KaiTi" size="6" color="red">&#x6211;&#x4EEC;&#x4E00;&#x76F4;&#x5728;&#x52AA;&#x529B;</font></a></p>
+    <p><a href="https://github.com/apachecn/AiLearning/" target="_blank">apachecn/AiLearning</a></p>
+    <p><iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=AiLearning&amp;type=watch&amp;count=true&amp;v=2" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=AiLearning&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=AiLearning&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <a target="_blank" href="../../shang.qq.com/wpa/qunwpa"><img border="0" src="http://data.apachecn.org/img/logo/ApacheCN-group.png" alt="ML | ApacheCN" title="ML | ApacheCN"></a></p>
+</div>
+ <div style="text-align:center;margin:0 0 10.5px;">
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3565452474788507" data-ad-slot="2543897000">
+     </ins>
+     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?33149aa6702022b1203201da06e23d81";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127082511-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127082511-1');
+    </script>
+</div>
+
+<p><meta name="google-site-verification" content="pyo9N70ZWyh8JB43bIu633mhxesJ1IcwWCZlM3jUfFo"></p>
+<p><iframe src="https://www.bilibili.com/read/cv2710377" style="display:none"></iframe>
+<img src="http://t.cn/AiCoDHwb" hidden="hidden"></p>
+<div>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+    <div id="gitalk-container"></div>
+    <script type="text/javascript">
+        const gitalk = new Gitalk({
+        clientID: '2e62dee5b9896e2eede6',
+        clientSecret: 'ca6819a54656af0d87960af15315320f8a628a53',
+        repo: 'AiLearning',
+        owner: 'apachecn',
+        admin: ['jiangzhonglian', 'wizardforcel'],
+        id: md5(location.pathname),
+        distractionFreeMode: false
+        })
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ibooker.org.cn 2019 all right reserved&#xFF0C;&#x7531; ApacheCN &#x56E2;&#x961F;&#x63D0;&#x4F9B;&#x652F;&#x6301;</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:  
+2020-10-19 13:02:43
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.html" class="navigation navigation-prev " aria-label="Previous page: 第6章_支持向量机">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8.html" class="navigation navigation-next " aria-label="Next page: 第8章_回归">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第7章_集成方法","level":"1.2.7","depth":2,"next":{"title":"第8章_回归","level":"1.2.8","depth":2,"path":"docs/ml/8.md","ref":"docs/ml/8.md","articles":[]},"previous":{"title":"第6章_支持向量机","level":"1.2.6","depth":2,"path":"docs/ml/6.md","ref":"docs/ml/6.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","github-buttons","-sharing","insert-logo","sharing-plus","back-to-top-button","code","copy-code-button","katex","pageview-count","edit-link","emphasize","alerts","auto-scroll-table","popup","hide-element","page-toc-button","tbfed-pagefooter","sitemap","advanced-emoji","expandable-chapters","splitter","search-pro"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy ibooker.org.cn 2019","modify_label":"该文件修订时间:  ","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"github":{"url":"https://github.com/apachecn/AiLearning"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sitemap":{"hostname":"http://pytorch.apachecn.org"},"page-toc-button":{"maxTocDepth":4,"minTocSize":4},"back-to-top-button":{},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"apachecn","repo":"AiLearning","type":"star","count":true,"size":"small"}]},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["qq","douban","facebook","google","linkedin","twitter","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"whatsapp":false,"twitter":false,"line":false,"google":false,"qzone":true},"edit-link":{"label":"编辑本页","base":"https://github.com/apachecn/AiLearning/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 150px; min-height: 150px","url":"http://data.apachecn.org/img/logo.jpg"},"expandable-chapters":{}},"my_links":{"sidebar":{"Home":"https://www.baidu.com"}},"theme":"default","author":"ApacheCN","my_plugins":["donate","todo","-lunr","-search","expandable-chapters-small","chapter-fold","expandable-chapters","expandable-chapters-small","back-to-top-button","ga","baidu","sitemap","tbfed-pagefooter","advanced-emoji","sectionx","page-treeview","simple-page-toc","ancre-navigation","theme-apachecn@git+https://github.com/apachecn/theme-apachecn#HEAD","pagefooter-apachecn@git+https://github.com/apachecn/gitbook-plugin-pagefooter-apachecn#HEAD"],"my_pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"ignores":["node_modules"],"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"page-copyright":{"wisdom":"Designer, Frontend Developer & overall web enthusiast","noPowered":false,"copyright":"Copyright &#169; 你的名字","style":"normal","timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"你的签名","copyrightColor":"#666","description":"modified at"},"donate":{"wechat":"微信收款的二维码URL","alipay":"支付宝收款的二维码URL","title":"","button":"赏","alipayText":"支付宝打赏","wechatText":"微信打赏"},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"apachecn","repo":"AiLearning","type":"star","count":true,"size":"small"},{"user":"apachecn","width":"160","type":"follow","count":true,"size":"small"}]},"ga":{"token":"UA-127082511-1"},"baidu":{"token":"75439e2cbd22bdd813226000e9dcc12f"},"pagefooter-apachecn":{"copyright":"Copyright &copy ibooker.org.cn 2019","modify_label":"该文件修订时间:  ","modify_format":"YYYY-MM-DD HH:mm:ss"}},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"AiLearning 中文文档","language":"zh-hans","gitbook":"*","description":"AiLearning 中文文档: 教程和文档"},"file":{"path":"docs/ml/7.md","mtime":"2020-10-19T13:02:43.836Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-19T13:03:33.421Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

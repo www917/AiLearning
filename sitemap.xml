@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url> <loc>http://pytorch.apachecn.org/./</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/1.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/2.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/3.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/4.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/5.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/6.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/7.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/8.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/9.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/10.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/11.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/12.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/13.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/14.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/15.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/ml/16.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/why-to-record-study-ml-video.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/report/2017-04-08.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/dl/反向传递.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/dl/CNN原理.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/dl/RNN原理.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/dl/LSTM原理.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/nlp/1.入门介绍.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/nlp/2.分词.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/nlp/3.命名实体识别.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/nlp/3.1.篇章分析-内容概述.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/nlp/3.2.篇章分析-内容标签.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/nlp/3.3.篇章分析-情感分析.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/nlp/3.4.篇章分析-自动摘要.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/TensorFlow2.x/安装指南.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/TensorFlow2.x/Keras快速入门.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/TensorFlow2.x/实战项目_1_电影情感分类.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/TensorFlow2.x/实战项目_2_汽车燃油效率.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/TensorFlow2.x/实战项目_3_优化_过拟合和欠拟合.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://pytorch.apachecn.org/docs/TensorFlow2.x/实战项目_4_古诗词自动生成.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+</urlset>

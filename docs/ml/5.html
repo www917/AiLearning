@@ -1,0 +1,1485 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第5章_逻辑回归 · AiLearning 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ApacheCN">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6.html" />
+    
+    
+    <link rel="prev" href="4.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"apachecn","repo":"AiLearning","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    入门须知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    机器学习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    第1章_基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    第2章_K近邻算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    第3章_决策树算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    第4章_朴素贝叶斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    第5章_逻辑回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    第6章_支持向量机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    第7章_集成方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    第8章_回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    第9章_树回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    第10章_KMeans聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    第11章_Apriori算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    第12章_FP-growth算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    第13章_PCA降维
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="14.html">
+            
+                <a href="14.html">
+            
+                    
+                    第14章_SVD简化数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="15.html">
+            
+                <a href="15.html">
+            
+                    
+                    第15章_大数据与MapReduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="16.html">
+            
+                <a href="16.html">
+            
+                    
+                    第16章_推荐系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../why-to-record-study-ml-video.html">
+            
+                <a href="../why-to-record-study-ml-video.html">
+            
+                    
+                    为何录制教学版视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../report/2017-04-08.html">
+            
+                <a href="../report/2017-04-08.html">
+            
+                    
+                    2017-04-08_第一期的总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    深度学习入门
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../dl/反向传递.html">
+            
+                <a href="../dl/反向传递.html">
+            
+                    
+                    反向传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../dl/CNN原理.html">
+            
+                <a href="../dl/CNN原理.html">
+            
+                    
+                    CNN原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../dl/RNN原理.html">
+            
+                <a href="../dl/RNN原理.html">
+            
+                    
+                    RNN原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../dl/LSTM原理.html">
+            
+                <a href="../dl/LSTM原理.html">
+            
+                    
+                    LSTM原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    自然语言处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../nlp/1.入门介绍.html">
+            
+                <a href="../nlp/1.入门介绍.html">
+            
+                    
+                    第1章_入门介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../nlp/2.分词.html">
+            
+                <a href="../nlp/2.分词.html">
+            
+                    
+                    第2章_分词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../nlp/3.命名实体识别.html">
+            
+                <a href="../nlp/3.命名实体识别.html">
+            
+                    
+                    第3章_命名实体识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../nlp/3.1.篇章分析-内容概述.html">
+            
+                <a href="../nlp/3.1.篇章分析-内容概述.html">
+            
+                    
+                    第10章_篇章分析-内容概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../nlp/3.2.篇章分析-内容标签.html">
+            
+                <a href="../nlp/3.2.篇章分析-内容标签.html">
+            
+                    
+                    第10章_篇章分析-内容标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../nlp/3.3.篇章分析-情感分析.html">
+            
+                <a href="../nlp/3.3.篇章分析-情感分析.html">
+            
+                    
+                    第10章_篇章分析-情感分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../nlp/3.4.篇章分析-自动摘要.html">
+            
+                <a href="../nlp/3.4.篇章分析-自动摘要.html">
+            
+                    
+                    第10章_篇章分析-自动摘要
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    TensorFlow 2.0 - 教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../TensorFlow2.x/安装指南.html">
+            
+                <a href="../TensorFlow2.x/安装指南.html">
+            
+                    
+                    安装指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../TensorFlow2.x/Keras快速入门.html">
+            
+                <a href="../TensorFlow2.x/Keras快速入门.html">
+            
+                    
+                    Kears 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../TensorFlow2.x/实战项目_1_电影情感分类.html">
+            
+                <a href="../TensorFlow2.x/实战项目_1_电影情感分类.html">
+            
+                    
+                    实战项目 1 电影情感分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../TensorFlow2.x/实战项目_2_汽车燃油效率.html">
+            
+                <a href="../TensorFlow2.x/实战项目_2_汽车燃油效率.html">
+            
+                    
+                    实战项目 2 汽车燃油效率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../TensorFlow2.x/实战项目_3_优化_过拟合和欠拟合.html">
+            
+                <a href="../TensorFlow2.x/实战项目_3_优化_过拟合和欠拟合.html">
+            
+                    
+                    实战项目 3 优化 过拟合和欠拟合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../TensorFlow2.x/实战项目_4_古诗词自动生成.html">
+            
+                <a href="../TensorFlow2.x/实战项目_4_古诗词自动生成.html">
+            
+                    
+                    实战项目 4 古诗词自动生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >第5章_逻辑回归</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;5&#x7AE0;-logistic&#x56DE;&#x5F52;">&#x7B2C;5&#x7AE0; Logistic&#x56DE;&#x5F52;</h1>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LogisticRegression_headPage_xy.png" alt="&#x6734;&#x7D20;&#x8D1D;&#x53F6;&#x65AF;_&#x9996;&#x9875;" title="Logistic&#x56DE;&#x5F52;&#x9996;&#x9875;"></p>
+<h2 id="logistic-&#x56DE;&#x5F52;-&#x6982;&#x8FF0;">Logistic &#x56DE;&#x5F52; &#x6982;&#x8FF0;</h2>
+<p><code>Logistic &#x56DE;&#x5F52; &#x6216;&#x8005;&#x53EB;&#x903B;&#x8F91;&#x56DE;&#x5F52; &#x867D;&#x7136;&#x540D;&#x5B57;&#x6709;&#x56DE;&#x5F52;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x662F;&#x7528;&#x6765;&#x505A;&#x5206;&#x7C7B;&#x7684;&#x3002;&#x5176;&#x4E3B;&#x8981;&#x601D;&#x60F3;&#x662F;: &#x6839;&#x636E;&#x73B0;&#x6709;&#x6570;&#x636E;&#x5BF9;&#x5206;&#x7C7B;&#x8FB9;&#x754C;&#x7EBF;(Decision Boundary)&#x5EFA;&#x7ACB;&#x56DE;&#x5F52;&#x516C;&#x5F0F;&#xFF0C;&#x4EE5;&#x6B64;&#x8FDB;&#x884C;&#x5206;&#x7C7B;&#x3002;</code></p>
+<h2 id="&#x987B;&#x77E5;&#x6982;&#x5FF5;">&#x987B;&#x77E5;&#x6982;&#x5FF5;</h2>
+<h3 id="sigmoid-&#x51FD;&#x6570;">Sigmoid &#x51FD;&#x6570;</h3>
+<h4 id="&#x56DE;&#x5F52;-&#x6982;&#x5FF5;">&#x56DE;&#x5F52; &#x6982;&#x5FF5;</h4>
+<p>&#x5047;&#x8BBE;&#x73B0;&#x5728;&#x6709;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x4E00;&#x6761;&#x76F4;&#x7EBF;&#x5BF9;&#x8FD9;&#x4E9B;&#x70B9;&#x8FDB;&#x884C;&#x62DF;&#x5408;&#xFF08;&#x8FD9;&#x6761;&#x76F4;&#x7EBF;&#x79F0;&#x4E3A;&#x6700;&#x4F73;&#x62DF;&#x5408;&#x76F4;&#x7EBF;&#xFF09;&#xFF0C;&#x8FD9;&#x4E2A;&#x62DF;&#x5408;&#x7684;&#x8FC7;&#x7A0B;&#x5C31;&#x53EB;&#x505A;&#x56DE;&#x5F52;&#x3002;&#x8FDB;&#x800C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5BF9;&#x8FD9;&#x4E9B;&#x70B9;&#x7684;&#x62DF;&#x5408;&#x76F4;&#x7EBF;&#x65B9;&#x7A0B;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x56DE;&#x5F52;&#x65B9;&#x7A0B;&#xFF0C;&#x600E;&#x4E48;&#x8FDB;&#x884C;&#x5206;&#x7C7B;&#x5462;&#xFF1F;&#x8BF7;&#x770B;&#x4E0B;&#x9762;&#x3002;</p>
+<h4 id="&#x4E8C;&#x503C;&#x578B;&#x8F93;&#x51FA;&#x5206;&#x7C7B;&#x51FD;&#x6570;">&#x4E8C;&#x503C;&#x578B;&#x8F93;&#x51FA;&#x5206;&#x7C7B;&#x51FD;&#x6570;</h4>
+<p>&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x662F;: &#x80FD;&#x63A5;&#x53D7;&#x6240;&#x6709;&#x7684;&#x8F93;&#x5165;&#x7136;&#x540E;&#x9884;&#x6D4B;&#x51FA;&#x7C7B;&#x522B;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x4E24;&#x4E2A;&#x7C7B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E0A;&#x8FF0;&#x51FD;&#x6570;&#x8F93;&#x51FA; 0 &#x6216; 1.&#x6216;&#x8BB8;&#x4F60;&#x4E4B;&#x524D;&#x63A5;&#x89E6;&#x8FC7;&#x5177;&#x6709;&#x8FD9;&#x79CD;&#x6027;&#x8D28;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x79F0;&#x4E3A; <code>&#x6D77;&#x7EF4;&#x585E;&#x5F97;&#x9636;&#x8DC3;&#x51FD;&#x6570;(Heaviside step function)</code>&#xFF0C;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x79F0;&#x4E3A; <code>&#x5355;&#x4F4D;&#x9636;&#x8DC3;&#x51FD;&#x6570;</code>&#x3002;&#x7136;&#x800C;&#xFF0C;&#x6D77;&#x7EF4;&#x585E;&#x5F97;&#x9636;&#x8DC3;&#x51FD;&#x6570;&#x7684;&#x95EE;&#x9898;&#x5728;&#x4E8E;: &#x8BE5;&#x51FD;&#x6570;&#x5728;&#x8DF3;&#x8DC3;&#x70B9;&#x4E0A;&#x4ECE; 0 &#x77AC;&#x95F4;&#x8DF3;&#x8DC3;&#x5230; 1&#xFF0C;&#x8FD9;&#x4E2A;&#x77AC;&#x95F4;&#x8DF3;&#x8DC3;&#x8FC7;&#x7A0B;&#x6709;&#x65F6;&#x5F88;&#x96BE;&#x5904;&#x7406;&#x3002;&#x5E78;&#x597D;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4E5F;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x6027;&#x8D28;&#xFF08;&#x53EF;&#x4EE5;&#x8F93;&#x51FA; 0 &#x6216;&#x8005; 1 &#x7684;&#x6027;&#x8D28;&#xFF09;&#xFF0C;&#x4E14;&#x6570;&#x5B66;&#x4E0A;&#x66F4;&#x6613;&#x5904;&#x7406;&#xFF0C;&#x8FD9;&#x5C31;&#x662F; Sigmoid &#x51FD;&#x6570;&#x3002; Sigmoid &#x51FD;&#x6570;&#x5177;&#x4F53;&#x7684;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x5982;&#x4E0B;: </p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_1.png" alt="Sigmoid &#x51FD;&#x6570;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;"></p>
+<p>&#x4E0B;&#x56FE;&#x7ED9;&#x51FA;&#x4E86; Sigmoid &#x51FD;&#x6570;&#x5728;&#x4E0D;&#x540C;&#x5750;&#x6807;&#x5C3A;&#x5EA6;&#x4E0B;&#x7684;&#x4E24;&#x6761;&#x66F2;&#x7EBF;&#x56FE;&#x3002;&#x5F53; x &#x4E3A; 0 &#x65F6;&#xFF0C;Sigmoid &#x51FD;&#x6570;&#x503C;&#x4E3A; 0.5 &#x3002;&#x968F;&#x7740; x &#x7684;&#x589E;&#x5927;&#xFF0C;&#x5BF9;&#x5E94;&#x7684; Sigmoid &#x503C;&#x5C06;&#x903C;&#x8FD1;&#x4E8E; 1 ; &#x800C;&#x968F;&#x7740; x &#x7684;&#x51CF;&#x5C0F;&#xFF0C; Sigmoid &#x503C;&#x5C06;&#x903C;&#x8FD1;&#x4E8E; 0 &#x3002;&#x5982;&#x679C;&#x6A2A;&#x5750;&#x6807;&#x523B;&#x5EA6;&#x8DB3;&#x591F;&#x5927;&#xFF0C; Sigmoid &#x51FD;&#x6570;&#x770B;&#x8D77;&#x6765;&#x5F88;&#x50CF;&#x4E00;&#x4E2A;&#x9636;&#x8DC3;&#x51FD;&#x6570;&#x3002;</p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_3.png" alt="Sigmoid &#x51FD;&#x6570;&#x5728;&#x4E0D;&#x540C;&#x5750;&#x6807;&#x4E0B;&#x7684;&#x56FE;&#x7247;"></p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0; Logistic &#x56DE;&#x5F52;&#x5206;&#x7C7B;&#x5668;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x6BCF;&#x4E2A;&#x7279;&#x5F81;&#x4E0A;&#x90FD;&#x4E58;&#x4EE5;&#x4E00;&#x4E2A;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#xFF08;&#x5982;&#x4E0B;&#x516C;&#x5F0F;&#x6240;&#x793A;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x6240;&#x6709;&#x7ED3;&#x679C;&#x503C;&#x76F8;&#x52A0;&#xFF0C;&#x5C06;&#x8FD9;&#x4E2A;&#x603B;&#x548C;&#x4EE3;&#x5165; Sigmoid &#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x8FDB;&#x800C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x8303;&#x56F4;&#x5728; 0~1 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x503C;&#x3002;&#x4EFB;&#x4F55;&#x5927;&#x4E8E; 0.5 &#x7684;&#x6570;&#x636E;&#x88AB;&#x5206;&#x5165; 1 &#x7C7B;&#xFF0C;&#x5C0F;&#x4E8E; 0.5 &#x5373;&#x88AB;&#x5F52;&#x5165; 0 &#x7C7B;&#x3002;&#x6240;&#x4EE5;&#xFF0C;Logistic &#x56DE;&#x5F52;&#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x6982;&#x7387;&#x4F30;&#x8BA1;&#xFF0C;&#x6BD4;&#x5982;&#x8FD9;&#x91CC;Sigmoid &#x51FD;&#x6570;&#x5F97;&#x51FA;&#x7684;&#x503C;&#x4E3A;0.5&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x7ED9;&#x5B9A;&#x6570;&#x636E;&#x548C;&#x53C2;&#x6570;&#xFF0C;&#x6570;&#x636E;&#x88AB;&#x5206;&#x5165; 1 &#x7C7B;&#x7684;&#x6982;&#x7387;&#x4E3A;0.5&#x3002;&#x60F3;&#x5BF9;Sigmoid &#x51FD;&#x6570;&#x6709;&#x66F4;&#x591A;&#x4E86;&#x89E3;&#xFF0C;&#x53EF;&#x4EE5;&#x70B9;&#x5F00;<a href="https://www.desmos.com/calculator/bgontvxotm" target="_blank">&#x6B64;&#x94FE;&#x63A5;</a>&#x8DDF;&#x6B64;&#x51FD;&#x6570;&#x4E92;&#x52A8;&#x3002;</p>
+<h3 id="&#x57FA;&#x4E8E;&#x6700;&#x4F18;&#x5316;&#x65B9;&#x6CD5;&#x7684;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x786E;&#x5B9A;">&#x57FA;&#x4E8E;&#x6700;&#x4F18;&#x5316;&#x65B9;&#x6CD5;&#x7684;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x786E;&#x5B9A;</h3>
+<p>Sigmoid &#x51FD;&#x6570;&#x7684;&#x8F93;&#x5165;&#x8BB0;&#x4E3A; z &#xFF0C;&#x7531;&#x4E0B;&#x9762;&#x516C;&#x5F0F;&#x5F97;&#x5230;: </p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_2.png" alt="Sigmoid &#x51FD;&#x6570;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;"></p>
+<p>&#x5982;&#x679C;&#x91C7;&#x7528;&#x5411;&#x91CF;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x4E0A;&#x8FF0;&#x516C;&#x5F0F;&#x53EF;&#x4EE5;&#x5199;&#x6210; <img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_4.png" alt="Sigmoid &#x51FD;&#x6570;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x5411;&#x91CF;&#x5F62;&#x5F0F;"> &#xFF0C;&#x5B83;&#x8868;&#x793A;&#x5C06;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x503C;&#x5411;&#x91CF;&#x5BF9;&#x5E94;&#x5143;&#x7D20;&#x76F8;&#x4E58;&#x7136;&#x540E;&#x5168;&#x90E8;&#x52A0;&#x8D77;&#x6765;&#x5373;&#x5F97;&#x5230; z &#x503C;&#x3002;&#x5176;&#x4E2D;&#x7684;&#x5411;&#x91CF; x &#x662F;&#x5206;&#x7C7B;&#x5668;&#x7684;&#x8F93;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x5411;&#x91CF; w &#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x627E;&#x5230;&#x7684;&#x6700;&#x4F73;&#x53C2;&#x6570;&#xFF08;&#x7CFB;&#x6570;&#xFF09;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x5F97;&#x5206;&#x7C7B;&#x5668;&#x5C3D;&#x53EF;&#x80FD;&#x5730;&#x7CBE;&#x786E;&#x3002;&#x4E3A;&#x4E86;&#x5BFB;&#x627E;&#x8BE5;&#x6700;&#x4F73;&#x53C2;&#x6570;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x6700;&#x4F18;&#x5316;&#x7406;&#x8BBA;&#x7684;&#x4E00;&#x4E9B;&#x77E5;&#x8BC6;&#x3002;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x2014;&#x2014;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x6CD5;&#xFF08;Gradient Ascent&#xFF09;&#x3002;</p>
+<h3 id="&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x6CD5;">&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x6CD5;</h3>
+<h4 id="&#x68AF;&#x5EA6;&#x7684;&#x4ECB;&#x7ECD;">&#x68AF;&#x5EA6;&#x7684;&#x4ECB;&#x7ECD;</h4>
+<p>&#x9700;&#x8981;&#x4E00;&#x70B9;&#x70B9;&#x5411;&#x91CF;&#x65B9;&#x9762;&#x7684;&#x6570;&#x5B66;&#x77E5;&#x8BC6;</p>
+<pre><code>&#x5411;&#x91CF; = &#x503C; + &#x65B9;&#x5411;  
+&#x68AF;&#x5EA6; = &#x5411;&#x91CF;
+&#x68AF;&#x5EA6; = &#x68AF;&#x5EA6;&#x503C; + &#x68AF;&#x5EA6;&#x65B9;&#x5411;
+</code></pre><h4 id="&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x6CD5;&#x7684;&#x601D;&#x60F3;">&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x6CD5;&#x7684;&#x601D;&#x60F3;</h4>
+<p>&#x8981;&#x627E;&#x5230;&#x67D0;&#x51FD;&#x6570;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x6700;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x6CBF;&#x7740;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x68AF;&#x5EA6;&#x65B9;&#x5411;&#x63A2;&#x5BFB;&#x3002;&#x5982;&#x679C;&#x68AF;&#x5EA6;&#x8BB0;&#x4E3A; &#x25BD; &#xFF0C;&#x5219;&#x51FD;&#x6570; f(x, y) &#x7684;&#x68AF;&#x5EA6;&#x7531;&#x4E0B;&#x5F0F;&#x8868;&#x793A;: </p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_5.png" alt="&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;"></p>
+<p>&#x8FD9;&#x4E2A;&#x68AF;&#x5EA6;&#x610F;&#x5473;&#x7740;&#x8981;&#x6CBF; x &#x7684;&#x65B9;&#x5411;&#x79FB;&#x52A8; <img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_6.png" alt="f(x, y)&#x5BF9;x&#x6C42;&#x504F;&#x5BFC;"> &#xFF0C;&#x6CBF; y &#x7684;&#x65B9;&#x5411;&#x79FB;&#x52A8; <img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_7.png" alt="f(x, y)&#x5BF9;y&#x6C42;&#x504F;&#x5BFC;"> &#x3002;&#x5176;&#x4E2D;&#xFF0C;&#x51FD;&#x6570;f(x, y) &#x5FC5;&#x987B;&#x8981;&#x5728;&#x5F85;&#x8BA1;&#x7B97;&#x7684;&#x70B9;&#x4E0A;&#x6709;&#x5B9A;&#x4E49;&#x5E76;&#x4E14;&#x53EF;&#x5FAE;&#x3002;&#x4E0B;&#x56FE;&#x662F;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_8.png" alt="&#x68AF;&#x5EA6;&#x4E0A;&#x5347;"></p>
+<p>&#x4E0A;&#x56FE;&#x5C55;&#x793A;&#x7684;&#xFF0C;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#x5230;&#x8FBE;&#x6BCF;&#x4E2A;&#x70B9;&#x540E;&#x90FD;&#x4F1A;&#x91CD;&#x65B0;&#x4F30;&#x8BA1;&#x79FB;&#x52A8;&#x7684;&#x65B9;&#x5411;&#x3002;&#x4ECE; P0 &#x5F00;&#x59CB;&#xFF0C;&#x8BA1;&#x7B97;&#x5B8C;&#x8BE5;&#x70B9;&#x7684;&#x68AF;&#x5EA6;&#xFF0C;&#x51FD;&#x6570;&#x5C31;&#x6839;&#x636E;&#x68AF;&#x5EA6;&#x79FB;&#x52A8;&#x5230;&#x4E0B;&#x4E00;&#x70B9; P1&#x3002;&#x5728; P1 &#x70B9;&#xFF0C;&#x68AF;&#x5EA6;&#x518D;&#x6B21;&#x88AB;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#xFF0C;&#x5E76;&#x6CBF;&#x7740;&#x65B0;&#x7684;&#x68AF;&#x5EA6;&#x65B9;&#x5411;&#x79FB;&#x52A8;&#x5230; P2 &#x3002;&#x5982;&#x6B64;&#x5FAA;&#x73AF;&#x8FED;&#x4EE3;&#xFF0C;&#x76F4;&#x5230;&#x6EE1;&#x8DB3;&#x505C;&#x6B62;&#x6761;&#x4EF6;&#x3002;&#x8FED;&#x4EE3;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x68AF;&#x5EA6;&#x7B97;&#x5B50;&#x603B;&#x662F;&#x4FDD;&#x8BC1;&#x6211;&#x4EEC;&#x80FD;&#x9009;&#x53D6;&#x5230;&#x6700;&#x4F73;&#x7684;&#x79FB;&#x52A8;&#x65B9;&#x5411;&#x3002;</p>
+<p>&#x4E0A;&#x56FE;&#x4E2D;&#x7684;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#x6CBF;&#x68AF;&#x5EA6;&#x65B9;&#x5411;&#x79FB;&#x52A8;&#x4E86;&#x4E00;&#x6B65;&#x3002;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x68AF;&#x5EA6;&#x7B97;&#x5B50;&#x603B;&#x662F;&#x6307;&#x5411;&#x51FD;&#x6570;&#x503C;&#x589E;&#x957F;&#x6700;&#x5FEB;&#x7684;&#x65B9;&#x5411;&#x3002;&#x8FD9;&#x91CC;&#x6240;&#x8BF4;&#x7684;&#x662F;&#x79FB;&#x52A8;&#x65B9;&#x5411;&#xFF0C;&#x800C;&#x672A;&#x63D0;&#x5230;&#x79FB;&#x52A8;&#x91CF;&#x7684;&#x5927;&#x5C0F;&#x3002;&#x8BE5;&#x91CF;&#x503C;&#x79F0;&#x4E3A;&#x6B65;&#x957F;&#xFF0C;&#x8BB0;&#x4F5C; &#x3B1; &#x3002;&#x7528;&#x5411;&#x91CF;&#x6765;&#x8868;&#x793A;&#x7684;&#x8BDD;&#xFF0C;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#x7684;&#x8FED;&#x4EE3;&#x516C;&#x5F0F;&#x5982;&#x4E0B;: </p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_9.png" alt="&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x8FED;&#x4EE3;&#x516C;&#x5F0F;"></p>
+<p>&#x8BE5;&#x516C;&#x5F0F;&#x5C06;&#x4E00;&#x76F4;&#x88AB;&#x8FED;&#x4EE3;&#x6267;&#x884C;&#xFF0C;&#x76F4;&#x81F3;&#x8FBE;&#x5230;&#x67D0;&#x4E2A;&#x505C;&#x6B62;&#x6761;&#x4EF6;&#x4E3A;&#x6B62;&#xFF0C;&#x6BD4;&#x5982;&#x8FED;&#x4EE3;&#x6B21;&#x6570;&#x8FBE;&#x5230;&#x67D0;&#x4E2A;&#x6307;&#x5B9A;&#x503C;&#x6216;&#x8005;&#x7B97;&#x6CD5;&#x8FBE;&#x5230;&#x67D0;&#x4E2A;&#x53EF;&#x4EE5;&#x5141;&#x8BB8;&#x7684;&#x8BEF;&#x5DEE;&#x8303;&#x56F4;&#x3002;</p>
+<p>&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x51E0;&#x4E2A;&#x76F8;&#x5173;&#x7684;&#x6982;&#x5FF5;: </p>
+<pre><code>&#x4F8B;&#x5982;: y = w0 + w1x1 + w2x2 + ... + wnxn
+&#x68AF;&#x5EA6;: &#x53C2;&#x8003;&#x4E0A;&#x56FE;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4E8C;&#x7EF4;&#x56FE;&#x50CF;&#xFF0C;x&#x65B9;&#x5411;&#x4EE3;&#x8868;&#x7B2C;&#x4E00;&#x4E2A;&#x7CFB;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; w1&#xFF0C;y&#x65B9;&#x5411;&#x4EE3;&#x8868;&#x7B2C;&#x4E8C;&#x4E2A;&#x7CFB;&#x6570;&#x4E5F;&#x5C31;&#x662F; w2&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x5411;&#x91CF;&#x5C31;&#x662F;&#x68AF;&#x5EA6;&#x3002;
+&#x3B1;: &#x4E0A;&#x9762;&#x7684;&#x68AF;&#x5EA6;&#x7B97;&#x6CD5;&#x7684;&#x8FED;&#x4EE3;&#x516C;&#x5F0F;&#x4E2D;&#x7684;&#x963F;&#x5C14;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x79FB;&#x52A8;&#x6B65;&#x957F;&#xFF08;step length&#xFF09;&#x3002;&#x79FB;&#x52A8;&#x6B65;&#x957F;&#x4F1A;&#x5F71;&#x54CD;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x7684;&#x62DF;&#x5408;&#x7A0B;&#x5EA6;&#xFF0C;&#x6700;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x968F;&#x7740;&#x8FED;&#x4EE3;&#x6B21;&#x6570;&#x66F4;&#x6539;&#x79FB;&#x52A8;&#x6B65;&#x957F;&#x3002;
+&#x6B65;&#x957F;&#x901A;&#x4FD7;&#x7684;&#x7406;&#x89E3;&#xFF0C;100&#x7C73;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4E00;&#x6B65;&#x8D70;10&#x7C73;&#xFF0C;&#x6211;&#x9700;&#x8981;&#x8D70;10&#x6B65;&#xFF1B;&#x5982;&#x679C;&#x4E00;&#x6B65;&#x8D70;20&#x7C73;&#xFF0C;&#x6211;&#x53EA;&#x9700;&#x8981;&#x8D70;5&#x6B65;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x4E00;&#x6B65;&#x8D70;&#x591A;&#x5C11;&#x7C73;&#x5C31;&#x662F;&#x6B65;&#x957F;&#x7684;&#x610F;&#x601D;&#x3002;
+&#x25BD;f(w): &#x4EE3;&#x8868;&#x6CBF;&#x7740;&#x68AF;&#x5EA6;&#x53D8;&#x5316;&#x7684;&#x65B9;&#x5411;&#x3002;
+</code></pre><p>   &#x95EE;: &#x6709;&#x4EBA;&#x4F1A;&#x597D;&#x5947;&#x4E3A;&#x4EC0;&#x4E48;&#x6709;&#x4E9B;&#x4E66;&#x7C4D;&#x4E0A;&#x8BF4;&#x7684;&#x662F;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6CD5;&#xFF08;Gradient Decent&#xFF09;?</p>
+<p>   &#x7B54;:  &#x5176;&#x5B9E;&#x8FD9;&#x4E2A;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5728;&#x6B64;&#x60C5;&#x51B5;&#x4E0B;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;&#x5173;&#x952E;&#x5728;&#x4E8E;&#x4EE3;&#x4EF7;&#x51FD;&#x6570;&#xFF08;cost function&#xFF09;&#x6216;&#x8005;&#x53EB;&#x76EE;&#x6807;&#x51FD;&#x6570;&#xFF08;objective function&#xFF09;&#x3002;&#x5982;&#x679C;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x662F;&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x6700;&#x5C0F;&#x5316;&#x635F;&#x5931;&#x51FD;&#x6570;&#x6765;&#x6C42;&#x51FD;&#x6570;&#x7684;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x5C31;&#x7528;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x3002; &#x5982;&#x679C;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x662F;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#xFF08;Likelihood function&#xFF09;&#xFF0C;&#x5C31;&#x662F;&#x8981;&#x6700;&#x5927;&#x5316;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#x6765;&#x6C42;&#x51FD;&#x6570;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x90A3;&#x5C31;&#x7528;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x3002;&#x5728;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x4E2D;&#xFF0C; &#x635F;&#x5931;&#x51FD;&#x6570;&#x548C;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#x65E0;&#x975E;&#x5C31;&#x662F;&#x4E92;&#x4E3A;&#x6B63;&#x8D1F;&#x5173;&#x7CFB;&#x3002;</p>
+<p>   &#x53EA;&#x9700;&#x8981;&#x5728;&#x8FED;&#x4EE3;&#x516C;&#x5F0F;&#x4E2D;&#x7684;&#x52A0;&#x6CD5;&#x53D8;&#x6210;&#x51CF;&#x6CD5;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x516C;&#x5F0F;&#x53EF;&#x4EE5;&#x5199;&#x6210;</p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_10.png" alt="&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x8FED;&#x4EE3;&#x516C;&#x5F0F;"></p>
+<p><strong>&#x5C40;&#x90E8;&#x6700;&#x4F18;&#x73B0;&#x8C61; &#xFF08;Local Optima&#xFF09;</strong></p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_20.png" alt="&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x56FE;_4"></p>
+<p>&#x4E0A;&#x56FE;&#x8868;&#x793A;&#x53C2;&#x6570; &#x3B8; &#x4E0E;&#x8BEF;&#x5DEE;&#x51FD;&#x6570; J(&#x3B8;) &#x7684;&#x5173;&#x7CFB;&#x56FE; (&#x8FD9;&#x91CC;&#x7684;&#x8BEF;&#x5DEE;&#x51FD;&#x6570;&#x662F;&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x6700;&#x5C0F;&#x5316;&#x635F;&#x5931;&#x51FD;&#x6570;)&#xFF0C;&#x7EA2;&#x8272;&#x7684;&#x90E8;&#x5206;&#x662F;&#x8868;&#x793A; J(&#x3B8;) &#x6709;&#x7740;&#x6BD4;&#x8F83;&#x9AD8;&#x7684;&#x53D6;&#x503C;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x662F;&#xFF0C;&#x80FD;&#x591F;&#x8BA9; J(&#x3B8;) &#x7684;&#x503C;&#x5C3D;&#x91CF;&#x7684;&#x4F4E;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x6DF1;&#x84DD;&#x8272;&#x7684;&#x90E8;&#x5206;&#x3002;&#x3B8;0&#xFF0C;&#x3B8;1 &#x8868;&#x793A; &#x3B8; &#x5411;&#x91CF;&#x7684;&#x4E24;&#x4E2A;&#x7EF4;&#x5EA6;&#xFF08;&#x6B64;&#x5904;&#x7684;&#x3B8;0&#xFF0C;&#x3B8;1&#x662F;x0&#x548C;x1&#x7684;&#x7CFB;&#x6570;&#xFF0C;&#x4E5F;&#x5BF9;&#x5E94;&#x7684;&#x662F;&#x4E0A;&#x6587;w0&#x548C;w1&#xFF09;&#x3002;</p>
+<p>&#x53EF;&#x80FD;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7684;&#x6700;&#x7EC8;&#x70B9;&#x5E76;&#x975E;&#x662F;&#x5168;&#x5C40;&#x6700;&#x5C0F;&#x70B9;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x5C40;&#x90E8;&#x6700;&#x5C0F;&#x70B9;&#xFF0C;&#x5982;&#x6211;&#x4EEC;&#x4E0A;&#x56FE;&#x4E2D;&#x7684;&#x53F3;&#x8FB9;&#x7684;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x66F2;&#x7EBF;&#xFF0C;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x6700;&#x7EC8;&#x5230;&#x8FBE;&#x4E00;&#x4E2A;&#x5C40;&#x90E8;&#x6700;&#x5C0F;&#x70B9;&#xFF0C;&#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x91CD;&#x65B0;&#x9009;&#x62E9;&#x4E86;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x70B9;&#x5F97;&#x5230;&#x7684;&#x3002;</p>
+<p>&#x770B;&#x6765;&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x5C06;&#x4F1A;&#x5728;&#x5F88;&#x5927;&#x7684;&#x7A0B;&#x5EA6;&#x4E0A;&#x88AB;&#x521D;&#x59CB;&#x70B9;&#x7684;&#x9009;&#x62E9;&#x5F71;&#x54CD;&#x800C;&#x9677;&#x5165;&#x5C40;&#x90E8;&#x6700;&#x5C0F;&#x70B9;&#x3002;</p>
+<h2 id="logistic-&#x56DE;&#x5F52;-&#x539F;&#x7406;">Logistic &#x56DE;&#x5F52; &#x539F;&#x7406;</h2>
+<h3 id="logistic-&#x56DE;&#x5F52;-&#x5DE5;&#x4F5C;&#x539F;&#x7406;">Logistic &#x56DE;&#x5F52; &#x5DE5;&#x4F5C;&#x539F;&#x7406;</h3>
+<pre><code>&#x6BCF;&#x4E2A;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x521D;&#x59CB;&#x5316;&#x4E3A; 1
+&#x91CD;&#x590D; R &#x6B21;:
+    &#x8BA1;&#x7B97;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x7684;&#x68AF;&#x5EA6;
+    &#x4F7F;&#x7528; &#x6B65;&#x957F; x &#x68AF;&#x5EA6; &#x66F4;&#x65B0;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x7684;&#x5411;&#x91CF;
+&#x8FD4;&#x56DE;&#x56DE;&#x5F52;&#x7CFB;&#x6570;
+</code></pre><h3 id="logistic-&#x56DE;&#x5F52;-&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">Logistic &#x56DE;&#x5F52; &#x5F00;&#x53D1;&#x6D41;&#x7A0B;</h3>
+<pre><code>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x91C7;&#x7528;&#x4EFB;&#x610F;&#x65B9;&#x6CD5;&#x6536;&#x96C6;&#x6570;&#x636E;
+&#x51C6;&#x5907;&#x6570;&#x636E;: &#x7531;&#x4E8E;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8DDD;&#x79BB;&#x8BA1;&#x7B97;&#xFF0C;&#x56E0;&#x6B64;&#x8981;&#x6C42;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E3A;&#x6570;&#x503C;&#x578B;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5219;&#x6700;&#x4F73;&#x3002;
+&#x5206;&#x6790;&#x6570;&#x636E;: &#x91C7;&#x7528;&#x4EFB;&#x610F;&#x65B9;&#x6CD5;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;
+&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: &#x5927;&#x90E8;&#x5206;&#x65F6;&#x95F4;&#x5C06;&#x7528;&#x4E8E;&#x8BAD;&#x7EC3;&#xFF0C;&#x8BAD;&#x7EC3;&#x7684;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x627E;&#x5230;&#x6700;&#x4F73;&#x7684;&#x5206;&#x7C7B;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x3002;
+&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x4E00;&#x65E6;&#x8BAD;&#x7EC3;&#x6B65;&#x9AA4;&#x5B8C;&#x6210;&#xFF0C;&#x5206;&#x7C7B;&#x5C06;&#x4F1A;&#x5F88;&#x5FEB;&#x3002;
+&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8F93;&#x5165;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x503C;&#xFF1B;&#x63A5;&#x7740;&#xFF0C;&#x57FA;&#x4E8E;&#x8BAD;&#x7EC3;&#x597D;&#x7684;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x5BF9;&#x8FD9;&#x4E9B;&#x6570;&#x503C;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x7684;&#x56DE;&#x5F52;&#x8BA1;&#x7B97;&#xFF0C;&#x5224;&#x5B9A;&#x5B83;&#x4EEC;&#x5C5E;&#x4E8E;&#x54EA;&#x4E2A;&#x7C7B;&#x522B;&#xFF1B;&#x5728;&#x8FD9;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x8F93;&#x51FA;&#x7684;&#x7C7B;&#x522B;&#x4E0A;&#x505A;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x5206;&#x6790;&#x5DE5;&#x4F5C;&#x3002;
+</code></pre><h3 id="logistic-&#x56DE;&#x5F52;-&#x7B97;&#x6CD5;&#x7279;&#x70B9;">Logistic &#x56DE;&#x5F52; &#x7B97;&#x6CD5;&#x7279;&#x70B9;</h3>
+<pre><code>&#x4F18;&#x70B9;: &#x8BA1;&#x7B97;&#x4EE3;&#x4EF7;&#x4E0D;&#x9AD8;&#xFF0C;&#x6613;&#x4E8E;&#x7406;&#x89E3;&#x548C;&#x5B9E;&#x73B0;&#x3002;
+&#x7F3A;&#x70B9;: &#x5BB9;&#x6613;&#x6B20;&#x62DF;&#x5408;&#xFF0C;&#x5206;&#x7C7B;&#x7CBE;&#x5EA6;&#x53EF;&#x80FD;&#x4E0D;&#x9AD8;&#x3002;
+&#x9002;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;: &#x6570;&#x503C;&#x578B;&#x548C;&#x6807;&#x79F0;&#x578B;&#x6570;&#x636E;&#x3002;
+</code></pre><h3 id="&#x9644;&#x52A0;-&#x65B9;&#x5411;&#x5BFC;&#x6570;&#x4E0E;&#x68AF;&#x5EA6;">&#x9644;&#x52A0; &#x65B9;&#x5411;&#x5BFC;&#x6570;&#x4E0E;&#x68AF;&#x5EA6;</h3>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/&#x65B9;&#x5411;&#x5BFC;&#x6570;&#x548C;&#x68AF;&#x5EA6;.png" alt="&#x65B9;&#x5411;&#x5BFC;&#x6570;&#x4E0E;&#x68AF;&#x5EA6;"></p>
+<h2 id="logistic-&#x56DE;&#x5F52;-&#x9879;&#x76EE;&#x6848;&#x4F8B;">Logistic &#x56DE;&#x5F52; &#x9879;&#x76EE;&#x6848;&#x4F8B;</h2>
+<h3 id="&#x9879;&#x76EE;&#x6848;&#x4F8B;1-&#x4F7F;&#x7528;-logistic-&#x56DE;&#x5F52;&#x5728;&#x7B80;&#x5355;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#x7684;&#x5206;&#x7C7B;">&#x9879;&#x76EE;&#x6848;&#x4F8B;1: &#x4F7F;&#x7528; Logistic &#x56DE;&#x5F52;&#x5728;&#x7B80;&#x5355;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#x7684;&#x5206;&#x7C7B;</h3>
+<p><a href="../../src/py2.x/ml/5.Logistic/logistic.py">&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x5730;&#x5740;</a>: <a href="https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/5.Logistic/logistic.py" target="_blank">https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/5.Logistic/logistic.py</a></p>
+<h4 id="&#x9879;&#x76EE;&#x6982;&#x8FF0;">&#x9879;&#x76EE;&#x6982;&#x8FF0;</h4>
+<p>&#x5728;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#xFF0C;&#x91C7;&#x7528;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x6CD5;&#x627E;&#x5230; Logistic &#x56DE;&#x5F52;&#x5206;&#x7C7B;&#x5668;&#x5728;&#x6B64;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#x7684;&#x6700;&#x4F73;&#x56DE;&#x5F52;&#x7CFB;&#x6570;</p>
+<h4 id="&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">&#x5F00;&#x53D1;&#x6D41;&#x7A0B;</h4>
+<pre><code>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x65B9;&#x6CD5;
+&#x51C6;&#x5907;&#x6570;&#x636E;: &#x7531;&#x4E8E;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8DDD;&#x79BB;&#x8BA1;&#x7B97;&#xFF0C;&#x56E0;&#x6B64;&#x8981;&#x6C42;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E3A;&#x6570;&#x503C;&#x578B;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5219;&#x6700;&#x4F73;
+&#x5206;&#x6790;&#x6570;&#x636E;: &#x753B;&#x51FA;&#x51B3;&#x7B56;&#x8FB9;&#x754C;
+&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: &#x4F7F;&#x7528;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x627E;&#x5230;&#x6700;&#x4F73;&#x53C2;&#x6570;
+&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x4F7F;&#x7528; Logistic &#x56DE;&#x5F52;&#x8FDB;&#x884C;&#x5206;&#x7C7B;
+&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x5BF9;&#x7B80;&#x5355;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x7C7B;
+</code></pre><blockquote>
+<p>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x65B9;&#x6CD5;</p>
+</blockquote>
+<p>&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x5B58;&#x50A8;&#x5728; TestSet.txt &#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#x5982;&#x4E0B;: </p>
+<pre><code>-0.017612    14.053064    0
+-1.395634    4.662541    1
+-0.752157    6.538620    0
+-1.322371    7.152853    0
+0.423363    11.054677    0
+</code></pre><p>&#x7ED8;&#x5236;&#x5728;&#x56FE;&#x4E2D;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;: </p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_11.png" alt="&#x7B80;&#x5355;&#x6570;&#x636E;&#x96C6;&#x7ED8;&#x5236;&#x5728;&#x56FE;&#x4E0A;"></p>
+<blockquote>
+<p>&#x51C6;&#x5907;&#x6570;&#x636E;: &#x7531;&#x4E8E;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8DDD;&#x79BB;&#x8BA1;&#x7B97;&#xFF0C;&#x56E0;&#x6B64;&#x8981;&#x6C42;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E3A;&#x6570;&#x503C;&#x578B;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5219;&#x6700;&#x4F73;</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x89E3;&#x6790;&#x6570;&#x636E;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loadDataSet</span><span class="hljs-params">(file_name)</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;
+    Desc: 
+        &#x52A0;&#x8F7D;&#x5E76;&#x89E3;&#x6790;&#x6570;&#x636E;
+    Args:
+        file_name -- &#x8981;&#x89E3;&#x6790;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;
+    Returns:
+        dataMat -- &#x539F;&#x59CB;&#x6570;&#x636E;&#x7684;&#x7279;&#x5F81;
+        labelMat -- &#x539F;&#x59CB;&#x6570;&#x636E;&#x7684;&#x6807;&#x7B7E;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6BCF;&#x6761;&#x6837;&#x672C;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#x522B;&#x3002;&#x5373;&#x76EE;&#x6807;&#x5411;&#x91CF;
+    &apos;&apos;&apos;</span>
+    <span class="hljs-comment"># dataMat&#x4E3A;&#x539F;&#x59CB;&#x6570;&#x636E;&#xFF0C; labelMat&#x4E3A;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7684;&#x6807;&#x7B7E;</span>
+    dataMat = []
+    labelMat = []
+    fr = open(file_name)
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> fr.readlines():
+        lineArr = line.strip().split()
+        <span class="hljs-comment"># &#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8BA1;&#x7B97;&#xFF0C;&#x6211;&#x4EEC;&#x5C06; X0 &#x7684;&#x503C;&#x8BBE;&#x4E3A; 1.0 &#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5728;&#x6BCF;&#x4E00;&#x884C;&#x7684;&#x5F00;&#x5934;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; 1.0 &#x4F5C;&#x4E3A; X0</span>
+        dataMat.append([<span class="hljs-number">1.0</span>, float(lineArr[<span class="hljs-number">0</span>]), float(lineArr[<span class="hljs-number">1</span>])])
+        labelMat.append(int(lineArr[<span class="hljs-number">2</span>]))
+    <span class="hljs-keyword">return</span> dataMat, labelMat
+</code></pre>
+<blockquote>
+<p>&#x5206;&#x6790;&#x6570;&#x636E;: &#x91C7;&#x7528;&#x4EFB;&#x610F;&#x65B9;&#x6CD5;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x6B64;&#x5904;&#x4E0D;&#x9700;&#x8981;</p>
+<p>&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: &#x4F7F;&#x7528;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x627E;&#x5230;&#x6700;&#x4F73;&#x53C2;&#x6570;</p>
+</blockquote>
+<p>&#x5B9A;&#x4E49;sigmoid&#x9636;&#x8DC3;&#x51FD;&#x6570;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># sigmoid&#x9636;&#x8DC3;&#x51FD;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sigmoid</span><span class="hljs-params">(inX)</span>:</span>
+    <span class="hljs-comment"># return 1.0 / (1 + exp(-inX))</span>
+
+    <span class="hljs-comment"># Tanh&#x662F;Sigmoid&#x7684;&#x53D8;&#x5F62;&#xFF0C;&#x4E0E; sigmoid &#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;tanh &#x662F;0&#x5747;&#x503C;&#x7684;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;tanh &#x4F1A;&#x6BD4; sigmoid &#x66F4;&#x597D;&#x3002;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * <span class="hljs-number">1.0</span>/(<span class="hljs-number">1</span>+exp(<span class="hljs-number">-2</span>*inX)) - <span class="hljs-number">1</span>
+</code></pre>
+<p>Logistic &#x56DE;&#x5F52;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x4F18;&#x5316;&#x7B97;&#x6CD5;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x6B63;&#x5E38;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6848;</span>
+<span class="hljs-comment"># &#x4E24;&#x4E2A;&#x53C2;&#x6570;: &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;==&gt; dataMatIn &#x662F;&#x4E00;&#x4E2A;2&#x7EF4;NumPy&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x5217;&#x5206;&#x522B;&#x4EE3;&#x8868;&#x6BCF;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x7279;&#x5F81;&#xFF0C;&#x6BCF;&#x884C;&#x5219;&#x4EE3;&#x8868;&#x6BCF;&#x4E2A;&#x8BAD;&#x7EC3;&#x6837;&#x672C;&#x3002;</span>
+<span class="hljs-comment"># &#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;==&gt; classLabels &#x662F;&#x7C7B;&#x522B;&#x6807;&#x7B7E;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A; 1*100 &#x7684;&#x884C;&#x5411;&#x91CF;&#x3002;&#x4E3A;&#x4E86;&#x4FBF;&#x4E8E;&#x77E9;&#x9635;&#x8BA1;&#x7B97;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x8BE5;&#x884C;&#x5411;&#x91CF;&#x8F6C;&#x6362;&#x4E3A;&#x5217;&#x5411;&#x91CF;&#xFF0C;&#x505A;&#x6CD5;&#x662F;&#x5C06;&#x539F;&#x5411;&#x91CF;&#x8F6C;&#x7F6E;&#xFF0C;&#x518D;&#x5C06;&#x5B83;&#x8D4B;&#x503C;&#x7ED9;labelMat&#x3002;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">gradAscent</span><span class="hljs-params">(dataMatIn, classLabels)</span>:</span>
+    <span class="hljs-comment"># &#x8F6C;&#x5316;&#x4E3A;&#x77E9;&#x9635;[[1,1,2],[1,1,2]....]</span>
+    dataMatrix = mat(dataMatIn)             <span class="hljs-comment"># &#x8F6C;&#x6362;&#x4E3A; NumPy &#x77E9;&#x9635;</span>
+    <span class="hljs-comment"># &#x8F6C;&#x5316;&#x4E3A;&#x77E9;&#x9635;[[0,1,0,1,0,1.....]]&#xFF0C;&#x5E76;&#x8F6C;&#x5236;[[0],[1],[0].....]</span>
+    <span class="hljs-comment"># transpose() &#x884C;&#x5217;&#x8F6C;&#x7F6E;&#x51FD;&#x6570;</span>
+    <span class="hljs-comment"># &#x5C06;&#x884C;&#x5411;&#x91CF;&#x8F6C;&#x5316;&#x4E3A;&#x5217;&#x5411;&#x91CF;   =&gt;  &#x77E9;&#x9635;&#x7684;&#x8F6C;&#x7F6E;</span>
+    labelMat = mat(classLabels).transpose() <span class="hljs-comment"># &#x9996;&#x5148;&#x5C06;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A; NumPy &#x77E9;&#x9635;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C06;&#x884C;&#x5411;&#x91CF;&#x8F6C;&#x7F6E;&#x4E3A;&#x5217;&#x5411;&#x91CF;</span>
+    <span class="hljs-comment"># m-&gt;&#x6570;&#x636E;&#x91CF;&#xFF0C;&#x6837;&#x672C;&#x6570; n-&gt;&#x7279;&#x5F81;&#x6570;</span>
+    m,n = shape(dataMatrix)
+    <span class="hljs-comment"># print m, n, &apos;__&apos;*10, shape(dataMatrix.transpose()), &apos;__&apos;*100</span>
+    <span class="hljs-comment"># alpha&#x4EE3;&#x8868;&#x5411;&#x76EE;&#x6807;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;</span>
+    alpha = <span class="hljs-number">0.001</span>
+    <span class="hljs-comment"># &#x8FED;&#x4EE3;&#x6B21;&#x6570;</span>
+    maxCycles = <span class="hljs-number">500</span>
+    <span class="hljs-comment"># &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x548C;&#x7279;&#x5F81;&#x6570;&#x76F8;&#x540C;&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x6B64;&#x5904;n&#x4E3A;3 -&gt; [[1],[1],[1]]</span>
+    <span class="hljs-comment"># weights &#x4EE3;&#x8868;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#xFF0C; &#x6B64;&#x5904;&#x7684; ones((n,1)) &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x548C;&#x7279;&#x5F81;&#x6570;&#x76F8;&#x540C;&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x6570;&#x5168;&#x90E8;&#x90FD;&#x662F; 1</span>
+    weights = ones((n,<span class="hljs-number">1</span>))
+    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(maxCycles):              <span class="hljs-comment">#heavy on matrix operations</span>
+        <span class="hljs-comment"># m*3 &#x7684;&#x77E9;&#x9635; * 3*1 &#x7684;&#x77E9;&#x9635; &#xFF1D; m*1&#x7684;&#x77E9;&#x9635;</span>
+        <span class="hljs-comment"># &#x90A3;&#x4E48;&#x4E58;&#x4E0A;&#x77E9;&#x9635;&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x5C31;&#x4EE3;&#x8868;: &#x901A;&#x8FC7;&#x516C;&#x5F0F;&#x5F97;&#x5230;&#x7684;&#x7406;&#x8BBA;&#x503C;</span>
+        <span class="hljs-comment"># &#x53C2;&#x8003;&#x5730;&#x5740;:  &#x77E9;&#x9635;&#x4E58;&#x6CD5;&#x7684;&#x672C;&#x8D28;&#x662F;&#x4EC0;&#x4E48;&#xFF1F; https://www.zhihu.com/question/21351965/answer/31050145</span>
+        <span class="hljs-comment"># print &apos;dataMatrix====&apos;, dataMatrix </span>
+        <span class="hljs-comment"># print &apos;weights====&apos;, weights</span>
+        <span class="hljs-comment"># n*3   *  3*1  = n*1</span>
+        h = sigmoid(dataMatrix*weights)     <span class="hljs-comment"># &#x77E9;&#x9635;&#x4E58;&#x6CD5;</span>
+        <span class="hljs-comment"># print &apos;hhhhhhh====&apos;, h</span>
+        <span class="hljs-comment"># labelMat&#x662F;&#x5B9E;&#x9645;&#x503C;</span>
+        error = (labelMat - h)              <span class="hljs-comment"># &#x5411;&#x91CF;&#x76F8;&#x51CF;</span>
+        <span class="hljs-comment"># 0.001* (3*m)*(m*1) &#x8868;&#x793A;&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x5217;&#x4E0A;&#x7684;&#x4E00;&#x4E2A;&#x8BEF;&#x5DEE;&#x60C5;&#x51B5;&#xFF0C;&#x6700;&#x540E;&#x5F97;&#x51FA; x1,x2,xn&#x7684;&#x7CFB;&#x6570;&#x7684;&#x504F;&#x79FB;&#x91CF;</span>
+        weights = weights + alpha * dataMatrix.transpose() * error <span class="hljs-comment"># &#x77E9;&#x9635;&#x4E58;&#x6CD5;&#xFF0C;&#x6700;&#x540E;&#x5F97;&#x5230;&#x56DE;&#x5F52;&#x7CFB;&#x6570;</span>
+    <span class="hljs-keyword">return</span> array(weights)
+</code></pre>
+<p>&#x5927;&#x5BB6;&#x770B;&#x5230;&#x8FD9;&#x513F;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x7591;&#x60D1;&#xFF0C;&#x5C31;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x8FED;&#x4EE3;&#x4E2D;&#x66F4;&#x65B0;&#x6211;&#x4EEC;&#x7684;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#xFF0C;&#x540E;&#x8FB9;&#x7684;&#x90E8;&#x5206;&#x662F;&#x600E;&#x4E48;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x662F; alpha <em> dataMatrix.transpose() </em> error ?&#x56E0;&#x4E3A;&#x8FD9;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x6240;&#x6C42;&#x7684;&#x68AF;&#x5EA6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5BF9; f(w) &#x5BF9; w &#x6C42;&#x4E00;&#x9636;&#x5BFC;&#x6570;&#x3002;&#x5177;&#x4F53;&#x63A8;&#x5BFC;&#x5982;&#x4E0B;:</p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_21.png" alt="f(w)&#x5BF9;w&#x6C42;&#x4E00;&#x9636;&#x5BFC;&#x6570;">
+&#x53EF;&#x53C2;&#x8003;<a href="http://blog.csdn.net/achuo/article/details/51160101" target="_blank">http://blog.csdn.net/achuo/article/details/51160101</a></p>
+<p>&#x753B;&#x51FA;&#x6570;&#x636E;&#x96C6;&#x548C; Logistic &#x56DE;&#x5F52;&#x6700;&#x4F73;&#x62DF;&#x5408;&#x76F4;&#x7EBF;&#x7684;&#x51FD;&#x6570;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plotBestFit</span><span class="hljs-params">(dataArr, labelMat, weights)</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;
+        Desc:
+            &#x5C06;&#x6211;&#x4EEC;&#x5F97;&#x5230;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x5C55;&#x793A;&#x51FA;&#x6765;
+        Args:
+            dataArr:&#x6837;&#x672C;&#x6570;&#x636E;&#x7684;&#x7279;&#x5F81;
+            labelMat:&#x6837;&#x672C;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x522B;&#x6807;&#x7B7E;&#xFF0C;&#x5373;&#x76EE;&#x6807;&#x53D8;&#x91CF;
+            weights:&#x56DE;&#x5F52;&#x7CFB;&#x6570;
+        Returns:
+            None
+    &apos;&apos;&apos;</span>
+
+    n = shape(dataArr)[<span class="hljs-number">0</span>]
+    xcord1 = []; ycord1 = []
+    xcord2 = []; ycord2 = []
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n):
+        <span class="hljs-keyword">if</span> int(labelMat[i])== <span class="hljs-number">1</span>:
+            xcord1.append(dataArr[i,<span class="hljs-number">1</span>]); ycord1.append(dataArr[i,<span class="hljs-number">2</span>])
+        <span class="hljs-keyword">else</span>:
+            xcord2.append(dataArr[i,<span class="hljs-number">1</span>]); ycord2.append(dataArr[i,<span class="hljs-number">2</span>])
+    fig = plt.figure()
+    ax = fig.add_subplot(<span class="hljs-number">111</span>)
+    ax.scatter(xcord1, ycord1, s=<span class="hljs-number">30</span>, c=<span class="hljs-string">&apos;red&apos;</span>, marker=<span class="hljs-string">&apos;s&apos;</span>)
+    ax.scatter(xcord2, ycord2, s=<span class="hljs-number">30</span>, c=<span class="hljs-string">&apos;green&apos;</span>)
+    x = arange(<span class="hljs-number">-3.0</span>, <span class="hljs-number">3.0</span>, <span class="hljs-number">0.1</span>)
+    <span class="hljs-string">&quot;&quot;&quot;
+    y&#x7684;&#x7531;&#x6765;&#xFF0C;&#x5367;&#x69FD;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x6CA1;&#x770B;&#x61C2;&#xFF1F;
+    &#x9996;&#x5148;&#x7406;&#x8BBA;&#x4E0A;&#x662F;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#x7684;&#x3002;
+    dataMat.append([1.0, float(lineArr[0]), float(lineArr[1])])
+    w0*x0+w1*x1+w2*x2=f(x)
+    x0&#x6700;&#x5F00;&#x59CB;&#x5C31;&#x8BBE;&#x7F6E;&#x4E3A;1&#x53FB;&#xFF0C; x2&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x753B;&#x56FE;&#x7684;y&#x503C;&#xFF0C;&#x800C;f(x)&#x88AB;&#x6211;&#x4EEC;&#x78E8;&#x5408;&#x8BEF;&#x5DEE;&#x7ED9;&#x7B97;&#x5230;w0,w1,w2&#x8EAB;&#x4E0A;&#x53BB;&#x4E86;
+    &#x6240;&#x4EE5;:  w0+w1*x+w2*y=0 =&gt; y = (-w0-w1*x)/w2   
+    &quot;&quot;&quot;</span>
+    y = (-weights[<span class="hljs-number">0</span>]-weights[<span class="hljs-number">1</span>]*x)/weights[<span class="hljs-number">2</span>]
+    ax.plot(x, y)
+    plt.xlabel(<span class="hljs-string">&apos;X&apos;</span>); plt.ylabel(<span class="hljs-string">&apos;Y&apos;</span>)
+    plt.show()
+</code></pre>
+<blockquote>
+<p>&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x4F7F;&#x7528; Logistic &#x56DE;&#x5F52;&#x8FDB;&#x884C;&#x5206;&#x7C7B;</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">testLR</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># 1.&#x6536;&#x96C6;&#x5E76;&#x51C6;&#x5907;&#x6570;&#x636E;</span>
+    dataMat, labelMat = loadDataSet(<span class="hljs-string">&quot;data/5.Logistic/TestSet.txt&quot;</span>)
+
+    <span class="hljs-comment"># print dataMat, &apos;---\n&apos;, labelMat</span>
+    <span class="hljs-comment"># 2.&#x8BAD;&#x7EC3;&#x6A21;&#x578B;&#xFF0C;  f(x)=a1*x1+b2*x2+..+nn*xn&#x4E2D; (a1,b2, .., nn).T&#x7684;&#x77E9;&#x9635;&#x503C;</span>
+    <span class="hljs-comment"># &#x56E0;&#x4E3A;&#x6570;&#x7EC4;&#x6CA1;&#x6709;&#x662F;&#x590D;&#x5236;n&#x4EFD;&#xFF0C; array&#x7684;&#x4E58;&#x6CD5;&#x5C31;&#x662F;&#x4E58;&#x6CD5;</span>
+    dataArr = array(dataMat)
+    <span class="hljs-comment"># print dataArr</span>
+    weights = gradAscent(dataArr, labelMat)
+    <span class="hljs-comment"># weights = stocGradAscent0(dataArr, labelMat)</span>
+    <span class="hljs-comment"># weights = stocGradAscent1(dataArr, labelMat)</span>
+    <span class="hljs-comment"># print &apos;*&apos;*30, weights</span>
+
+    <span class="hljs-comment"># &#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;</span>
+    plotBestFit(dataArr, labelMat, weights)
+</code></pre>
+<blockquote>
+<p>&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x5BF9;&#x7B80;&#x5355;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x7C7B;</p>
+</blockquote>
+<h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
+<p>&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#x5728;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x65F6;&#x90FD;&#x9700;&#x8981;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5728;&#x5904;&#x7406; 100 &#x4E2A;&#x5DE6;&#x53F3;&#x7684;&#x6570;&#x636E;&#x96C6;&#x65F6;&#x5C1A;&#x53EF;&#xFF0C;&#x4F46;&#x5982;&#x679C;&#x6709;&#x6570;&#x5341;&#x4EBF;&#x6837;&#x672C;&#x548C;&#x6210;&#x5343;&#x4E0A;&#x4E07;&#x7684;&#x7279;&#x5F81;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x8BA1;&#x7B97;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x592A;&#x9AD8;&#x4E86;&#x3002;&#x4E00;&#x79CD;&#x6539;&#x8FDB;&#x65B9;&#x6CD5;&#x662F;&#x4E00;&#x6B21;&#x4EC5;&#x7528;&#x4E00;&#x4E2A;&#x6837;&#x672C;&#x70B9;&#x6765;&#x66F4;&#x65B0;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x79F0;&#x4E3A; <code>&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;</code>&#x3002;&#x7531;&#x4E8E;&#x53EF;&#x4EE5;&#x5728;&#x65B0;&#x6837;&#x672C;&#x5230;&#x6765;&#x65F6;&#x5BF9;&#x5206;&#x7C7B;&#x5668;&#x8FDB;&#x884C;&#x589E;&#x91CF;&#x5F0F;&#x66F4;&#x65B0;&#xFF0C;&#x56E0;&#x800C;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#x662F;&#x4E00;&#x4E2A;&#x5728;&#x7EBF;&#x5B66;&#x4E60;(online learning)&#x7B97;&#x6CD5;&#x3002;&#x4E0E; &#x201C;&#x5728;&#x7EBF;&#x5B66;&#x4E60;&#x201D; &#x76F8;&#x5BF9;&#x5E94;&#xFF0C;&#x4E00;&#x6B21;&#x5904;&#x7406;&#x6240;&#x6709;&#x6570;&#x636E;&#x88AB;&#x79F0;&#x4F5C;&#x662F; &#x201C;&#x6279;&#x5904;&#x7406;&#x201D; &#xFF08;batch&#xFF09; &#x3002;</p>
+<p>&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#x5982;&#x4E0B;&#x7684;&#x4F2A;&#x4EE3;&#x7801;: </p>
+<pre><code>&#x6240;&#x6709;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x521D;&#x59CB;&#x5316;&#x4E3A; 1
+&#x5BF9;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x6BCF;&#x4E2A;&#x6837;&#x672C;
+    &#x8BA1;&#x7B97;&#x8BE5;&#x6837;&#x672C;&#x7684;&#x68AF;&#x5EA6;
+    &#x4F7F;&#x7528; alpha x gradient &#x66F4;&#x65B0;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x503C;
+&#x8FD4;&#x56DE;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x503C;
+</code></pre><p>&#x4EE5;&#x4E0B;&#x662F;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;: </p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;</span>
+<span class="hljs-comment"># &#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x5728;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x96C6;&#x65F6;&#x90FD;&#x9700;&#x8981;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x8BA1;&#x7B97;&#x590D;&#x6742;&#x90FD;&#x8F83;&#x9AD8;</span>
+<span class="hljs-comment"># &#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x4E00;&#x6B21;&#x53EA;&#x7528;&#x4E00;&#x4E2A;&#x6837;&#x672C;&#x70B9;&#x6765;&#x66F4;&#x65B0;&#x56DE;&#x5F52;&#x7CFB;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stocGradAscent0</span><span class="hljs-params">(dataMatrix, classLabels)</span>:</span>
+    m,n = shape(dataMatrix)
+    alpha = <span class="hljs-number">0.01</span>
+    <span class="hljs-comment"># n*1&#x7684;&#x77E9;&#x9635;</span>
+    <span class="hljs-comment"># &#x51FD;&#x6570;ones&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5168;1&#x7684;&#x6570;&#x7EC4;</span>
+    weights = ones(n)   <span class="hljs-comment"># &#x521D;&#x59CB;&#x5316;&#x957F;&#x5EA6;&#x4E3A;n&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5143;&#x7D20;&#x5168;&#x90E8;&#x4E3A; 1</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(m):
+        <span class="hljs-comment"># sum(dataMatrix[i]*weights)&#x4E3A;&#x4E86;&#x6C42; f(x)&#x7684;&#x503C;&#xFF0C; f(x)=a1*x1+b2*x2+..+nn*xn,&#x6B64;&#x5904;&#x6C42;&#x51FA;&#x7684; h &#x662F;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x77E9;&#x9635;</span>
+        h = sigmoid(sum(dataMatrix[i]*weights))
+        <span class="hljs-comment"># print &apos;dataMatrix[i]===&apos;, dataMatrix[i]</span>
+        <span class="hljs-comment"># &#x8BA1;&#x7B97;&#x771F;&#x5B9E;&#x7C7B;&#x522B;&#x4E0E;&#x9884;&#x6D4B;&#x7C7B;&#x522B;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x6309;&#x7167;&#x8BE5;&#x5DEE;&#x503C;&#x8C03;&#x6574;&#x56DE;&#x5F52;&#x7CFB;&#x6570;</span>
+        error = classLabels[i] - h
+        <span class="hljs-comment"># 0.01*(1*1)*(1*n)</span>
+        <span class="hljs-keyword">print</span> weights, <span class="hljs-string">&quot;*&quot;</span>*<span class="hljs-number">10</span> , dataMatrix[i], <span class="hljs-string">&quot;*&quot;</span>*<span class="hljs-number">10</span> , error
+        weights = weights + alpha * error * dataMatrix[i]
+    <span class="hljs-keyword">return</span> weights
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#x4E0E;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#x5728;&#x4EE3;&#x7801;&#x4E0A;&#x5F88;&#x76F8;&#x4F3C;&#xFF0C;&#x4F46;&#x4E5F;&#x6709;&#x4E00;&#x4E9B;&#x533A;&#x522B;: &#x7B2C;&#x4E00;&#xFF0C;&#x540E;&#x8005;&#x7684;&#x53D8;&#x91CF; h &#x548C;&#x8BEF;&#x5DEE; error &#x90FD;&#x662F;&#x5411;&#x91CF;&#xFF0C;&#x800C;&#x524D;&#x8005;&#x5219;&#x5168;&#x662F;&#x6570;&#x503C;&#xFF1B;&#x7B2C;&#x4E8C;&#xFF0C;&#x524D;&#x8005;&#x6CA1;&#x6709;&#x77E9;&#x9635;&#x7684;&#x8F6C;&#x6362;&#x8FC7;&#x7A0B;&#xFF0C;&#x6240;&#x6709;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x90FD;&#x662F; NumPy &#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x5224;&#x65AD;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x4F18;&#x52A3;&#x7684;&#x53EF;&#x9760;&#x65B9;&#x6CD5;&#x662F;&#x770B;&#x5B83;&#x662F;&#x5426;&#x6536;&#x655B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x53C2;&#x6570;&#x662F;&#x5426;&#x8FBE;&#x5230;&#x4E86;&#x7A33;&#x5B9A;&#x503C;&#xFF0C;&#x662F;&#x5426;&#x8FD8;&#x4F1A;&#x4E0D;&#x65AD;&#x5730;&#x53D8;&#x5316;&#xFF1F;&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#x5728; 200 &#x6B21;&#x8FED;&#x4EE3;&#x8FC7;&#x7A0B;&#x4E2D;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x7684;&#x53D8;&#x5316;&#x60C5;&#x51B5;&#x3002;&#x5176;&#x4E2D;&#x7684;&#x7CFB;&#x6570;2&#xFF0C;&#x4E5F;&#x5C31;&#x662F; X2 &#x53EA;&#x7ECF;&#x8FC7;&#x4E86; 50 &#x6B21;&#x8FED;&#x4EE3;&#x5C31;&#x8FBE;&#x5230;&#x4E86;&#x7A33;&#x5B9A;&#x503C;&#xFF0C;&#x4F46;&#x7CFB;&#x6570; 1 &#x548C; 0 &#x5219;&#x9700;&#x8981;&#x66F4;&#x591A;&#x6B21;&#x7684;&#x8FED;&#x4EE3;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;: </p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_12.png" alt="&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x4E0E;&#x8FED;&#x4EE3;&#x6B21;&#x6570;&#x7684;&#x5173;&#x7CFB;&#x56FE;"></p>
+<p>&#x9488;&#x5BF9;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x6539;&#x8FDB;&#x4E86;&#x4E4B;&#x524D;&#x7684;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#xFF0C;&#x5982;&#x4E0B;: </p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#xFF08;&#x968F;&#x673A;&#x5316;&#xFF09;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stocGradAscent1</span><span class="hljs-params">(dataMatrix, classLabels, numIter=<span class="hljs-number">150</span>)</span>:</span>
+    m,n = shape(dataMatrix)
+    weights = ones(n)   <span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E0E;&#x5217;&#x6570;&#x76F8;&#x540C;&#x7684;&#x77E9;&#x9635;&#x7684;&#x7CFB;&#x6570;&#x77E9;&#x9635;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x662F;1</span>
+    <span class="hljs-comment"># &#x968F;&#x673A;&#x68AF;&#x5EA6;, &#x5FAA;&#x73AF;150,&#x89C2;&#x5BDF;&#x662F;&#x5426;&#x6536;&#x655B;</span>
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(numIter):
+        <span class="hljs-comment"># [0, 1, 2 .. m-1]</span>
+        dataIndex = range(m)
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(m):
+            <span class="hljs-comment"># i&#x548C;j&#x7684;&#x4E0D;&#x65AD;&#x589E;&#x5927;&#xFF0C;&#x5BFC;&#x81F4;alpha&#x7684;&#x503C;&#x4E0D;&#x65AD;&#x51CF;&#x5C11;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x4E3A;0</span>
+            alpha = <span class="hljs-number">4</span>/(<span class="hljs-number">1.0</span>+j+i)+<span class="hljs-number">0.0001</span>    <span class="hljs-comment"># alpha &#x4F1A;&#x968F;&#x7740;&#x8FED;&#x4EE3;&#x4E0D;&#x65AD;&#x51CF;&#x5C0F;&#xFF0C;&#x4F46;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x51CF;&#x5C0F;&#x5230;0&#xFF0C;&#x56E0;&#x4E3A;&#x540E;&#x8FB9;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5E38;&#x6570;&#x9879;0.0001</span>
+            <span class="hljs-comment"># &#x968F;&#x673A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A; 0&#xFF5E;len()&#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x4E2A;&#x503C;</span>
+            <span class="hljs-comment"># random.uniform(x, y) &#x65B9;&#x6CD5;&#x5C06;&#x968F;&#x673A;&#x751F;&#x6210;&#x4E0B;&#x4E00;&#x4E2A;&#x5B9E;&#x6570;&#xFF0C;&#x5B83;&#x5728;[x,y]&#x8303;&#x56F4;&#x5185;,x&#x662F;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6700;&#x5C0F;&#x503C;&#xFF0C;y&#x662F;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6700;&#x5927;&#x503C;&#x3002;</span>
+            randIndex = int(random.uniform(<span class="hljs-number">0</span>,len(dataIndex)))
+            <span class="hljs-comment"># sum(dataMatrix[i]*weights)&#x4E3A;&#x4E86;&#x6C42; f(x)&#x7684;&#x503C;&#xFF0C; f(x)=a1*x1+b2*x2+..+nn*xn</span>
+            h = sigmoid(sum(dataMatrix[dataIndex[randIndex]]*weights))
+            error = classLabels[dataIndex[randIndex]] - h
+            <span class="hljs-comment"># print weights, &apos;__h=%s&apos; % h, &apos;__&apos;*20, alpha, &apos;__&apos;*20, error, &apos;__&apos;*20, dataMatrix[randIndex]</span>
+            weights = weights + alpha * error * dataMatrix[dataIndex[randIndex]]
+            <span class="hljs-keyword">del</span>(dataIndex[randIndex])
+    <span class="hljs-keyword">return</span> weights
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x6539;&#x8FDB;&#x7248;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x4E86;&#x4E24;&#x5904;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x5904;&#x6539;&#x8FDB;&#x4E3A; alpha &#x7684;&#x503C;&#x3002;alpha &#x5728;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x4F1A;&#x8C03;&#x6574;&#xFF0C;&#x8FD9;&#x56DE;&#x7F13;&#x89E3;&#x4E0A;&#x9762;&#x6CE2;&#x52A8;&#x56FE;&#x7684;&#x6570;&#x636E;&#x6CE2;&#x52A8;&#x6216;&#x8005;&#x9AD8;&#x9891;&#x6CE2;&#x52A8;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x867D;&#x7136; alpha &#x4F1A;&#x968F;&#x7740;&#x8FED;&#x4EE3;&#x6B21;&#x6570;&#x4E0D;&#x65AD;&#x51CF;&#x5C11;&#xFF0C;&#x4F46;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x51CF;&#x5C0F;&#x5230; 0&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5728;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x4E2D;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x5E38;&#x6570;&#x9879;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x5904;&#x4FEE;&#x6539;&#x4E3A; randIndex &#x66F4;&#x65B0;&#xFF0C;&#x8FD9;&#x91CC;&#x901A;&#x8FC7;&#x968F;&#x673A;&#x9009;&#x53D6;&#x6837;&#x672C;&#x62C9;&#x6765;&#x66F4;&#x65B0;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5C06;&#x51CF;&#x5C11;&#x5468;&#x671F;&#x6027;&#x7684;&#x6CE2;&#x52A8;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x6BCF;&#x6B21;&#x968F;&#x673A;&#x4ECE;&#x5217;&#x8868;&#x4E2D;&#x9009;&#x51FA;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x5217;&#x8868;&#x4E2D;&#x5220;&#x6389;&#x8BE5;&#x503C;&#xFF08;&#x518D;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B21;&#x8FED;&#x4EE3;&#xFF09;&#x3002;</p>
+<p>&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x4E4B;&#x540E;&#x80FD;&#x770B;&#x5230;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E0B;&#x56FE;&#x7684;&#x7ED3;&#x679C;&#x56FE;&#x3002;</p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/5.Logistic/LR_13.png" alt="&#x6539;&#x8FDB;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7ED3;&#x679C;&#x56FE;"></p>
+<h3 id="&#x9879;&#x76EE;&#x6848;&#x4F8B;2-&#x4ECE;&#x759D;&#x6C14;&#x75C5;&#x75C7;&#x9884;&#x6D4B;&#x75C5;&#x9A6C;&#x7684;&#x6B7B;&#x4EA1;&#x7387;">&#x9879;&#x76EE;&#x6848;&#x4F8B;2: &#x4ECE;&#x759D;&#x6C14;&#x75C5;&#x75C7;&#x9884;&#x6D4B;&#x75C5;&#x9A6C;&#x7684;&#x6B7B;&#x4EA1;&#x7387;</h3>
+<p><a href="../../src/py2.x/ml/5.Logistic/logistic.py">&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x5730;&#x5740;</a>: <a href="https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/5.Logistic/logistic.py" target="_blank">https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/5.Logistic/logistic.py</a></p>
+<h4 id="&#x9879;&#x76EE;&#x6982;&#x8FF0;">&#x9879;&#x76EE;&#x6982;&#x8FF0;</h4>
+<p>&#x4F7F;&#x7528; Logistic &#x56DE;&#x5F52;&#x6765;&#x9884;&#x6D4B;&#x60A3;&#x6709;&#x759D;&#x75C5;&#x7684;&#x9A6C;&#x7684;&#x5B58;&#x6D3B;&#x95EE;&#x9898;&#x3002;&#x759D;&#x75C5;&#x662F;&#x63CF;&#x8FF0;&#x9A6C;&#x80C3;&#x80A0;&#x75DB;&#x7684;&#x672F;&#x8BED;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x8FD9;&#x79CD;&#x75C5;&#x4E0D;&#x4E00;&#x5B9A;&#x6E90;&#x81EA;&#x9A6C;&#x7684;&#x80C3;&#x80A0;&#x95EE;&#x9898;&#xFF0C;&#x5176;&#x4ED6;&#x95EE;&#x9898;&#x4E5F;&#x53EF;&#x80FD;&#x5F15;&#x53D1;&#x9A6C;&#x759D;&#x75C5;&#x3002;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x533B;&#x9662;&#x68C0;&#x6D4B;&#x9A6C;&#x759D;&#x75C5;&#x7684;&#x4E00;&#x4E9B;&#x6307;&#x6807;&#xFF0C;&#x6709;&#x7684;&#x6307;&#x6807;&#x6BD4;&#x8F83;&#x4E3B;&#x89C2;&#xFF0C;&#x6709;&#x7684;&#x6307;&#x6807;&#x96BE;&#x4EE5;&#x6D4B;&#x91CF;&#xFF0C;&#x4F8B;&#x5982;&#x9A6C;&#x7684;&#x75BC;&#x75DB;&#x7EA7;&#x522B;&#x3002;</p>
+<h4 id="&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">&#x5F00;&#x53D1;&#x6D41;&#x7A0B;</h4>
+<pre><code>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x7ED9;&#x5B9A;&#x6570;&#x636E;&#x6587;&#x4EF6;
+&#x51C6;&#x5907;&#x6570;&#x636E;: &#x7528; Python &#x89E3;&#x6790;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x5E76;&#x586B;&#x5145;&#x7F3A;&#x5931;&#x503C;
+&#x5206;&#x6790;&#x6570;&#x636E;: &#x53EF;&#x89C6;&#x5316;&#x5E76;&#x89C2;&#x5BDF;&#x6570;&#x636E;
+&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: &#x4F7F;&#x7528;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#xFF0C;&#x627E;&#x5230;&#x6700;&#x4F73;&#x7684;&#x7CFB;&#x6570;
+&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x4E3A;&#x4E86;&#x91CF;&#x5316;&#x56DE;&#x5F52;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x9700;&#x8981;&#x89C2;&#x5BDF;&#x9519;&#x8BEF;&#x7387;&#x3002;&#x6839;&#x636E;&#x9519;&#x8BEF;&#x7387;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x56DE;&#x9000;&#x5230;&#x8BAD;&#x7EC3;&#x9636;&#x6BB5;&#xFF0C;
+         &#x901A;&#x8FC7;&#x6539;&#x53D8;&#x8FED;&#x4EE3;&#x7684;&#x6B21;&#x6570;&#x548C;&#x6B65;&#x957F;&#x7684;&#x53C2;&#x6570;&#x6765;&#x5F97;&#x5230;&#x66F4;&#x597D;&#x7684;&#x56DE;&#x5F52;&#x7CFB;&#x6570;
+&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F;&#x6765;&#x6536;&#x96C6;&#x9A6C;&#x7684;&#x75C7;&#x72B6;&#x5E76;&#x8F93;&#x51FA;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x5E76;&#x975E;&#x96BE;&#x4E8B;&#xFF0C;
+         &#x8FD9;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x7559;&#x7ED9;&#x5927;&#x5BB6;&#x7684;&#x4E00;&#x9053;&#x4E60;&#x9898;
+</code></pre><blockquote>
+<p>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x7ED9;&#x5B9A;&#x6570;&#x636E;&#x6587;&#x4EF6;</p>
+</blockquote>
+<p>&#x75C5;&#x9A6C;&#x7684;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x7ED9;&#x51FA;&#x6765;&#x4E86;&#xFF0C;&#x5982;&#x4E0B;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#x5728;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;:</p>
+<pre><code>1.000000    1.000000    39.200000    88.000000    20.000000    0.000000    0.000000    4.000000    1.000000    3.000000    4.000000    2.000000    0.000000    0.000000    0.000000    4.000000    2.000000    50.000000    85.000000    2.000000    2.000000    0.000000
+2.000000    1.000000    38.300000    40.000000    24.000000    1.000000    1.000000    3.000000    1.000000    3.000000    3.000000    1.000000    0.000000    0.000000    0.000000    1.000000    1.000000    33.000000    6.700000    0.000000    0.000000    1.000000
+</code></pre><blockquote>
+<p>&#x51C6;&#x5907;&#x6570;&#x636E;: &#x7528; Python &#x89E3;&#x6790;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x5E76;&#x586B;&#x5145;&#x7F3A;&#x5931;&#x503C;</p>
+</blockquote>
+<p>&#x5904;&#x7406;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x7F3A;&#x5931;&#x503C;</p>
+<p>&#x5047;&#x8BBE;&#x6709;100&#x4E2A;&#x6837;&#x672C;&#x548C;20&#x4E2A;&#x7279;&#x5F81;&#xFF0C;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x90FD;&#x662F;&#x673A;&#x5668;&#x6536;&#x96C6;&#x56DE;&#x6765;&#x7684;&#x3002;&#x82E5;&#x673A;&#x5668;&#x4E0A;&#x7684;&#x67D0;&#x4E2A;&#x4F20;&#x611F;&#x5668;&#x635F;&#x574F;&#x5BFC;&#x81F4;&#x4E00;&#x4E2A;&#x7279;&#x5F81;&#x65E0;&#x6548;&#x65F6;&#x8BE5;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x6B64;&#x65F6;&#x662F;&#x5426;&#x8981;&#x6254;&#x6389;&#x6574;&#x4E2A;&#x6570;&#x636E;&#xFF1F;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53E6;&#x5916;19&#x4E2A;&#x7279;&#x5F81;&#x600E;&#x4E48;&#x529E;&#xFF1F;
+&#x5B83;&#x4EEC;&#x662F;&#x5426;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#xFF1F;&#x7B54;&#x6848;&#x662F;&#x80AF;&#x5B9A;&#x7684;&#x3002;&#x56E0;&#x4E3A;&#x6709;&#x65F6;&#x5019;&#x6570;&#x636E;&#x76F8;&#x5F53;&#x6602;&#x8D35;&#xFF0C;&#x6254;&#x6389;&#x548C;&#x91CD;&#x65B0;&#x83B7;&#x53D6;&#x90FD;&#x662F;&#x4E0D;&#x53EF;&#x53D6;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5FC5;&#x987B;&#x91C7;&#x7528;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x53EF;&#x9009;&#x7684;&#x505A;&#x6CD5;: </p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x53EF;&#x7528;&#x7279;&#x5F81;&#x7684;&#x5747;&#x503C;&#x6765;&#x586B;&#x8865;&#x7F3A;&#x5931;&#x503C;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528;&#x7279;&#x6B8A;&#x503C;&#x6765;&#x586B;&#x8865;&#x7F3A;&#x5931;&#x503C;&#xFF0C;&#x5982; -1&#xFF1B;</li>
+<li>&#x5FFD;&#x7565;&#x6709;&#x7F3A;&#x5931;&#x503C;&#x7684;&#x6837;&#x672C;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528;&#x6709;&#x76F8;&#x4F3C;&#x6837;&#x672C;&#x7684;&#x5747;&#x503C;&#x6DFB;&#x8865;&#x7F3A;&#x5931;&#x503C;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528;&#x53E6;&#x5916;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x9884;&#x6D4B;&#x7F3A;&#x5931;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x4E0B;&#x4E00;&#x8282;&#x8981;&#x7528;&#x7684;&#x6570;&#x636E;&#x96C6;&#x8FDB;&#x884C;&#x9884;&#x5904;&#x7406;&#xFF0C;&#x4F7F;&#x5176;&#x53EF;&#x4EE5;&#x987A;&#x5229;&#x5730;&#x4F7F;&#x7528;&#x5206;&#x7C7B;&#x7B97;&#x6CD5;&#x3002;&#x5728;&#x9884;&#x5904;&#x7406;&#x9700;&#x8981;&#x505A;&#x4E24;&#x4EF6;&#x4E8B;: </p>
+<ul>
+<li><p>&#x6240;&#x6709;&#x7684;&#x7F3A;&#x5931;&#x503C;&#x5FC5;&#x987B;&#x7528;&#x4E00;&#x4E2A;&#x5B9E;&#x6570;&#x503C;&#x6765;&#x66FF;&#x6362;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684; NumPy &#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E0D;&#x5141;&#x8BB8;&#x5305;&#x542B;&#x7F3A;&#x5931;&#x503C;&#x3002;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x9009;&#x62E9;&#x5B9E;&#x6570; 0 &#x6765;&#x66FF;&#x6362;&#x6240;&#x6709;&#x7F3A;&#x5931;&#x503C;&#xFF0C;&#x6070;&#x597D;&#x80FD;&#x9002;&#x7528;&#x4E8E; Logistic &#x56DE;&#x5F52;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x76F4;&#x89C9;&#x5728;&#x4E8E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5728;&#x66F4;&#x65B0;&#x65F6;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x7CFB;&#x6570;&#x7684;&#x503C;&#x3002;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x7684;&#x66F4;&#x65B0;&#x516C;&#x5F0F;&#x5982;&#x4E0B;:</p>
+<p>  weights = weights + alpha <em> error </em> dataMatrix[dataIndex[randIndex]]</p>
+<p>  &#x5982;&#x679C; dataMatrix &#x7684;&#x67D0;&#x4E2A;&#x7279;&#x5F81;&#x5BF9;&#x5E94;&#x503C;&#x4E3A; 0&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x7279;&#x5F81;&#x7684;&#x7CFB;&#x6570;&#x5C06;&#x4E0D;&#x505A;&#x66F4;&#x65B0;&#xFF0C;&#x5373;:</p>
+<p>  weights = weights</p>
+<p>  &#x53E6;&#x5916;&#xFF0C;&#x7531;&#x4E8E; Sigmoid(0) = 0.5 &#xFF0C;&#x5373;&#x5B83;&#x5BF9;&#x7ED3;&#x679C;&#x7684;&#x9884;&#x6D4B;&#x4E0D;&#x5177;&#x6709;&#x4EFB;&#x4F55;&#x503E;&#x5411;&#x6027;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x4E0A;&#x8FF0;&#x505A;&#x6CD5;&#x4E5F;&#x4E0D;&#x4F1A;&#x5BF9;&#x8BEF;&#x5DEE;&#x9020;&#x6210;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#x3002;&#x57FA;&#x4E8E;&#x4E0A;&#x8FF0;&#x539F;&#x56E0;&#xFF0C;&#x5C06;&#x7F3A;&#x5931;&#x503C;&#x7528; 0 &#x4EE3;&#x66FF;&#x65E2;&#x53EF;&#x4EE5;&#x4FDD;&#x7559;&#x73B0;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x5BF9;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x8BE5;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x7684;&#x7279;&#x5F81;&#x53D6;&#x503C;&#x4E00;&#x822C;&#x4E0D;&#x4E3A; 0&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x67D0;&#x79CD;&#x610F;&#x4E49;&#x4E0A;&#x8BF4;&#x5B83;&#x4E5F;&#x6EE1;&#x8DB3; &#x201C;&#x7279;&#x6B8A;&#x503C;&#x201D; &#x8FD9;&#x4E2A;&#x8981;&#x6C42;&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x5728;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x53D1;&#x73B0;&#x4E86;&#x4E00;&#x6761;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x522B;&#x6807;&#x7B7E;&#x5DF2;&#x7ECF;&#x7F3A;&#x5931;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x7684;&#x7B80;&#x5355;&#x505A;&#x6CD5;&#x662F;&#x5C06;&#x8BE5;&#x6761;&#x6570;&#x636E;&#x4E22;&#x5F03;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x7C7B;&#x522B;&#x6807;&#x7B7E;&#x4E0E;&#x7279;&#x5F81;&#x4E0D;&#x540C;&#xFF0C;&#x5F88;&#x96BE;&#x786E;&#x5B9A;&#x91C7;&#x7528;&#x67D0;&#x4E2A;&#x5408;&#x9002;&#x7684;&#x503C;&#x6765;&#x66FF;&#x6362;&#x3002;&#x91C7;&#x7528; Logistic &#x56DE;&#x5F52;&#x8FDB;&#x884C;&#x5206;&#x7C7B;&#x65F6;&#x8FD9;&#x79CD;&#x505A;&#x6CD5;&#x662F;&#x5408;&#x7406;&#x7684;&#xFF0C;&#x800C;&#x5982;&#x679C;&#x91C7;&#x7528;&#x7C7B;&#x4F3C; kNN &#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5219;&#x4FDD;&#x7559;&#x8BE5;&#x6761;&#x6570;&#x636E;&#x663E;&#x5F97;&#x66F4;&#x52A0;&#x5408;&#x7406;&#x3002;</p>
+</li>
+</ul>
+<p>&#x539F;&#x59CB;&#x7684;&#x6570;&#x636E;&#x96C6;&#x7ECF;&#x8FC7;&#x9884;&#x5904;&#x7406;&#x540E;&#xFF0C;&#x4FDD;&#x5B58;&#x6210;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;: horseColicTest.txt &#x548C; horseColicTraining.txt &#x3002; </p>
+<blockquote>
+<p>&#x5206;&#x6790;&#x6570;&#x636E;: &#x53EF;&#x89C6;&#x5316;&#x5E76;&#x89C2;&#x5BDF;&#x6570;&#x636E;</p>
+</blockquote>
+<p>&#x5C06;&#x6570;&#x636E;&#x4F7F;&#x7528; MatPlotlib &#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x89C2;&#x5BDF;&#x6570;&#x636E;&#x662F;&#x5426;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x683C;&#x5F0F;</p>
+<blockquote>
+<p>&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: &#x4F7F;&#x7528;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#xFF0C;&#x627E;&#x5230;&#x6700;&#x4F73;&#x7684;&#x7CFB;&#x6570;</p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x7ED9;&#x51FA; &#x539F;&#x59CB;&#x7684;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#xFF0C;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#xFF0C;&#x6539;&#x8FDB;&#x7248;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5; &#x7684;&#x4EE3;&#x7801;: </p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x6B63;&#x5E38;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6848;</span>
+<span class="hljs-comment"># &#x4E24;&#x4E2A;&#x53C2;&#x6570;: &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;==&gt; dataMatIn &#x662F;&#x4E00;&#x4E2A;2&#x7EF4;NumPy&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x5217;&#x5206;&#x522B;&#x4EE3;&#x8868;&#x6BCF;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x7279;&#x5F81;&#xFF0C;&#x6BCF;&#x884C;&#x5219;&#x4EE3;&#x8868;&#x6BCF;&#x4E2A;&#x8BAD;&#x7EC3;&#x6837;&#x672C;&#x3002;</span>
+<span class="hljs-comment"># &#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;==&gt; classLabels &#x662F;&#x7C7B;&#x522B;&#x6807;&#x7B7E;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A; 1*100 &#x7684;&#x884C;&#x5411;&#x91CF;&#x3002;&#x4E3A;&#x4E86;&#x4FBF;&#x4E8E;&#x77E9;&#x9635;&#x8BA1;&#x7B97;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x8BE5;&#x884C;&#x5411;&#x91CF;&#x8F6C;&#x6362;&#x4E3A;&#x5217;&#x5411;&#x91CF;&#xFF0C;&#x505A;&#x6CD5;&#x662F;&#x5C06;&#x539F;&#x5411;&#x91CF;&#x8F6C;&#x7F6E;&#xFF0C;&#x518D;&#x5C06;&#x5B83;&#x8D4B;&#x503C;&#x7ED9;labelMat&#x3002;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">gradAscent</span><span class="hljs-params">(dataMatIn, classLabels)</span>:</span>
+    <span class="hljs-comment"># &#x8F6C;&#x5316;&#x4E3A;&#x77E9;&#x9635;[[1,1,2],[1,1,2]....]</span>
+    dataMatrix = mat(dataMatIn)             <span class="hljs-comment"># &#x8F6C;&#x6362;&#x4E3A; NumPy &#x77E9;&#x9635;</span>
+    <span class="hljs-comment"># &#x8F6C;&#x5316;&#x4E3A;&#x77E9;&#x9635;[[0,1,0,1,0,1.....]]&#xFF0C;&#x5E76;&#x8F6C;&#x5236;[[0],[1],[0].....]</span>
+    <span class="hljs-comment"># transpose() &#x884C;&#x5217;&#x8F6C;&#x7F6E;&#x51FD;&#x6570;</span>
+    <span class="hljs-comment"># &#x5C06;&#x884C;&#x5411;&#x91CF;&#x8F6C;&#x5316;&#x4E3A;&#x5217;&#x5411;&#x91CF;   =&gt;  &#x77E9;&#x9635;&#x7684;&#x8F6C;&#x7F6E;</span>
+    labelMat = mat(classLabels).transpose() <span class="hljs-comment"># &#x9996;&#x5148;&#x5C06;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A; NumPy &#x77E9;&#x9635;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C06;&#x884C;&#x5411;&#x91CF;&#x8F6C;&#x7F6E;&#x4E3A;&#x5217;&#x5411;&#x91CF;</span>
+    <span class="hljs-comment"># m-&gt;&#x6570;&#x636E;&#x91CF;&#xFF0C;&#x6837;&#x672C;&#x6570; n-&gt;&#x7279;&#x5F81;&#x6570;</span>
+    m,n = shape(dataMatrix)
+    <span class="hljs-comment"># print m, n, &apos;__&apos;*10, shape(dataMatrix.transpose()), &apos;__&apos;*100</span>
+    <span class="hljs-comment"># alpha&#x4EE3;&#x8868;&#x5411;&#x76EE;&#x6807;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;</span>
+    alpha = <span class="hljs-number">0.001</span>
+    <span class="hljs-comment"># &#x8FED;&#x4EE3;&#x6B21;&#x6570;</span>
+    maxCycles = <span class="hljs-number">500</span>
+    <span class="hljs-comment"># &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x548C;&#x7279;&#x5F81;&#x6570;&#x76F8;&#x540C;&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x6B64;&#x5904;n&#x4E3A;3 -&gt; [[1],[1],[1]]</span>
+    <span class="hljs-comment"># weights &#x4EE3;&#x8868;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#xFF0C; &#x6B64;&#x5904;&#x7684; ones((n,1)) &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x548C;&#x7279;&#x5F81;&#x6570;&#x76F8;&#x540C;&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x6570;&#x5168;&#x90E8;&#x90FD;&#x662F; 1</span>
+    weights = ones((n,<span class="hljs-number">1</span>))
+    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(maxCycles):              <span class="hljs-comment">#heavy on matrix operations</span>
+        <span class="hljs-comment"># m*3 &#x7684;&#x77E9;&#x9635; * 3*1 &#x7684;&#x5355;&#x4F4D;&#x77E9;&#x9635; &#xFF1D; m*1&#x7684;&#x77E9;&#x9635;</span>
+        <span class="hljs-comment"># &#x90A3;&#x4E48;&#x4E58;&#x4E0A;&#x5355;&#x4F4D;&#x77E9;&#x9635;&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x5C31;&#x4EE3;&#x8868;: &#x901A;&#x8FC7;&#x516C;&#x5F0F;&#x5F97;&#x5230;&#x7684;&#x7406;&#x8BBA;&#x503C;</span>
+        <span class="hljs-comment"># &#x53C2;&#x8003;&#x5730;&#x5740;:  &#x77E9;&#x9635;&#x4E58;&#x6CD5;&#x7684;&#x672C;&#x8D28;&#x662F;&#x4EC0;&#x4E48;&#xFF1F; https://www.zhihu.com/question/21351965/answer/31050145</span>
+        <span class="hljs-comment"># print &apos;dataMatrix====&apos;, dataMatrix </span>
+        <span class="hljs-comment"># print &apos;weights====&apos;, weights</span>
+        <span class="hljs-comment"># n*3   *  3*1  = n*1</span>
+        h = sigmoid(dataMatrix*weights)     <span class="hljs-comment"># &#x77E9;&#x9635;&#x4E58;&#x6CD5;</span>
+        <span class="hljs-comment"># print &apos;hhhhhhh====&apos;, h</span>
+        <span class="hljs-comment"># labelMat&#x662F;&#x5B9E;&#x9645;&#x503C;</span>
+        error = (labelMat - h)              <span class="hljs-comment"># &#x5411;&#x91CF;&#x76F8;&#x51CF;</span>
+        <span class="hljs-comment"># 0.001* (3*m)*(m*1) &#x8868;&#x793A;&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x5217;&#x4E0A;&#x7684;&#x4E00;&#x4E2A;&#x8BEF;&#x5DEE;&#x60C5;&#x51B5;&#xFF0C;&#x6700;&#x540E;&#x5F97;&#x51FA; x1,x2,xn&#x7684;&#x7CFB;&#x6570;&#x7684;&#x504F;&#x79FB;&#x91CF;</span>
+        weights = weights + alpha * dataMatrix.transpose() * error <span class="hljs-comment"># &#x77E9;&#x9635;&#x4E58;&#x6CD5;&#xFF0C;&#x6700;&#x540E;&#x5F97;&#x5230;&#x56DE;&#x5F52;&#x7CFB;&#x6570;</span>
+    <span class="hljs-keyword">return</span> array(weights)
+
+
+<span class="hljs-comment"># &#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;</span>
+<span class="hljs-comment"># &#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x5728;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x96C6;&#x65F6;&#x90FD;&#x9700;&#x8981;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x8BA1;&#x7B97;&#x590D;&#x6742;&#x90FD;&#x8F83;&#x9AD8;</span>
+<span class="hljs-comment"># &#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x4E00;&#x6B21;&#x53EA;&#x7528;&#x4E00;&#x4E2A;&#x6837;&#x672C;&#x70B9;&#x6765;&#x66F4;&#x65B0;&#x56DE;&#x5F52;&#x7CFB;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stocGradAscent0</span><span class="hljs-params">(dataMatrix, classLabels)</span>:</span>
+    m,n = shape(dataMatrix)
+    alpha = <span class="hljs-number">0.01</span>
+    <span class="hljs-comment"># n*1&#x7684;&#x77E9;&#x9635;</span>
+    <span class="hljs-comment"># &#x51FD;&#x6570;ones&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5168;1&#x7684;&#x6570;&#x7EC4;</span>
+    weights = ones(n)   <span class="hljs-comment"># &#x521D;&#x59CB;&#x5316;&#x957F;&#x5EA6;&#x4E3A;n&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5143;&#x7D20;&#x5168;&#x90E8;&#x4E3A; 1</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(m):
+        <span class="hljs-comment"># sum(dataMatrix[i]*weights)&#x4E3A;&#x4E86;&#x6C42; f(x)&#x7684;&#x503C;&#xFF0C; f(x)=a1*x1+b2*x2+..+nn*xn,&#x6B64;&#x5904;&#x6C42;&#x51FA;&#x7684; h &#x662F;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x77E9;&#x9635;</span>
+        h = sigmoid(sum(dataMatrix[i]*weights))
+        <span class="hljs-comment"># print &apos;dataMatrix[i]===&apos;, dataMatrix[i]</span>
+        <span class="hljs-comment"># &#x8BA1;&#x7B97;&#x771F;&#x5B9E;&#x7C7B;&#x522B;&#x4E0E;&#x9884;&#x6D4B;&#x7C7B;&#x522B;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x6309;&#x7167;&#x8BE5;&#x5DEE;&#x503C;&#x8C03;&#x6574;&#x56DE;&#x5F52;&#x7CFB;&#x6570;</span>
+        error = classLabels[i] - h
+        <span class="hljs-comment"># 0.01*(1*1)*(1*n)</span>
+        <span class="hljs-keyword">print</span> weights, <span class="hljs-string">&quot;*&quot;</span>*<span class="hljs-number">10</span> , dataMatrix[i], <span class="hljs-string">&quot;*&quot;</span>*<span class="hljs-number">10</span> , error
+        weights = weights + alpha * error * dataMatrix[i]
+    <span class="hljs-keyword">return</span> weights
+
+
+<span class="hljs-comment"># &#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0A;&#x5347;&#x7B97;&#x6CD5;&#xFF08;&#x968F;&#x673A;&#x5316;&#xFF09;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stocGradAscent1</span><span class="hljs-params">(dataMatrix, classLabels, numIter=<span class="hljs-number">150</span>)</span>:</span>
+    m,n = shape(dataMatrix)
+    weights = ones(n)   <span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E0E;&#x5217;&#x6570;&#x76F8;&#x540C;&#x7684;&#x77E9;&#x9635;&#x7684;&#x7CFB;&#x6570;&#x77E9;&#x9635;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x662F;1</span>
+    <span class="hljs-comment"># &#x968F;&#x673A;&#x68AF;&#x5EA6;, &#x5FAA;&#x73AF;150,&#x89C2;&#x5BDF;&#x662F;&#x5426;&#x6536;&#x655B;</span>
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(numIter):
+        <span class="hljs-comment"># [0, 1, 2 .. m-1]</span>
+        dataIndex = range(m)
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(m):
+            <span class="hljs-comment"># i&#x548C;j&#x7684;&#x4E0D;&#x65AD;&#x589E;&#x5927;&#xFF0C;&#x5BFC;&#x81F4;alpha&#x7684;&#x503C;&#x4E0D;&#x65AD;&#x51CF;&#x5C11;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x4E3A;0</span>
+            alpha = <span class="hljs-number">4</span>/(<span class="hljs-number">1.0</span>+j+i)+<span class="hljs-number">0.0001</span>    <span class="hljs-comment"># alpha &#x4F1A;&#x968F;&#x7740;&#x8FED;&#x4EE3;&#x4E0D;&#x65AD;&#x51CF;&#x5C0F;&#xFF0C;&#x4F46;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x51CF;&#x5C0F;&#x5230;0&#xFF0C;&#x56E0;&#x4E3A;&#x540E;&#x8FB9;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5E38;&#x6570;&#x9879;0.0001</span>
+            <span class="hljs-comment"># &#x968F;&#x673A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A; 0&#xFF5E;len()&#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x4E2A;&#x503C;</span>
+            <span class="hljs-comment"># random.uniform(x, y) &#x65B9;&#x6CD5;&#x5C06;&#x968F;&#x673A;&#x751F;&#x6210;&#x4E0B;&#x4E00;&#x4E2A;&#x5B9E;&#x6570;&#xFF0C;&#x5B83;&#x5728;[x,y]&#x8303;&#x56F4;&#x5185;,x&#x662F;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6700;&#x5C0F;&#x503C;&#xFF0C;y&#x662F;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6700;&#x5927;&#x503C;&#x3002;</span>
+            randIndex = int(random.uniform(<span class="hljs-number">0</span>,len(dataIndex)))
+            <span class="hljs-comment"># sum(dataMatrix[i]*weights)&#x4E3A;&#x4E86;&#x6C42; f(x)&#x7684;&#x503C;&#xFF0C; f(x)=a1*x1+b2*x2+..+nn*xn</span>
+            h = sigmoid(sum(dataMatrix[dataIndex[randIndex]]*weights))
+            error = classLabels[dataIndex[randIndex]] - h
+            <span class="hljs-comment"># print weights, &apos;__h=%s&apos; % h, &apos;__&apos;*20, alpha, &apos;__&apos;*20, error, &apos;__&apos;*20, dataMatrix[randIndex]</span>
+            weights = weights + alpha * error * dataMatrix[dataIndex[randIndex]]
+            <span class="hljs-keyword">del</span>(dataIndex[randIndex])
+    <span class="hljs-keyword">return</span> weights
+</code></pre>
+<blockquote>
+<p>&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x4E3A;&#x4E86;&#x91CF;&#x5316;&#x56DE;&#x5F52;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x9700;&#x8981;&#x89C2;&#x5BDF;&#x9519;&#x8BEF;&#x7387;&#x3002;&#x6839;&#x636E;&#x9519;&#x8BEF;&#x7387;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x56DE;&#x9000;&#x5230;&#x8BAD;&#x7EC3;&#x9636;&#x6BB5;&#xFF0C;&#x901A;&#x8FC7;&#x6539;&#x53D8;&#x8FED;&#x4EE3;&#x7684;&#x6B21;&#x6570;&#x548C;&#x6B65;&#x957F;&#x7684;&#x53C2;&#x6570;&#x6765;&#x5F97;&#x5230;&#x66F4;&#x597D;&#x7684;&#x56DE;&#x5F52;&#x7CFB;&#x6570;</p>
+</blockquote>
+<p>Logistic &#x56DE;&#x5F52;&#x5206;&#x7C7B;&#x51FD;&#x6570;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5206;&#x7C7B;&#x51FD;&#x6570;&#xFF0C;&#x6839;&#x636E;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x548C;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x6765;&#x8BA1;&#x7B97; Sigmoid&#x7684;&#x503C;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">classifyVector</span><span class="hljs-params">(inX, weights)</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;
+    Desc: 
+        &#x6700;&#x7EC8;&#x7684;&#x5206;&#x7C7B;&#x51FD;&#x6570;&#xFF0C;&#x6839;&#x636E;&#x56DE;&#x5F52;&#x7CFB;&#x6570;&#x548C;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x6765;&#x8BA1;&#x7B97; Sigmoid &#x7684;&#x503C;&#xFF0C;&#x5927;&#x4E8E;0.5&#x51FD;&#x6570;&#x8FD4;&#x56DE;1&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;0
+    Args:
+        inX -- &#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF0C;features
+        weights -- &#x6839;&#x636E;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;/&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D; &#x8BA1;&#x7B97;&#x5F97;&#x5230;&#x7684;&#x56DE;&#x5F52;&#x7CFB;&#x6570;
+    Returns:
+        &#x5982;&#x679C; prob &#x8BA1;&#x7B97;&#x5927;&#x4E8E; 0.5 &#x51FD;&#x6570;&#x8FD4;&#x56DE; 1
+        &#x5426;&#x5219;&#x8FD4;&#x56DE; 0
+    &apos;&apos;&apos;</span>
+    prob = sigmoid(sum(inX*weights))
+    <span class="hljs-keyword">if</span> prob &gt; <span class="hljs-number">0.5</span>: <span class="hljs-keyword">return</span> <span class="hljs-number">1.0</span>
+    <span class="hljs-keyword">else</span>: <span class="hljs-keyword">return</span> <span class="hljs-number">0.0</span>
+
+<span class="hljs-comment"># &#x6253;&#x5F00;&#x6D4B;&#x8BD5;&#x96C6;&#x548C;&#x8BAD;&#x7EC3;&#x96C6;,&#x5E76;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;&#x5904;&#x7406;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">colicTest</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;
+    Desc:
+        &#x6253;&#x5F00;&#x6D4B;&#x8BD5;&#x96C6;&#x548C;&#x8BAD;&#x7EC3;&#x96C6;&#xFF0C;&#x5E76;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;&#x5904;&#x7406;
+    Args:
+        None
+    Returns:
+        errorRate -- &#x5206;&#x7C7B;&#x9519;&#x8BEF;&#x7387;
+    &apos;&apos;&apos;</span>
+    frTrain = open(<span class="hljs-string">&apos;data/5.Logistic/horseColicTraining.txt&apos;</span>)
+    frTest = open(<span class="hljs-string">&apos;data/5.Logistic/horseColicTest.txt&apos;</span>)
+    trainingSet = []
+    trainingLabels = []
+    <span class="hljs-comment"># &#x89E3;&#x6790;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7279;&#x5F81;&#x548C;Labels</span>
+    <span class="hljs-comment"># trainingSet &#x4E2D;&#x5B58;&#x50A8;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;&#x7684;&#x7279;&#x5F81;&#xFF0C;trainingLabels &#x5B58;&#x50A8;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;&#x7684;&#x6837;&#x672C;&#x5BF9;&#x5E94;&#x7684;&#x5206;&#x7C7B;&#x6807;&#x7B7E;</span>
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> frTrain.readlines():
+        currLine = line.strip().split(<span class="hljs-string">&apos;\t&apos;</span>)
+        lineArr = []
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">21</span>):
+            lineArr.append(float(currLine[i]))
+        trainingSet.append(lineArr)
+        trainingLabels.append(float(currLine[<span class="hljs-number">21</span>]))
+    <span class="hljs-comment"># &#x4F7F;&#x7528; &#x6539;&#x8FDB;&#x540E;&#x7684; &#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7B97;&#x6CD5; &#x6C42;&#x5F97;&#x5728;&#x6B64;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#x7684;&#x6700;&#x4F73;&#x56DE;&#x5F52;&#x7CFB;&#x6570; trainWeights</span>
+    trainWeights = stocGradAscent1(array(trainingSet), trainingLabels, <span class="hljs-number">500</span>)
+    errorCount = <span class="hljs-number">0</span>
+    numTestVec = <span class="hljs-number">0.0</span>
+    <span class="hljs-comment"># &#x8BFB;&#x53D6; &#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x96C6; &#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x8BA1;&#x7B97;&#x5206;&#x7C7B;&#x9519;&#x8BEF;&#x7684;&#x6837;&#x672C;&#x6761;&#x6570;&#x548C;&#x6700;&#x7EC8;&#x7684;&#x9519;&#x8BEF;&#x7387;</span>
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> frTest.readlines():
+        numTestVec += <span class="hljs-number">1.0</span>
+        currLine = line.strip().split(<span class="hljs-string">&apos;\t&apos;</span>)
+        lineArr = []
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">21</span>):
+            lineArr.append(float(currLine[i]))
+        <span class="hljs-keyword">if</span> int(classifyVector(array(lineArr), trainWeights)) != int(currLine[<span class="hljs-number">21</span>]):
+            errorCount += <span class="hljs-number">1</span>
+    errorRate = (float(errorCount) / numTestVec)
+    <span class="hljs-keyword">print</span> <span class="hljs-string">&quot;the error rate of this test is: %f&quot;</span> % errorRate
+    <span class="hljs-keyword">return</span> errorRate
+
+
+<span class="hljs-comment"># &#x8C03;&#x7528; colicTest() 10&#x6B21;&#x5E76;&#x6C42;&#x7ED3;&#x679C;&#x7684;&#x5E73;&#x5747;&#x503C;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">multiTest</span><span class="hljs-params">()</span>:</span>
+    numTests = <span class="hljs-number">10</span>
+    errorSum = <span class="hljs-number">0.0</span>
+    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(numTests):
+        errorSum += colicTest()
+    <span class="hljs-keyword">print</span> <span class="hljs-string">&quot;after %d iterations the average error rate is: %f&quot;</span> % (numTests, errorSum/float(numTests))
+</code></pre>
+<blockquote>
+<p>&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F;&#x6765;&#x6536;&#x96C6;&#x9A6C;&#x7684;&#x75C7;&#x72B6;&#x5E76;&#x8F93;&#x51FA;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x5E76;&#x975E;&#x96BE;&#x4E8B;&#xFF0C;&#x8FD9;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x7559;&#x7ED9;&#x5927;&#x5BB6;&#x7684;&#x4E00;&#x9053;&#x4E60;&#x9898;</p>
+</blockquote>
+<h1 id="&#x989D;&#x5916;&#x5185;&#x5BB9;&#x53EF;&#x9009;&#x8BFB;">&#x989D;&#x5916;&#x5185;&#x5BB9;(&#x53EF;&#x9009;&#x8BFB;)</h1>
+<p>&#x5728;&#x4E0A;&#x6587;&#x4E2D;&#xFF0C;&#x5F53;Sigmoid&#x51FD;&#x6570;&#x5927;&#x4E8E; 0.5 &#x7684;&#x6570;&#x636E;&#x88AB;&#x5206;&#x5165; 1 &#x7C7B;&#xFF0C;&#x5C0F;&#x4E8E; 0.5 &#x5373;&#x88AB;&#x5F52;&#x5165; 0 &#x7C7B;&#x3002;&#x5176;&#x5B9E;0.5&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x6539;&#x52A8;&#x7684;&#x3002; &#x6BD4;&#x5982;&#x5927;&#x4E8E; 0.9 &#x7684;&#x6570;&#x636E;&#x88AB;&#x5206;&#x5165; 1 &#x7C7B;&#xFF0C;&#x5C0F;&#x4E8E; 0.9 &#x5373;&#x88AB;&#x5F52;&#x5165; 0 &#x7C7B;&#x3002;</p>
+<h2 id="logistic&#x56DE;&#x5F52;-&#x548C;-&#x6700;&#x5927;&#x71B5;&#x6A21;&#x578B;">Logistic&#x56DE;&#x5F52; &#x548C; &#x6700;&#x5927;&#x71B5;&#x6A21;&#x578B;</h2>
+<p>Logistic&#x56DE;&#x5F52;&#x548C;&#x6700;&#x5927;&#x71B5;&#x6A21;&#x578B; &#x90FD;&#x5C5E;&#x4E8E;&#x5BF9;&#x6570;&#x7EBF;&#x6027;&#x6A21;&#x578B; &#xFF08;log linear model&#xFF09;&#x3002; &#x5F53;&#x7C7B;&#x6807;&#x7B7E;&#xFF08;class label&#xFF09;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6700;&#x5927;&#x71B5;&#x6A21;&#x578B;&#x5C31;&#x662F; logistic &#x56DE;&#x5F52;&#x6A21;&#x578B;&#x3002; &#x5B66;&#x4E60;&#x5B83;&#x4EEC;&#x7684;&#x6A21;&#x578B;&#x4E00;&#x822C;&#x91C7;&#x7528;&#x6781;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;&#x6216;&#x8005;&#x6B63;&#x5219;&#x5316;&#x7684;&#x6781;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;&#x3002;Logistic &#x56DE;&#x5F52;&#x548C;&#x6700;&#x5927;&#x71B5;&#x6A21;&#x578B;&#x5B66;&#x4E60;&#x53EF;&#x4EE5;&#x5F62;&#x5F0F;&#x5316;&#x4E3A;&#x65E0;&#x7EA6;&#x675F;&#x6700;&#x4F18;&#x5316;&#x95EE;&#x9898;&#x3002;&#xFF08;&#x5173;&#x4E8E;&#x6700;&#x5927;&#x71B5;&#x6A21;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x9605;&#x8BFB;&#x300A;&#x7EDF;&#x8BA1;&#x5B66;&#x4E60;&#x65B9;&#x6CD5;&#x300B; &#x7B2C;&#x516D;&#x7AE0;&#x3002;&#xFF09;</p>
+<h2 id="&#x5176;&#x4ED6;&#x7B97;&#x6CD5;">&#x5176;&#x4ED6;&#x7B97;&#x6CD5;</h2>
+<p>&#x9664;&#x4E86;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF0C;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF0C;&#x8FD8;&#x6709;Conjugate Gradient&#xFF0C;BFGS&#xFF0C;L-BFGS&#xFF0C;&#x4ED6;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x6307;&#x5B9A;alpha&#x503C;&#xFF08;&#x6B65;&#x957F;&#xFF09;&#xFF0C;&#x800C;&#x4E14;&#x6BD4;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x66F4;&#x5FEB;&#xFF0C;&#x5728;&#x73B0;&#x5B9E;&#x4E2D;&#x5E94;&#x7528;&#x7684;&#x4E5F;&#x6BD4;&#x8F83;&#x591A;&#x3002; &#x5F53;&#x7136;&#x8FD9;&#x4E9B;&#x7B97;&#x6CD5;&#x76F8;&#x6BD4;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x8981;&#x590D;&#x6742;&#x3002;</p>
+<p>&#x7EFC;&#x4E0A;&#x8FD9;&#x4E9B;&#x7B97;&#x6CD5;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5171;&#x901A;&#x7684;&#x7F3A;&#x70B9;&#x5C31;&#x662F;&#x4ED6;&#x4EEC;&#x90FD;&#x662F;&#x4E0D;&#x65AD;&#x53BB;&#x903C;&#x8FD1;&#x771F;&#x5B9E;&#x503C;&#xFF0C;&#x6C38;&#x8FDC;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x771F;&#x5B9E;&#x503C;&#x7684;&#x8FD1;&#x4F3C;&#x503C;&#x800C;&#x5DF2;&#x3002;</p>
+<h2 id="&#x591A;&#x6807;&#x7B7E;&#x5206;&#x7C7B;">&#x591A;&#x6807;&#x7B7E;&#x5206;&#x7C7B;</h2>
+<p>&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4F5C;&#x4E8E;&#x591A;&#x6807;&#x7B7E;&#x5206;&#x7C7B;&#x3002; &#x601D;&#x8DEF;&#x5982;&#x4E0B;: </p>
+<p>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6807;&#x7B7E;A&#x4E2D;&#x6709;a0,a1,a2....an&#x4E2A;&#x6807;&#x7B7E;&#xFF0C;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x6807;&#x7B7E; ai (ai &#x662F;&#x6807;&#x7B7E;A&#x4E4B;&#x4E00;)&#xFF0C;&#x6211;&#x4EEC;&#x8BAD;&#x7EC3;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x5206;&#x7C7B;&#x5668;&#x3002;</p>
+<p>&#x5373;&#xFF0C;&#x8BAD;&#x7EC3;&#x8BE5;&#x6807;&#x7B7E;&#x7684;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x5206;&#x7C7B;&#x5668;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C06;ai&#x770B;&#x4F5C;&#x4E00;&#x7C7B;&#x6807;&#x7B7E;&#xFF0C;&#x975E;ai&#x7684;&#x6240;&#x6709;&#x6807;&#x7B7E;&#x770B;&#x4F5C;&#x4E00;&#x7C7B;&#x6807;&#x7B7E;&#x3002;&#x90A3;&#x4E48;&#x76F8;&#x5F53;&#x4E8E;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x91CC;&#x9762;&#x53EA;&#x6709;&#x4E24;&#x7C7B;&#x6807;&#x7B7E;: ai &#x548C;&#x5176;&#x4ED6;&#x3002;</p>
+<p>&#x5269;&#x4E0B;&#x6B65;&#x9AA4;&#x5C31;&#x8DDF;&#x6211;&#x4EEC;&#x8BAD;&#x7EC3;&#x6B63;&#x5E38;&#x7684;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x5206;&#x7C7B;&#x5668;&#x4E00;&#x6837;&#x4E86;&#x3002;</p>
+<p>&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C06;&#x67E5;&#x8BE2;&#x70B9;&#x5957;&#x7528;&#x5728;&#x6BCF;&#x4E2A;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x5206;&#x7C7B;&#x5668;&#x4E2D;&#x7684;Sigmoid &#x51FD;&#x6570;&#xFF0C;&#x53D6;&#x503C;&#x6700;&#x9AD8;&#x7684;&#x5BF9;&#x5E94;&#x6807;&#x7B7E;&#x4E3A;&#x67E5;&#x8BE2;&#x70B9;&#x7684;&#x6807;&#x7B7E;&#x3002;</p>
+<hr>
+<ul>
+<li><strong>&#x4F5C;&#x8005;: <a href="http://cwiki.apachecn.org/display/~xuxin" target="_blank">&#x7F8A;&#x4E09;</a> <a href="http://cwiki.apachecn.org/display/~chenyao" target="_blank">&#x5C0F;&#x7476;</a></strong></li>
+<li><a href="https://github.com/apachecn/AiLearning" target="_blank">GitHub&#x5730;&#x5740;</a>: <a href="https://github.com/apachecn/AiLearning" target="_blank">https://github.com/apachecn/AiLearning</a></li>
+<li><strong>&#x7248;&#x6743;&#x58F0;&#x660E;: &#x6B22;&#x8FCE;&#x8F6C;&#x8F7D;&#x5B66;&#x4E60; =&gt; &#x8BF7;&#x6807;&#x6CE8;&#x4FE1;&#x606F;&#x6765;&#x6E90;&#x4E8E; <a href="http://www.apachecn.org/" target="_blank">ApacheCN</a></strong></li>
+</ul>
+<p><hr></p>
+<div align="center">
+    <p><a href="http://www.apachecn.org" target="_blank"><font face="KaiTi" size="6" color="red">&#x6211;&#x4EEC;&#x4E00;&#x76F4;&#x5728;&#x52AA;&#x529B;</font></a></p>
+    <p><a href="https://github.com/apachecn/AiLearning/" target="_blank">apachecn/AiLearning</a></p>
+    <p><iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=AiLearning&amp;type=watch&amp;count=true&amp;v=2" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=AiLearning&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=AiLearning&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <a target="_blank" href="../../shang.qq.com/wpa/qunwpa"><img border="0" src="http://data.apachecn.org/img/logo/ApacheCN-group.png" alt="ML | ApacheCN" title="ML | ApacheCN"></a></p>
+</div>
+ <div style="text-align:center;margin:0 0 10.5px;">
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3565452474788507" data-ad-slot="2543897000">
+     </ins>
+     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?33149aa6702022b1203201da06e23d81";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127082511-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127082511-1');
+    </script>
+</div>
+
+<p><meta name="google-site-verification" content="pyo9N70ZWyh8JB43bIu633mhxesJ1IcwWCZlM3jUfFo"></p>
+<p><iframe src="https://www.bilibili.com/read/cv2710377" style="display:none"></iframe>
+<img src="http://t.cn/AiCoDHwb" hidden="hidden"></p>
+<div>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+    <div id="gitalk-container"></div>
+    <script type="text/javascript">
+        const gitalk = new Gitalk({
+        clientID: '2e62dee5b9896e2eede6',
+        clientSecret: 'ca6819a54656af0d87960af15315320f8a628a53',
+        repo: 'AiLearning',
+        owner: 'apachecn',
+        admin: ['jiangzhonglian', 'wizardforcel'],
+        id: md5(location.pathname),
+        distractionFreeMode: false
+        })
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ibooker.org.cn 2019 all right reserved&#xFF0C;&#x7531; ApacheCN &#x56E2;&#x961F;&#x63D0;&#x4F9B;&#x652F;&#x6301;</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:  
+2020-10-19 13:02:43
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4.html" class="navigation navigation-prev " aria-label="Previous page: 第4章_朴素贝叶斯">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6.html" class="navigation navigation-next " aria-label="Next page: 第6章_支持向量机">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第5章_逻辑回归","level":"1.2.5","depth":2,"next":{"title":"第6章_支持向量机","level":"1.2.6","depth":2,"path":"docs/ml/6.md","ref":"docs/ml/6.md","articles":[]},"previous":{"title":"第4章_朴素贝叶斯","level":"1.2.4","depth":2,"path":"docs/ml/4.md","ref":"docs/ml/4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","github-buttons","-sharing","insert-logo","sharing-plus","back-to-top-button","code","copy-code-button","katex","pageview-count","edit-link","emphasize","alerts","auto-scroll-table","popup","hide-element","page-toc-button","tbfed-pagefooter","sitemap","advanced-emoji","expandable-chapters","splitter","search-pro"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy ibooker.org.cn 2019","modify_label":"该文件修订时间:  ","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"github":{"url":"https://github.com/apachecn/AiLearning"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sitemap":{"hostname":"http://pytorch.apachecn.org"},"page-toc-button":{"maxTocDepth":4,"minTocSize":4},"back-to-top-button":{},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"apachecn","repo":"AiLearning","type":"star","count":true,"size":"small"}]},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["qq","douban","facebook","google","linkedin","twitter","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"whatsapp":false,"twitter":false,"line":false,"google":false,"qzone":true},"edit-link":{"label":"编辑本页","base":"https://github.com/apachecn/AiLearning/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 150px; min-height: 150px","url":"http://data.apachecn.org/img/logo.jpg"},"expandable-chapters":{}},"my_links":{"sidebar":{"Home":"https://www.baidu.com"}},"theme":"default","author":"ApacheCN","my_plugins":["donate","todo","-lunr","-search","expandable-chapters-small","chapter-fold","expandable-chapters","expandable-chapters-small","back-to-top-button","ga","baidu","sitemap","tbfed-pagefooter","advanced-emoji","sectionx","page-treeview","simple-page-toc","ancre-navigation","theme-apachecn@git+https://github.com/apachecn/theme-apachecn#HEAD","pagefooter-apachecn@git+https://github.com/apachecn/gitbook-plugin-pagefooter-apachecn#HEAD"],"my_pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"ignores":["node_modules"],"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"page-copyright":{"wisdom":"Designer, Frontend Developer & overall web enthusiast","noPowered":false,"copyright":"Copyright &#169; 你的名字","style":"normal","timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"你的签名","copyrightColor":"#666","description":"modified at"},"donate":{"wechat":"微信收款的二维码URL","alipay":"支付宝收款的二维码URL","title":"","button":"赏","alipayText":"支付宝打赏","wechatText":"微信打赏"},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"apachecn","repo":"AiLearning","type":"star","count":true,"size":"small"},{"user":"apachecn","width":"160","type":"follow","count":true,"size":"small"}]},"ga":{"token":"UA-127082511-1"},"baidu":{"token":"75439e2cbd22bdd813226000e9dcc12f"},"pagefooter-apachecn":{"copyright":"Copyright &copy ibooker.org.cn 2019","modify_label":"该文件修订时间:  ","modify_format":"YYYY-MM-DD HH:mm:ss"}},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"AiLearning 中文文档","language":"zh-hans","gitbook":"*","description":"AiLearning 中文文档: 教程和文档"},"file":{"path":"docs/ml/5.md","mtime":"2020-10-19T13:02:43.836Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-19T13:03:33.421Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

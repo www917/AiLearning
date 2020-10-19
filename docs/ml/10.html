@@ -1,0 +1,1176 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第10章_KMeans聚类 · AiLearning 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ApacheCN">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="11.html" />
+    
+    
+    <link rel="prev" href="9.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"apachecn","repo":"AiLearning","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    入门须知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    机器学习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    第1章_基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    第2章_K近邻算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    第3章_决策树算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    第4章_朴素贝叶斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    第5章_逻辑回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    第6章_支持向量机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    第7章_集成方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    第8章_回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    第9章_树回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    第10章_KMeans聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    第11章_Apriori算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    第12章_FP-growth算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    第13章_PCA降维
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="14.html">
+            
+                <a href="14.html">
+            
+                    
+                    第14章_SVD简化数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="15.html">
+            
+                <a href="15.html">
+            
+                    
+                    第15章_大数据与MapReduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="16.html">
+            
+                <a href="16.html">
+            
+                    
+                    第16章_推荐系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../why-to-record-study-ml-video.html">
+            
+                <a href="../why-to-record-study-ml-video.html">
+            
+                    
+                    为何录制教学版视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../report/2017-04-08.html">
+            
+                <a href="../report/2017-04-08.html">
+            
+                    
+                    2017-04-08_第一期的总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    深度学习入门
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../dl/反向传递.html">
+            
+                <a href="../dl/反向传递.html">
+            
+                    
+                    反向传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../dl/CNN原理.html">
+            
+                <a href="../dl/CNN原理.html">
+            
+                    
+                    CNN原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../dl/RNN原理.html">
+            
+                <a href="../dl/RNN原理.html">
+            
+                    
+                    RNN原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../dl/LSTM原理.html">
+            
+                <a href="../dl/LSTM原理.html">
+            
+                    
+                    LSTM原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    自然语言处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../nlp/1.入门介绍.html">
+            
+                <a href="../nlp/1.入门介绍.html">
+            
+                    
+                    第1章_入门介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../nlp/2.分词.html">
+            
+                <a href="../nlp/2.分词.html">
+            
+                    
+                    第2章_分词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../nlp/3.命名实体识别.html">
+            
+                <a href="../nlp/3.命名实体识别.html">
+            
+                    
+                    第3章_命名实体识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../nlp/3.1.篇章分析-内容概述.html">
+            
+                <a href="../nlp/3.1.篇章分析-内容概述.html">
+            
+                    
+                    第10章_篇章分析-内容概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../nlp/3.2.篇章分析-内容标签.html">
+            
+                <a href="../nlp/3.2.篇章分析-内容标签.html">
+            
+                    
+                    第10章_篇章分析-内容标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../nlp/3.3.篇章分析-情感分析.html">
+            
+                <a href="../nlp/3.3.篇章分析-情感分析.html">
+            
+                    
+                    第10章_篇章分析-情感分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../nlp/3.4.篇章分析-自动摘要.html">
+            
+                <a href="../nlp/3.4.篇章分析-自动摘要.html">
+            
+                    
+                    第10章_篇章分析-自动摘要
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    TensorFlow 2.0 - 教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../TensorFlow2.x/安装指南.html">
+            
+                <a href="../TensorFlow2.x/安装指南.html">
+            
+                    
+                    安装指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../TensorFlow2.x/Keras快速入门.html">
+            
+                <a href="../TensorFlow2.x/Keras快速入门.html">
+            
+                    
+                    Kears 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../TensorFlow2.x/实战项目_1_电影情感分类.html">
+            
+                <a href="../TensorFlow2.x/实战项目_1_电影情感分类.html">
+            
+                    
+                    实战项目 1 电影情感分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../TensorFlow2.x/实战项目_2_汽车燃油效率.html">
+            
+                <a href="../TensorFlow2.x/实战项目_2_汽车燃油效率.html">
+            
+                    
+                    实战项目 2 汽车燃油效率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../TensorFlow2.x/实战项目_3_优化_过拟合和欠拟合.html">
+            
+                <a href="../TensorFlow2.x/实战项目_3_优化_过拟合和欠拟合.html">
+            
+                    
+                    实战项目 3 优化 过拟合和欠拟合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../TensorFlow2.x/实战项目_4_古诗词自动生成.html">
+            
+                <a href="../TensorFlow2.x/实战项目_4_古诗词自动生成.html">
+            
+                    
+                    实战项目 4 古诗词自动生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >第10章_KMeans聚类</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-10-&#x7AE0;-k-means&#xFF08;k-&#x5747;&#x503C;&#xFF09;&#x805A;&#x7C7B;&#x7B97;&#x6CD5;">&#x7B2C; 10 &#x7AE0; K-Means&#xFF08;K-&#x5747;&#x503C;&#xFF09;&#x805A;&#x7C7B;&#x7B97;&#x6CD5;</h1>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/10.KMeans/K-Means_&#x9996;&#x9875;.jpg" alt="K-Means&#xFF08;K-&#x5747;&#x503C;&#xFF09;&#x805A;&#x7C7B;&#x7B97;&#x6CD5;_&#x9996;&#x9875;"></p>
+<h2 id="&#x805A;&#x7C7B;">&#x805A;&#x7C7B;</h2>
+<p>&#x805A;&#x7C7B;&#xFF0C;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x5C06;&#x4E00;&#x4E2A;&#x5E9E;&#x6742;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x5177;&#x6709;&#x76F8;&#x4F3C;&#x7279;&#x5F81;&#x7684;&#x6570;&#x636E;&#x81EA;&#x52A8;&#x5F52;&#x7C7B;&#x5230;&#x4E00;&#x8D77;&#xFF0C;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x7C07;&#xFF0C;&#x7C07;&#x5185;&#x7684;&#x5BF9;&#x8C61;&#x8D8A;&#x76F8;&#x4F3C;&#xFF0C;&#x805A;&#x7C7B;&#x7684;&#x6548;&#x679C;&#x8D8A;&#x597D;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x79CD;&#x65E0;&#x76D1;&#x7763;&#x7684;&#x5B66;&#x4E60;(Unsupervised Learning)&#x65B9;&#x6CD5;,&#x4E0D;&#x9700;&#x8981;&#x9884;&#x5148;&#x6807;&#x6CE8;&#x597D;&#x7684;&#x8BAD;&#x7EC3;&#x96C6;&#x3002;&#x805A;&#x7C7B;&#x4E0E;&#x5206;&#x7C7B;&#x6700;&#x5927;&#x7684;&#x533A;&#x522B;&#x5C31;&#x662F;&#x5206;&#x7C7B;&#x7684;&#x76EE;&#x6807;&#x4E8B;&#x5148;&#x5DF2;&#x77E5;&#xFF0C;&#x4F8B;&#x5982;&#x732B;&#x72D7;&#x8BC6;&#x522B;&#xFF0C;&#x4F60;&#x5728;&#x5206;&#x7C7B;&#x4E4B;&#x524D;&#x5DF2;&#x7ECF;&#x9884;&#x5148;&#x77E5;&#x9053;&#x8981;&#x5C06;&#x5B83;&#x5206;&#x4E3A;&#x732B;&#x3001;&#x72D7;&#x4E24;&#x4E2A;&#x79CD;&#x7C7B;&#xFF1B;&#x800C;&#x5728;&#x4F60;&#x805A;&#x7C7B;&#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x5BF9;&#x4F60;&#x7684;&#x76EE;&#x6807;&#x662F;&#x672A;&#x77E5;&#x7684;&#xFF0C;&#x540C;&#x6837;&#x4EE5;&#x52A8;&#x7269;&#x4E3A;&#x4F8B;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x52A8;&#x7269;&#x96C6;&#x6765;&#x8BF4;&#xFF0C;&#x4F60;&#x5E76;&#x4E0D;&#x6E05;&#x695A;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x5185;&#x90E8;&#x6709;&#x591A;&#x5C11;&#x79CD;&#x7C7B;&#x7684;&#x52A8;&#x7269;&#xFF0C;&#x4F60;&#x80FD;&#x505A;&#x7684;&#x53EA;&#x662F;&#x5229;&#x7528;&#x805A;&#x7C7B;&#x65B9;&#x6CD5;&#x5C06;&#x5B83;&#x81EA;&#x52A8;&#x6309;&#x7167;&#x7279;&#x5F81;&#x5206;&#x4E3A;&#x591A;&#x7C7B;&#xFF0C;&#x7136;&#x540E;&#x4EBA;&#x4E3A;&#x7ED9;&#x51FA;&#x8FD9;&#x4E2A;&#x805A;&#x7C7B;&#x7ED3;&#x679C;&#x7684;&#x5B9A;&#x4E49;&#xFF08;&#x5373;&#x7C07;&#x8BC6;&#x522B;&#xFF09;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F60;&#x5C06;&#x4E00;&#x4E2A;&#x52A8;&#x7269;&#x96C6;&#x5206;&#x4E3A;&#x4E86;&#x4E09;&#x7C07;&#xFF08;&#x7C7B;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x89C2;&#x5BDF;&#x8FD9;&#x4E09;&#x7C7B;&#x52A8;&#x7269;&#x7684;&#x7279;&#x5F81;&#xFF0C;&#x4F60;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x7C07;&#x8D77;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#xFF0C;&#x5982;&#x5927;&#x8C61;&#x3001;&#x72D7;&#x3001;&#x732B;&#x7B49;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x805A;&#x7C7B;&#x7684;&#x57FA;&#x672C;&#x601D;&#x60F3;&#x3002;     </p>
+<p>&#x81F3;&#x4E8E;&#x201C;&#x76F8;&#x4F3C;&#x201D;&#x8FD9;&#x4E00;&#x6982;&#x5FF5;&#xFF0C;&#x662F;&#x5229;&#x7528;&#x8DDD;&#x79BB;&#x8FD9;&#x4E2A;&#x8BC4;&#x4EF7;&#x6807;&#x51C6;&#x6765;&#x8861;&#x91CF;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x5BF9;&#x8C61;&#x4E0E;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x8FDC;&#x8FD1;&#x6765;&#x5224;&#x65AD;&#x5B83;&#x4EEC;&#x662F;&#x5426;&#x5C5E;&#x4E8E;&#x540C;&#x4E00;&#x7C7B;&#x522B;&#xFF0C;&#x5373;&#x662F;&#x5426;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x7C07;&#x3002;&#x81F3;&#x4E8E;&#x8DDD;&#x79BB;&#x5982;&#x4F55;&#x8BA1;&#x7B97;&#xFF0C;&#x79D1;&#x5B66;&#x5BB6;&#x4EEC;&#x63D0;&#x51FA;&#x4E86;&#x8BB8;&#x591A;&#x79CD;&#x8DDD;&#x79BB;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x4E2D;&#x6B27;&#x5F0F;&#x8DDD;&#x79BB;&#x662F;&#x6700;&#x4E3A;&#x7B80;&#x5355;&#x548C;&#x5E38;&#x7528;&#x7684;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x8FD8;&#x6709;&#x66FC;&#x54C8;&#x987F;&#x8DDD;&#x79BB;&#x548C;&#x4F59;&#x5F26;&#x76F8;&#x4F3C;&#x6027;&#x8DDD;&#x79BB;&#x7B49;&#x3002;</p>
+<p>&#x6B27;&#x5F0F;&#x8DDD;&#x79BB;&#xFF0C;&#x6211;&#x60F3;&#x5927;&#x5BB6;&#x518D;&#x719F;&#x6089;&#x4E0D;&#x8FC7;&#x4E86;&#xFF0C;&#x4F46;&#x4E3A;&#x514D;&#x6709;&#x4E00;&#x4E9B;&#x57FA;&#x7840;&#x8584;&#x5F31;&#x7684;&#x540C;&#x5B66;&#xFF0C;&#x5728;&#x6B64;&#x518D;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#xFF0C;&#x5B83;&#x7684;&#x5B9A;&#x4E49;&#x4E3A;:<br>&#x5BF9;&#x4E8E;x&#x70B9;&#x5750;&#x6807;&#x4E3A;(x1,x2,x3,...,xn)&#x548C; y&#x70B9;&#x5750;&#x6807;&#x4E3A;(y1,y2,y3,...,yn)&#xFF0C;&#x4E24;&#x8005;&#x7684;&#x6B27;&#x5F0F;&#x8DDD;&#x79BB;&#x4E3A;:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mo>=</mo><mrow><msqrt><mrow><mo>(</mo><msub><mi>x</mi><mrow><mn>1</mn></mrow></msub><mo>&#x2212;</mo><msub><mi>y</mi><mrow><mn>1</mn></mrow></msub><msup><mo>)</mo><mrow><mn>2</mn></mrow></msup><mo>+</mo><mo>(</mo><msub><mi>x</mi><mrow><mn>2</mn></mrow></msub><mo>&#x2212;</mo><msub><mi>y</mi><mrow><mn>2</mn></mrow></msub><msup><mo>)</mo><mrow><mn>2</mn></mrow></msup><mo>+</mo><mo>&#x22EF;</mo><mo>+</mo><mo>(</mo><msub><mi>x</mi><mrow><mi>n</mi></mrow></msub><mo>&#x2212;</mo><msub><mi>y</mi><mrow><mi>n</mi></mrow></msub><msup><mo>)</mo><mrow><mn>2</mn></mrow></msup></mrow></msqrt></mrow><mo>=</mo><mrow><msqrt><mrow><msubsup><mo>&#x2211;</mo><mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow></mrow><mrow><mi>n</mi></mrow></msubsup><mo>(</mo><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub><mo>&#x2212;</mo><msub><mi>y</mi><mrow><mi>i</mi></mrow></msub><msup><mo>)</mo><mrow><mn>2</mn></mrow></msup></mrow></msqrt></mrow></mrow><annotation encoding="application/x-tex">
+d(x,y)
+    ={\sqrt{
+            (x_{1}-y_{1})^{2}+(x_{2}-y_{2})^{2} + \cdots +(x_{n}-y_{n})^{2}
+        }}
+    ={\sqrt{
+            \sum_{ {i=1} }^{n}(x_{i}-y_{i})^{2}
+        }}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:2.128249em;"></span><span class="strut bottom" style="height:3.6550199999999995em;vertical-align:-1.5267709999999999em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">d</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord displaystyle textstyle uncramped"><span class="mord sqrt"><span class="sqrt-sign" style="top:-0.09388000000000007em;"><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing size1">&#x221A;</span></span></span><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle cramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.289em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.289em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="minner">&#x22EF;</span><span class="mbin">+</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.289em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span style="top:-0.90388em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped sqrt-line"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord displaystyle textstyle uncramped"><span class="mord sqrt"><span class="sqrt-sign" style="top:-0.023254000000000108em;"><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:0.665005em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="delimsizinginner delim-size4"><span>&#x23B7;</span></span></span><span style="top:-0.24999499999999997em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="delimsizinginner delim-size4"><span>&#xE000;</span></span></span><span style="top:-0.854995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="delimsizinginner delim-size4"><span>&#xE000;</span></span></span><span style="top:-1.459995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="delimsizinginner delim-size4"><span>&#xE001;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle cramped"><span class="mop op-limits"><span class="vlist"><span style="top:1.1776689999999999em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span></span><span style="top:-0.000005000000000143778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span><span style="top:-1.2500050000000003em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.289em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span style="top:-2.0482489999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped sqrt-line"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></span></p>
+<p>&#x5728;&#x4E8C;&#x7EF4;&#x5E73;&#x9762;&#xFF0C;&#x5B83;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x521D;&#x4E2D;&#x65F6;&#x5C31;&#x5B66;&#x8FC7;&#x7684;&#x4E24;&#x70B9;&#x8DDD;&#x79BB;&#x516C;&#x5F0F;</p>
+<h2 id="k-means-&#x7B97;&#x6CD5;">K-Means &#x7B97;&#x6CD5;</h2>
+<p>K-Means &#x662F;&#x53D1;&#x73B0;&#x7ED9;&#x5B9A;&#x6570;&#x636E;&#x96C6;&#x7684; K &#x4E2A;&#x7C07;&#x7684;&#x805A;&#x7C7B;&#x7B97;&#x6CD5;, &#x4E4B;&#x6240;&#x4EE5;&#x79F0;&#x4E4B;&#x4E3A; <code>K-&#x5747;&#x503C;</code> &#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x53EF;&#x4EE5;&#x53D1;&#x73B0; K &#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x7C07;, &#x4E14;&#x6BCF;&#x4E2A;&#x7C07;&#x7684;&#x4E2D;&#x5FC3;&#x91C7;&#x7528;&#x7C07;&#x4E2D;&#x6240;&#x542B;&#x503C;&#x7684;&#x5747;&#x503C;&#x8BA1;&#x7B97;&#x800C;&#x6210;.<br>&#x7C07;&#x4E2A;&#x6570; K &#x662F;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;, &#x6BCF;&#x4E00;&#x4E2A;&#x7C07;&#x901A;&#x8FC7;&#x5176;&#x8D28;&#x5FC3;&#xFF08;centroid&#xFF09;, &#x5373;&#x7C07;&#x4E2D;&#x6240;&#x6709;&#x70B9;&#x7684;&#x4E2D;&#x5FC3;&#x6765;&#x63CF;&#x8FF0;.<br>&#x805A;&#x7C7B;&#x4E0E;&#x5206;&#x7C7B;&#x7B97;&#x6CD5;&#x7684;&#x6700;&#x5927;&#x533A;&#x522B;&#x5728;&#x4E8E;, &#x5206;&#x7C7B;&#x7684;&#x76EE;&#x6807;&#x7C7B;&#x522B;&#x5DF2;&#x77E5;, &#x800C;&#x805A;&#x7C7B;&#x7684;&#x76EE;&#x6807;&#x7C7B;&#x522B;&#x662F;&#x672A;&#x77E5;&#x7684;.  </p>
+<p><strong>&#x4F18;&#x70B9;</strong>:</p>
+<ul>
+<li>&#x5C5E;&#x4E8E;&#x65E0;&#x76D1;&#x7763;&#x5B66;&#x4E60;&#xFF0C;&#x65E0;&#x987B;&#x51C6;&#x5907;&#x8BAD;&#x7EC3;&#x96C6;</li>
+<li>&#x539F;&#x7406;&#x7B80;&#x5355;&#xFF0C;&#x5B9E;&#x73B0;&#x8D77;&#x6765;&#x8F83;&#x4E3A;&#x5BB9;&#x6613;</li>
+<li>&#x7ED3;&#x679C;&#x53EF;&#x89E3;&#x91CA;&#x6027;&#x8F83;&#x597D;</li>
+</ul>
+<p><strong>&#x7F3A;&#x70B9;</strong>:</p>
+<ul>
+<li><strong>&#x9700;&#x624B;&#x52A8;&#x8BBE;&#x7F6E;k&#x503C;</strong>&#x3002; &#x5728;&#x7B97;&#x6CD5;&#x5F00;&#x59CB;&#x9884;&#x6D4B;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x624B;&#x52A8;&#x8BBE;&#x7F6E;k&#x503C;&#xFF0C;&#x5373;&#x4F30;&#x8BA1;&#x6570;&#x636E;&#x5927;&#x6982;&#x7684;&#x7C7B;&#x522B;&#x4E2A;&#x6570;&#xFF0C;&#x4E0D;&#x5408;&#x7406;&#x7684;k&#x503C;&#x4F1A;&#x4F7F;&#x7ED3;&#x679C;&#x7F3A;&#x4E4F;&#x89E3;&#x91CA;&#x6027;</li>
+<li>&#x53EF;&#x80FD;&#x6536;&#x655B;&#x5230;&#x5C40;&#x90E8;&#x6700;&#x5C0F;&#x503C;, &#x5728;&#x5927;&#x89C4;&#x6A21;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#x6536;&#x655B;&#x8F83;&#x6162;</li>
+<li>&#x5BF9;&#x4E8E;&#x5F02;&#x5E38;&#x70B9;&#x3001;&#x79BB;&#x7FA4;&#x70B9;&#x654F;&#x611F;</li>
+</ul>
+<p>&#x4F7F;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B; : &#x6570;&#x503C;&#x578B;&#x6570;&#x636E;</p>
+<h3 id="k-means-&#x573A;&#x666F;">K-Means &#x573A;&#x666F;</h3>
+<p>kmeans&#xFF0C;&#x5982;&#x524D;&#x6240;&#x8FF0;&#xFF0C;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x96C6;&#x5185;&#x79CD;&#x7C7B;&#x5C5E;&#x6027;&#x4E0D;&#x660E;&#x6670;&#xFF0C;&#x5E0C;&#x671B;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x6570;&#x636E;&#x6316;&#x6398;&#x51FA;&#x6216;&#x81EA;&#x52A8;&#x5F52;&#x7C7B;&#x51FA;&#x6709;&#x76F8;&#x4F3C;&#x7279;&#x70B9;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x573A;&#x666F;&#x3002;&#x5176;&#x5546;&#x4E1A;&#x754C;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E00;&#x822C;&#x4E3A;&#x6316;&#x6398;&#x51FA;&#x5177;&#x6709;&#x76F8;&#x4F3C;&#x7279;&#x70B9;&#x7684;&#x6F5C;&#x5728;&#x5BA2;&#x6237;&#x7FA4;&#x4F53;&#x4EE5;&#x4FBF;&#x516C;&#x53F8;&#x80FD;&#x591F;&#x91CD;&#x70B9;&#x7814;&#x7A76;&#x3001;&#x5BF9;&#x75C7;&#x4E0B;&#x836F;&#x3002;  </p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5728;2000&#x5E74;&#x548C;2004&#x5E74;&#x7684;&#x7F8E;&#x56FD;&#x603B;&#x7EDF;&#x5927;&#x9009;&#x4E2D;&#xFF0C;&#x5019;&#x9009;&#x4EBA;&#x7684;&#x5F97;&#x7968;&#x6570;&#x6BD4;&#x8F83;&#x63A5;&#x8FD1;&#x6216;&#x8005;&#x8BF4;&#x975E;&#x5E38;&#x63A5;&#x8FD1;&#x3002;&#x4EFB;&#x4E00;&#x5019;&#x9009;&#x4EBA;&#x5F97;&#x5230;&#x7684;&#x666E;&#x9009;&#x7968;&#x6570;&#x7684;&#x6700;&#x5927;&#x767E;&#x5206;&#x6BD4;&#x4E3A;50.7%&#x800C;&#x6700;&#x5C0F;&#x767E;&#x5206;&#x6BD4;&#x4E3A;47.9% &#x5982;&#x679C;1%&#x7684;&#x9009;&#x6C11;&#x5C06;&#x624B;&#x4E2D;&#x7684;&#x9009;&#x7968;&#x6295;&#x5411;&#x53E6;&#x5916;&#x7684;&#x5019;&#x9009;&#x4EBA;&#xFF0C;&#x90A3;&#x4E48;&#x9009;&#x4E3E;&#x7ED3;&#x679C;&#x5C31;&#x4F1A;&#x622A;&#x7136;&#x4E0D;&#x540C;&#x3002; &#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5982;&#x679C;&#x59A5;&#x5584;&#x52A0;&#x4EE5;&#x5F15;&#x5BFC;&#x4E0E;&#x5438;&#x5F15;&#xFF0C;&#x5C11;&#x90E8;&#x5206;&#x9009;&#x6C11;&#x5C31;&#x4F1A;&#x8F6C;&#x6362;&#x7ACB;&#x573A;&#x3002;&#x5C3D;&#x7BA1;&#x8FD9;&#x7C7B;&#x9009;&#x4E3E;&#x8005;&#x5360;&#x7684;&#x6BD4;&#x4F8B;&#x8F83;&#x4F4E;&#xFF0C;&#x4F46;&#x5F53;&#x5019;&#x9009;&#x4EBA;&#x7684;&#x9009;&#x7968;&#x63A5;&#x8FD1;&#x65F6;&#xFF0C;&#x8FD9;&#x4E9B;&#x4EBA;&#x7684;&#x7ACB;&#x573A;&#x65E0;&#x7591;&#x4F1A;&#x5BF9;&#x9009;&#x4E3E;&#x7ED3;&#x679C;&#x4EA7;&#x751F;&#x975E;&#x5E38;&#x5927;&#x7684;&#x5F71;&#x54CD;&#x3002;&#x5982;&#x4F55;&#x627E;&#x51FA;&#x8FD9;&#x7C7B;&#x9009;&#x6C11;&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x5728;&#x6709;&#x9650;&#x7684;&#x9884;&#x7B97;&#x4E0B;&#x91C7;&#x53D6;&#x63AA;&#x65BD;&#x6765;&#x5438;&#x5F15;&#x4ED6;&#x4EEC;&#xFF1F; &#x7B54;&#x6848;&#x5C31;&#x662F;&#x805A;&#x7C7B;&#xFF08;Clustering)&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x5177;&#x4F53;&#x5982;&#x4F55;&#x5B9E;&#x65BD;&#x5462;&#xFF1F;&#x9996;&#x5148;&#xFF0C;&#x6536;&#x96C6;&#x7528;&#x6237;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x6536;&#x96C6;&#x7528;&#x6237;&#x6EE1;&#x610F;&#x6216;&#x4E0D;&#x6EE1;&#x610F;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x4EFB;&#x4F55;&#x5BF9;&#x7528;&#x6237;&#x91CD;&#x8981;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x53EF;&#x80FD;&#x5F71;&#x54CD;&#x7528;&#x6237;&#x7684;&#x6295;&#x7968;&#x7ED3;&#x679C;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x5C06;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x8F93;&#x5165;&#x5230;&#x67D0;&#x4E2A;&#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x4E2D;&#x3002;&#x63A5;&#x7740;&#xFF0C;&#x5BF9;&#x805A;&#x7C7B;&#x7ED3;&#x679C;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x7C07;&#xFF08;&#x6700;&#x597D;&#x9009;&#x62E9;&#x6700;&#x5927;&#x7C07; &#xFF09;&#xFF0C; &#x7CBE;&#x5FC3;&#x6784;&#x9020;&#x80FD;&#x591F;&#x5438;&#x5F15;&#x8BE5;&#x7C07;&#x9009;&#x6C11;&#x7684;&#x6D88;&#x606F;&#x3002;&#x6700;&#x540E;&#xFF0C; &#x5F00;&#x5C55;&#x7ADE;&#x9009;&#x6D3B;&#x52A8;&#x5E76;&#x89C2;&#x5BDF;&#x4E0A;&#x8FF0;&#x505A;&#x6CD5;&#x662F;&#x5426;&#x6709;&#x6548;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x5C31;&#x662F;&#x4EA7;&#x54C1;&#x90E8;&#x95E8;&#x7684;&#x5E02;&#x573A;&#x8C03;&#x7814;&#x4E86;&#x3002;&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x4E86;&#x89E3;&#x81EA;&#x5DF1;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x4EA7;&#x54C1;&#x90E8;&#x95E8;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x805A;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x5F97;&#x5230;&#x4E0D;&#x540C;&#x7279;&#x5F81;&#x7684;&#x7528;&#x6237;&#x7FA4;&#x4F53;&#xFF0C;&#x7136;&#x540E;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x7528;&#x6237;&#x7FA4;&#x4F53;&#x53EF;&#x4EE5;&#x5BF9;&#x75C7;&#x4E0B;&#x836F;&#xFF0C;&#x4E3A;&#x4ED6;&#x4EEC;&#x63D0;&#x4F9B;&#x66F4;&#x52A0;&#x7CBE;&#x51C6;&#x6709;&#x6548;&#x7684;&#x670D;&#x52A1;&#x3002;</p>
+<h3 id="k-means-&#x672F;&#x8BED;">K-Means &#x672F;&#x8BED;</h3>
+<ul>
+<li>&#x7C07;: &#x6240;&#x6709;&#x6570;&#x636E;&#x7684;&#x70B9;&#x96C6;&#x5408;&#xFF0C;&#x7C07;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x76F8;&#x4F3C;&#x7684;&#x3002;</li>
+<li>&#x8D28;&#x5FC3;: &#x7C07;&#x4E2D;&#x6240;&#x6709;&#x70B9;&#x7684;&#x4E2D;&#x5FC3;&#xFF08;&#x8BA1;&#x7B97;&#x6240;&#x6709;&#x70B9;&#x7684;&#x5747;&#x503C;&#x800C;&#x6765;&#xFF09;.</li>
+<li>SSE: Sum of Sqared Error&#xFF08;&#x8BEF;&#x5DEE;&#x5E73;&#x65B9;&#x548C;&#xFF09;, &#x5B83;&#x88AB;&#x7528;&#x6765;&#x8BC4;&#x4F30;&#x6A21;&#x578B;&#x7684;&#x597D;&#x574F;&#xFF0C;SSE &#x503C;&#x8D8A;&#x5C0F;&#xFF0C;&#x8868;&#x793A;&#x8D8A;&#x63A5;&#x8FD1;&#x5B83;&#x4EEC;&#x7684;&#x8D28;&#x5FC3;. &#x805A;&#x7C7B;&#x6548;&#x679C;&#x8D8A;&#x597D;&#x3002;&#x7531;&#x4E8E;&#x5BF9;&#x8BEF;&#x5DEE;&#x53D6;&#x4E86;&#x5E73;&#x65B9;&#xFF0C;&#x56E0;&#x6B64;&#x66F4;&#x52A0;&#x6CE8;&#x91CD;&#x90A3;&#x4E9B;&#x8FDC;&#x79BB;&#x4E2D;&#x5FC3;&#x7684;&#x70B9;&#xFF08;&#x4E00;&#x822C;&#x4E3A;&#x8FB9;&#x754C;&#x70B9;&#x6216;&#x79BB;&#x7FA4;&#x70B9;&#xFF09;&#x3002;&#x8BE6;&#x60C5;&#x89C1;kmeans&#x7684;&#x8BC4;&#x4EF7;&#x6807;&#x51C6;&#x3002;</li>
+</ul>
+<p>&#x6709;&#x5173; <code>&#x7C07;</code> &#x548C; <code>&#x8D28;&#x5FC3;</code> &#x672F;&#x8BED;&#x66F4;&#x5F62;&#x8C61;&#x7684;&#x4ECB;&#x7ECD;, &#x8BF7;&#x53C2;&#x8003;&#x4E0B;&#x56FE;:</p>
+<p><img src="http://data.apachecn.org/img/AiLearning/ml/10.KMeans/apachecn-k-means-term-1.jpg" alt="K-Means &#x672F;&#x8BED;&#x56FE;"></p>
+<h3 id="k-means-&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;">K-Means &#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;</h3>
+<ol>
+<li>&#x9996;&#x5148;, &#x968F;&#x673A;&#x786E;&#x5B9A; K &#x4E2A;&#x521D;&#x59CB;&#x70B9;&#x4F5C;&#x4E3A;&#x8D28;&#x5FC3;&#xFF08;<strong>&#x4E0D;&#x5FC5;&#x662F;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x70B9;</strong>&#xFF09;&#x3002;</li>
+<li>&#x7136;&#x540E;&#x5C06;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x70B9;&#x5206;&#x914D;&#x5230;&#x4E00;&#x4E2A;&#x7C07;&#x4E2D;, &#x5177;&#x4F53;&#x6765;&#x8BB2;, &#x5C31;&#x662F;&#x4E3A;&#x6BCF;&#x4E2A;&#x70B9;&#x627E;&#x5230;&#x8DDD;&#x5176;&#x6700;&#x8FD1;&#x7684;&#x8D28;&#x5FC3;, &#x5E76;&#x5C06;&#x5176;&#x5206;&#x914D;&#x8BE5;&#x8D28;&#x5FC3;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x7C07;. &#x8FD9;&#x4E00;&#x6B65;&#x5B8C;&#x6210;&#x4E4B;&#x540E;, &#x6BCF;&#x4E2A;&#x7C07;&#x7684;&#x8D28;&#x5FC3;&#x66F4;&#x65B0;&#x4E3A;&#x8BE5;&#x7C07;&#x6240;&#x6709;&#x70B9;&#x7684;&#x5E73;&#x5747;&#x503C;.
+3.&#x91CD;&#x590D;&#x4E0A;&#x8FF0;&#x8FC7;&#x7A0B;&#x76F4;&#x5230;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x70B9;&#x90FD;&#x8DDD;&#x79BB;&#x5B83;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x8D28;&#x5FC3;&#x6700;&#x8FD1;&#x65F6;&#x7ED3;&#x675F;&#x3002;</li>
+</ol>
+<p>&#x4E0A;&#x8FF0;&#x8FC7;&#x7A0B;&#x7684; <code>&#x4F2A;&#x4EE3;&#x7801;</code> &#x5982;&#x4E0B;:</p>
+<ul>
+<li>&#x521B;&#x5EFA; k &#x4E2A;&#x70B9;&#x4F5C;&#x4E3A;&#x8D77;&#x59CB;&#x8D28;&#x5FC3;&#xFF08;&#x901A;&#x5E38;&#x662F;&#x968F;&#x673A;&#x9009;&#x62E9;&#xFF09;</li>
+<li>&#x5F53;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x70B9;&#x7684;&#x7C07;&#x5206;&#x914D;&#x7ED3;&#x679C;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF08;&#x4E0D;&#x6539;&#x53D8;&#x65F6;&#x7B97;&#x6CD5;&#x7ED3;&#x675F;&#xFF09;<ul>
+<li>&#x5BF9;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x70B9;<ul>
+<li>&#x5BF9;&#x6BCF;&#x4E2A;&#x8D28;&#x5FC3;<ul>
+<li>&#x8BA1;&#x7B97;&#x8D28;&#x5FC3;&#x4E0E;&#x6570;&#x636E;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;</li>
+</ul>
+</li>
+<li>&#x5C06;&#x6570;&#x636E;&#x70B9;&#x5206;&#x914D;&#x5230;&#x8DDD;&#x5176;&#x6700;&#x8FD1;&#x7684;&#x7C07;</li>
+</ul>
+</li>
+<li>&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;&#x7C07;, &#x8BA1;&#x7B97;&#x7C07;&#x4E2D;&#x6240;&#x6709;&#x70B9;&#x7684;&#x5747;&#x503C;&#x5E76;&#x5C06;&#x5747;&#x503C;&#x4F5C;&#x4E3A;&#x8D28;&#x5FC3;</li>
+</ul>
+</li>
+</ul>
+<h3 id="k-means-&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">K-Means &#x5F00;&#x53D1;&#x6D41;&#x7A0B;</h3>
+<pre><code>&#x6536;&#x96C6;&#x6570;&#x636E;: &#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x65B9;&#x6CD5;
+&#x51C6;&#x5907;&#x6570;&#x636E;: &#x9700;&#x8981;&#x6570;&#x503C;&#x578B;&#x6570;&#x636E;&#x7C7B;&#x8BA1;&#x7B97;&#x8DDD;&#x79BB;, &#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x6807;&#x79F0;&#x578B;&#x6570;&#x636E;&#x6620;&#x5C04;&#x4E3A;&#x4E8C;&#x503C;&#x578B;&#x6570;&#x636E;&#x518D;&#x7528;&#x4E8E;&#x8DDD;&#x79BB;&#x8BA1;&#x7B97;
+&#x5206;&#x6790;&#x6570;&#x636E;: &#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x65B9;&#x6CD5;
+&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;: &#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x65E0;&#x76D1;&#x7763;&#x5B66;&#x4E60;&#xFF0C;&#x5373;&#x65E0;&#x76D1;&#x7763;&#x5B66;&#x4E60;&#x4E0D;&#x9700;&#x8981;&#x8BAD;&#x7EC3;&#x6B65;&#x9AA4;
+&#x6D4B;&#x8BD5;&#x7B97;&#x6CD5;: &#x5E94;&#x7528;&#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x3001;&#x89C2;&#x5BDF;&#x7ED3;&#x679C;.&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x91CF;&#x5316;&#x7684;&#x8BEF;&#x5DEE;&#x6307;&#x6807;&#x5982;&#x8BEF;&#x5DEE;&#x5E73;&#x65B9;&#x548C;&#xFF08;&#x540E;&#x9762;&#x4F1A;&#x4ECB;&#x7ECD;&#xFF09;&#x6765;&#x8BC4;&#x4EF7;&#x7B97;&#x6CD5;&#x7684;&#x7ED3;&#x679C;.
+&#x4F7F;&#x7528;&#x7B97;&#x6CD5;: &#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6240;&#x5E0C;&#x671B;&#x7684;&#x4EFB;&#x4F55;&#x5E94;&#x7528;.&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;, &#x7C07;&#x8D28;&#x5FC3;&#x53EF;&#x4EE5;&#x4EE3;&#x8868;&#x6574;&#x4E2A;&#x7C07;&#x7684;&#x6570;&#x636E;&#x6765;&#x505A;&#x51FA;&#x51B3;&#x7B56;.
+</code></pre><h3 id="k-means-&#x7684;&#x8BC4;&#x4EF7;&#x6807;&#x51C6;">K-Means &#x7684;&#x8BC4;&#x4EF7;&#x6807;&#x51C6;</h3>
+<p>k-means&#x7B97;&#x6CD5;&#x56E0;&#x4E3A;&#x624B;&#x52A8;&#x9009;&#x53D6;k&#x503C;&#x548C;&#x521D;&#x59CB;&#x5316;&#x968F;&#x673A;&#x8D28;&#x5FC3;&#x7684;&#x7F18;&#x6545;&#xFF0C;&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x4F1A;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#xFF0C;&#x800C;&#x4E14;&#x7531;&#x4E8E;&#x624B;&#x52A8;&#x9009;&#x53D6;k&#x503C;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x77E5;&#x9053;&#x6211;&#x4EEC;&#x9009;&#x53D6;&#x7684;k&#x503C;&#x662F;&#x5426;&#x5408;&#x7406;&#xFF0C;&#x805A;&#x7C7B;&#x6548;&#x679C;&#x597D;&#x4E0D;&#x597D;&#xFF0C;&#x90A3;&#x4E48;&#x5982;&#x4F55;&#x6765;&#x8BC4;&#x4EF7;&#x67D0;&#x4E00;&#x6B21;&#x7684;&#x805A;&#x7C7B;&#x6548;&#x679C;&#x5462;&#xFF1F;&#x4E5F;&#x8BB8;&#x5C06;&#x5B83;&#x4EEC;&#x753B;&#x5728;&#x56FE;&#x4E0A;&#x76F4;&#x63A5;&#x89C2;&#x5BDF;&#x662F;&#x6700;&#x597D;&#x7684;&#x529E;&#x6CD5;&#xFF0C;&#x4F46;&#x73B0;&#x5B9E;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x4EC5;&#x4EC5;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x7279;&#x5F81;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x90FD;&#x6709;&#x5341;&#x51E0;&#x4E2A;&#x7279;&#x5F81;&#xFF0C;&#x800C;&#x89C2;&#x5BDF;&#x5341;&#x51E0;&#x7EF4;&#x7684;&#x7A7A;&#x95F4;&#x5BF9;&#x6211;&#x4EEC;&#x6765;&#x8BF4;&#x662F;&#x4E00;&#x4E2A;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x7684;&#x4EFB;&#x52A1;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x516C;&#x5F0F;&#x6765;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5224;&#x65AD;&#x805A;&#x7C7B;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x8FD9;&#x4E2A;&#x516C;&#x5F0F;&#x5C31;&#x662F;<strong>SSE</strong> (Sum of Squared Error, &#x8BEF;&#x5DEE;&#x5E73;&#x65B9;&#x548C; &#xFF09;&#xFF0C;&#x5B83;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x70B9;&#x5230;&#x5176;&#x7C07;&#x5185;&#x8D28;&#x5FC3;&#x7684;&#x8DDD;&#x79BB;&#x7684;&#x5E73;&#x65B9;&#x503C;&#x7684;&#x603B;&#x548C;&#xFF0C;&#x8FD9;&#x4E2A;&#x6570;&#x503C;&#x5BF9;&#x5E94;kmeans&#x51FD;&#x6570;&#x4E2D;<strong>clusterAssment</strong>&#x77E9;&#x9635;&#x7684;&#x7B2C;&#x4E00;&#x5217;&#x4E4B;&#x548C;&#x3002; <strong>SSE</strong>&#x503C;&#x8D8A;&#x5C0F;&#x8868;&#x793A;&#x6570;&#x636E;&#x70B9;&#x8D8A;&#x63A5;&#x8FD1;&#x4E8E;&#x5B83;&#x4EEC;&#x7684;&#x8D28;&#x5FC3;&#xFF0C;&#x805A;&#x7C7B;&#x6548;&#x679C;&#x4E5F;&#x8D8A;&#x597D;&#x3002; &#x56E0;&#x4E3A;&#x5BF9;&#x8BEF;&#x5DEE;&#x53D6;&#x4E86;&#x5E73;&#x65B9;&#xFF0C;&#x56E0;&#x6B64;&#x66F4;&#x52A0;&#x91CD;&#x89C6;&#x90A3;&#x4E9B;&#x8FDC;&#x79BB;&#x4E2D;&#x5FC3;&#x7684;&#x70B9;&#x3002;&#x4E00;&#x79CD;&#x80AF;&#x5B9A;&#x53EF;&#x4EE5;&#x964D;&#x4F4E;<strong>SSE</strong>&#x503C;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x589E;&#x52A0;&#x7C07;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x4F46;&#x8FD9;&#x8FDD;&#x80CC;&#x4E86;&#x805A;&#x7C7B;&#x7684;&#x76EE;&#x6807;&#x3002;&#x805A;&#x7C7B;&#x7684;&#x76EE;&#x6807;&#x662F;&#x5728;&#x4FDD;&#x6301;&#x7C07;&#x6570;&#x76EE;&#x4E0D;&#x53D8;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x63D0;&#x9AD8;&#x7C07;&#x7684;&#x8D28;&#x91CF;&#x3002;</p>
+<h3 id="k-means-&#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x51FD;&#x6570;">K-Means &#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x51FD;&#x6570;</h3>
+<h4 id="&#x4ECE;&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x6570;&#x636E;&#x96C6;">&#x4ECE;&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x6570;&#x636E;&#x96C6;</h4>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x4ECE;&#x6587;&#x672C;&#x4E2D;&#x6784;&#x5EFA;&#x77E9;&#x9635;&#xFF0C;&#x52A0;&#x8F7D;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x5904;&#x7406;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loadDataSet</span><span class="hljs-params">(fileName)</span>:</span>    <span class="hljs-comment"># &#x901A;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x89E3;&#x6790;&#x4EE5; tab &#x952E;&#x5206;&#x9694;&#x7684; floats&#xFF08;&#x6D6E;&#x70B9;&#x6570;&#xFF09;&#xFF0C;&#x4F8B;&#x5982;: 1.658985    4.285136</span>
+    dataMat = []
+    fr = open(fileName)
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> fr.readlines():
+        curLine = line.strip().split(<span class="hljs-string">&apos;\t&apos;</span>)
+        fltLine = map(float,curLine)    <span class="hljs-comment"># &#x6620;&#x5C04;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#x4E3A; float&#xFF08;&#x6D6E;&#x70B9;&#x6570;&#xFF09;&#x7C7B;&#x578B;</span>
+        dataMat.append(fltLine)
+    <span class="hljs-keyword">return</span> dataMat
+</code></pre>
+<h4 id="&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x5411;&#x91CF;&#x7684;&#x6B27;&#x6C0F;&#x8DDD;&#x79BB;">&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x5411;&#x91CF;&#x7684;&#x6B27;&#x6C0F;&#x8DDD;&#x79BB;</h4>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x5411;&#x91CF;&#x7684;&#x6B27;&#x5F0F;&#x8DDD;&#x79BB;&#xFF08;&#x53EF;&#x6839;&#x636E;&#x573A;&#x666F;&#x9009;&#x62E9;&#x5176;&#x4ED6;&#x8DDD;&#x79BB;&#x516C;&#x5F0F;&#xFF09;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">distEclud</span><span class="hljs-params">(vecA, vecB)</span>:</span>
+    <span class="hljs-keyword">return</span> sqrt(sum(power(vecA - vecB, <span class="hljs-number">2</span>))) <span class="hljs-comment"># la.norm(vecA-vecB)</span>
+</code></pre>
+<h4 id="&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B;-k-&#x4E2A;&#x968F;&#x673A;&#x8D28;&#x5FC3;&#x7684;&#x96C6;&#x5408;">&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B; K &#x4E2A;&#x968F;&#x673A;&#x8D28;&#x5FC3;&#x7684;&#x96C6;&#x5408;</h4>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x4E3A;&#x7ED9;&#x5B9A;&#x6570;&#x636E;&#x96C6;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B; k &#x4E2A;&#x968F;&#x673A;&#x8D28;&#x5FC3;&#x7684;&#x96C6;&#x5408;&#x3002;&#x968F;&#x673A;&#x8D28;&#x5FC3;&#x5FC5;&#x987B;&#x8981;&#x5728;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x7684;&#x8FB9;&#x754C;&#x4E4B;&#x5185;&#xFF0C;&#x8FD9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x627E;&#x5230;&#x6570;&#x636E;&#x96C6;&#x6BCF;&#x4E00;&#x7EF4;&#x7684;&#x6700;&#x5C0F;&#x548C;&#x6700;&#x5927;&#x503C;&#x6765;&#x5B8C;&#x6210;&#x3002;&#x7136;&#x540E;&#x751F;&#x6210; 0~1.0 &#x4E4B;&#x95F4;&#x7684;&#x968F;&#x673A;&#x6570;&#x5E76;&#x901A;&#x8FC7;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x548C;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x4EE5;&#x4FBF;&#x786E;&#x4FDD;&#x968F;&#x673A;&#x70B9;&#x5728;&#x6570;&#x636E;&#x7684;&#x8FB9;&#x754C;&#x4E4B;&#x5185;&#x3002;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">randCent</span><span class="hljs-params">(dataSet, k)</span>:</span>
+    n = shape(dataSet)[<span class="hljs-number">1</span>] <span class="hljs-comment"># &#x5217;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x5373;&#x6570;&#x636E;&#x7684;&#x7279;&#x5F81;&#x4E2A;&#x6570;</span>
+    centroids = mat(zeros((k,n))) <span class="hljs-comment"># &#x521B;&#x5EFA;k&#x4E2A;&#x8D28;&#x5FC3;&#x77E9;&#x9635;</span>
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(n): <span class="hljs-comment"># &#x521B;&#x5EFA;&#x968F;&#x673A;&#x7C07;&#x8D28;&#x5FC3;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x6BCF;&#x4E00;&#x7EF4;&#x7684;&#x8FB9;&#x754C;&#x5185;</span>
+        minJ = min(dataSet[:,j])    <span class="hljs-comment"># &#x6700;&#x5C0F;&#x503C;</span>
+        rangeJ = float(max(dataSet[:,j]) - minJ)    <span class="hljs-comment"># &#x8303;&#x56F4; = &#x6700;&#x5927;&#x503C; - &#x6700;&#x5C0F;&#x503C;</span>
+        centroids[:,j] = mat(minJ + rangeJ * random.rand(k,<span class="hljs-number">1</span>))    <span class="hljs-comment"># &#x968F;&#x673A;&#x751F;&#x6210;&#xFF0C;mat&#x4E3A;numpy&#x51FD;&#x6570;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x6700;&#x5F00;&#x59CB;&#x5199;&#x4E0A; from numpy import *</span>
+    <span class="hljs-keyword">return</span> centroids
+</code></pre>
+<h4 id="k-means-&#x805A;&#x7C7B;&#x7B97;&#x6CD5;">K-Means &#x805A;&#x7C7B;&#x7B97;&#x6CD5;</h4>
+<pre><code class="lang-python"><span class="hljs-comment"># k-means &#x805A;&#x7C7B;&#x7B97;&#x6CD5;</span>
+<span class="hljs-comment"># &#x8BE5;&#x7B97;&#x6CD5;&#x4F1A;&#x521B;&#x5EFA;k&#x4E2A;&#x8D28;&#x5FC3;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6BCF;&#x4E2A;&#x70B9;&#x5206;&#x914D;&#x5230;&#x6700;&#x8FD1;&#x7684;&#x8D28;&#x5FC3;&#xFF0C;&#x518D;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#x8D28;&#x5FC3;&#x3002;</span>
+<span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x91CD;&#x590D;&#x6570;&#x6B21;&#xFF0C;&#x76F4;&#x5230;&#x6570;&#x636E;&#x70B9;&#x7684;&#x7C07;&#x5206;&#x914D;&#x7ED3;&#x679C;&#x4E0D;&#x518D;&#x6539;&#x53D8;&#x4F4D;&#x7F6E;&#x3002;</span>
+<span class="hljs-comment"># &#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF08;&#x591A;&#x6B21;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x53EF;&#x80FD;&#x4F1A;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x8BD5;&#x8BD5;&#xFF0C;&#x539F;&#x56E0;&#x4E3A;&#x968F;&#x673A;&#x8D28;&#x5FC3;&#x7684;&#x5F71;&#x54CD;&#xFF0C;&#x4F46;&#x603B;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x5BF9;&#x7684;&#xFF0C; &#x56E0;&#x4E3A;&#x6570;&#x636E;&#x8DB3;&#x591F;&#x76F8;&#x4F3C;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x4F1A;&#x9677;&#x5165;&#x5C40;&#x90E8;&#x6700;&#x5C0F;&#x503C;&#xFF09;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">kMeans</span><span class="hljs-params">(dataSet, k, distMeas=distEclud, createCent=randCent)</span>:</span>
+    m = shape(dataSet)[<span class="hljs-number">0</span>]    <span class="hljs-comment"># &#x884C;&#x6570;&#xFF0C;&#x5373;&#x6570;&#x636E;&#x4E2A;&#x6570;</span>
+    clusterAssment = mat(zeros((m, <span class="hljs-number">2</span>)))    <span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E0E; dataSet &#x884C;&#x6570;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E24;&#x5217;&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x7C07;&#x5206;&#x914D;&#x7ED3;&#x679C;</span>
+    centroids = createCent(dataSet, k)    <span class="hljs-comment"># &#x521B;&#x5EFA;&#x8D28;&#x5FC3;&#xFF0C;&#x968F;&#x673A;k&#x4E2A;&#x8D28;&#x5FC3;</span>
+    clusterChanged = <span class="hljs-keyword">True</span>
+    <span class="hljs-keyword">while</span> clusterChanged:
+        clusterChanged = <span class="hljs-keyword">False</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(m):    <span class="hljs-comment"># &#x5FAA;&#x73AF;&#x6BCF;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x70B9;&#x5E76;&#x5206;&#x914D;&#x5230;&#x6700;&#x8FD1;&#x7684;&#x8D28;&#x5FC3;&#x4E2D;&#x53BB;</span>
+            minDist = inf; minIndex = <span class="hljs-number">-1</span>
+            <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(k):
+                distJI = distMeas(centroids[j,:],dataSet[i,:])    <span class="hljs-comment"># &#x8BA1;&#x7B97;&#x6570;&#x636E;&#x70B9;&#x5230;&#x8D28;&#x5FC3;&#x7684;&#x8DDD;&#x79BB;</span>
+                <span class="hljs-keyword">if</span> distJI &lt; minDist:    <span class="hljs-comment"># &#x5982;&#x679C;&#x8DDD;&#x79BB;&#x6BD4; minDist&#xFF08;&#x6700;&#x5C0F;&#x8DDD;&#x79BB;&#xFF09;&#x8FD8;&#x5C0F;&#xFF0C;&#x66F4;&#x65B0; minDist&#xFF08;&#x6700;&#x5C0F;&#x8DDD;&#x79BB;&#xFF09;&#x548C;&#x6700;&#x5C0F;&#x8D28;&#x5FC3;&#x7684; index&#xFF08;&#x7D22;&#x5F15;&#xFF09;</span>
+                    minDist = distJI; minIndex = j
+            <span class="hljs-keyword">if</span> clusterAssment[i, <span class="hljs-number">0</span>] != minIndex:    <span class="hljs-comment"># &#x7C07;&#x5206;&#x914D;&#x7ED3;&#x679C;&#x6539;&#x53D8;</span>
+                clusterChanged = <span class="hljs-keyword">True</span>    <span class="hljs-comment"># &#x7C07;&#x6539;&#x53D8;</span>
+                clusterAssment[i, :] = minIndex,minDist**<span class="hljs-number">2</span>    <span class="hljs-comment"># &#x66F4;&#x65B0;&#x7C07;&#x5206;&#x914D;&#x7ED3;&#x679C;&#x4E3A;&#x6700;&#x5C0F;&#x8D28;&#x5FC3;&#x7684; index&#xFF08;&#x7D22;&#x5F15;&#xFF09;&#xFF0C;minDist&#xFF08;&#x6700;&#x5C0F;&#x8DDD;&#x79BB;&#xFF09;&#x7684;&#x5E73;&#x65B9;</span>
+        <span class="hljs-keyword">print</span> centroids
+        <span class="hljs-keyword">for</span> cent <span class="hljs-keyword">in</span> range(k): <span class="hljs-comment"># &#x66F4;&#x65B0;&#x8D28;&#x5FC3;</span>
+            ptsInClust = dataSet[nonzero(clusterAssment[:, <span class="hljs-number">0</span>].A==cent)[<span class="hljs-number">0</span>]] <span class="hljs-comment"># &#x83B7;&#x53D6;&#x8BE5;&#x7C07;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x70B9;</span>
+            centroids[cent,:] = mean(ptsInClust, axis=<span class="hljs-number">0</span>) <span class="hljs-comment"># &#x5C06;&#x8D28;&#x5FC3;&#x4FEE;&#x6539;&#x4E3A;&#x7C07;&#x4E2D;&#x6240;&#x6709;&#x70B9;&#x7684;&#x5E73;&#x5747;&#x503C;&#xFF0C;mean &#x5C31;&#x662F;&#x6C42;&#x5E73;&#x5747;&#x503C;&#x7684;</span>
+    <span class="hljs-keyword">return</span> centroids, clusterAssment
+</code></pre>
+<h4 id="&#x6D4B;&#x8BD5;&#x51FD;&#x6570;">&#x6D4B;&#x8BD5;&#x51FD;&#x6570;</h4>
+<ol>
+<li>&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x4EE5;&#x4E0A;&#x7684;&#x57FA;&#x7840;&#x51FD;&#x6570;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5982;&#x9884;&#x671F;&#x8FD0;&#x884C;, &#x8BF7;&#x770B;: <a href="https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/10.kmeans/kMeans.py" target="_blank">https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/10.kmeans/kMeans.py</a></li>
+<li>&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B; kMeans &#x51FD;&#x6570;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5982;&#x9884;&#x671F;&#x8FD0;&#x884C;, &#x8BF7;&#x770B;: <a href="https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/10.kmeans/kMeans.py" target="_blank">https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/10.kmeans/kMeans.py</a> </li>
+</ol>
+<p>&#x53C2;&#x8003;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:<br><img src="http://data.apachecn.org/img/AiLearning/ml/10.KMeans/apachecn-k-means-run-result-1.jpg" alt="K-Means &#x8FD0;&#x884C;&#x7ED3;&#x679C;1"></p>
+<h3 id="k-means-&#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x7684;&#x7F3A;&#x9677;">K-Means &#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x7684;&#x7F3A;&#x9677;</h3>
+<blockquote>
+<p>&#x5728; kMeans &#x7684;&#x51FD;&#x6570;&#x6D4B;&#x8BD5;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x5076;&#x5C14;&#x4F1A;&#x9677;&#x5165;&#x5C40;&#x90E8;&#x6700;&#x5C0F;&#x503C;&#xFF08;&#x5C40;&#x90E8;&#x6700;&#x4F18;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x5168;&#x5C40;&#x6700;&#x4F18;&#x7684;&#x7ED3;&#x679C;&#xFF09;.</p>
+</blockquote>
+<p>&#x5C40;&#x90E8;&#x6700;&#x5C0F;&#x503C;&#x7684;&#x7684;&#x60C5;&#x51B5;&#x5982;&#x4E0B;:<br><img src="http://data.apachecn.org/img/AiLearning/ml/10.KMeans/apachecn-kmeans-partial-best-result-1.jpg" alt="K-Means &#x5C40;&#x90E8;&#x6700;&#x5C0F;&#x503C;1">
+&#x51FA;&#x73B0;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x6709;&#x5F88;&#x591A;&#x539F;&#x56E0;&#xFF0C;&#x53EF;&#x80FD;&#x662F;k&#x503C;&#x53D6;&#x7684;&#x4E0D;&#x5408;&#x9002;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x8DDD;&#x79BB;&#x51FD;&#x6570;&#x4E0D;&#x5408;&#x9002;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x6700;&#x521D;&#x968F;&#x673A;&#x9009;&#x53D6;&#x7684;&#x8D28;&#x5FC3;&#x9760;&#x7684;&#x592A;&#x8FD1;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x6570;&#x636E;&#x672C;&#x8EAB;&#x5206;&#x5E03;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;&#x751F;&#x6210;&#x7684;&#x7C07;&#x8FDB;&#x884C;&#x540E;&#x5904;&#x7406;&#xFF0C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x5C06;&#x5177;&#x6709;&#x6700;&#x5927;<strong>SSE</strong>&#x503C;&#x7684;&#x7C07;&#x5212;&#x5206;&#x6210;&#x4E24;&#x4E2A;&#x7C07;&#x3002;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x65F6;&#x53EF;&#x4EE5;&#x5C06;&#x6700;&#x5927;&#x7C07;&#x5305;&#x542B;&#x7684;&#x70B9;&#x8FC7;&#x6EE4;&#x51FA;&#x6765;&#x5E76;&#x5728;&#x8FD9;&#x4E9B;&#x70B9;&#x4E0A;&#x8FD0;&#x884C;K-&#x5747;&#x503C;&#x7B97;&#x6CD5;&#xFF0C;&#x4EE4;k&#x8BBE;&#x4E3A;2&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x7C07;&#x603B;&#x6570;&#x4E0D;&#x53D8;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x67D0;&#x4E24;&#x4E2A;&#x7C07;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x3002;&#x4ECE;&#x4E0A;&#x56FE;&#x4E2D;&#x5F88;&#x660E;&#x663E;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x5E94;&#x8BE5;&#x5C06;&#x4E0A;&#x56FE;&#x4E0B;&#x90E8;&#x4E24;&#x4E2A;&#x51FA;&#x9519;&#x7684;&#x7C07;&#x8D28;&#x5FC3;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x3002;&#x90A3;&#x4E48;&#x95EE;&#x9898;&#x6765;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x5BF9;&#x4E8C;&#x7EF4;&#x6570;&#x636E;&#x4E0A;&#x7684;&#x805A;&#x7C7B;&#x8FDB;&#x884C;&#x53EF;&#x89C6;&#x5316;&#xFF0C; &#x4F46;&#x662F;&#x5982;&#x679C;&#x9047;&#x5230;40&#x7EF4;&#x7684;&#x6570;&#x636E;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x53BB;&#x505A;&#xFF1F;</p>
+<p>&#x6709;&#x4E24;&#x79CD;&#x53EF;&#x4EE5;&#x91CF;&#x5316;&#x7684;&#x529E;&#x6CD5;: &#x5408;&#x5E76;&#x6700;&#x8FD1;&#x7684;&#x8D28;&#x5FC3;&#xFF0C;&#x6216;&#x8005;&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x4F7F;&#x5F97;<strong>SSE</strong>&#x589E;&#x5E45;&#x6700;&#x5C0F;&#x7684;&#x8D28;&#x5FC3;&#x3002; &#x7B2C;&#x4E00;&#x79CD;&#x601D;&#x8DEF;&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x6240;&#x6709;&#x8D28;&#x5FC3;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C; &#x7136;&#x540E;&#x5408;&#x5E76;&#x8DDD;&#x79BB;&#x6700;&#x8FD1;&#x7684;&#x4E24;&#x4E2A;&#x70B9;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x7C07;&#x7136;&#x540E;&#x8BA1;&#x7B97;&#x603B;<strong>SSE</strong>&#x503C;&#x3002;&#x5FC5;&#x987B;&#x5728;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x4E24;&#x4E2A;&#x7C07;&#x4E0A;&#x91CD;&#x590D;&#x4E0A;&#x8FF0;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x5408;&#x5E76;&#x6700;&#x4F73;&#x7684;&#x4E24;&#x4E2A;&#x7C07;&#x4E3A;&#x6B62;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x4E0A;&#x8FF0;&#x540E;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x5B9E;&#x5728;&#x662F;&#x6709;&#x4E9B;&#x7E41;&#x7410;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x66F4;&#x5389;&#x5BB3;&#x7684;&#x5927;&#x4F6C;&#x63D0;&#x51FA;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x79F0;&#x4E4B;&#x4E3A;&#x4E8C;&#x5206;K-&#x5747;&#x503C;&#xFF08;bisecting K-Means&#xFF09;&#x7684;&#x7B97;&#x6CD5;.   </p>
+<h3 id="&#x4E8C;&#x5206;-k-means-&#x805A;&#x7C7B;&#x7B97;&#x6CD5;">&#x4E8C;&#x5206; K-Means &#x805A;&#x7C7B;&#x7B97;&#x6CD5;</h3>
+<p>&#x8BE5;&#x7B97;&#x6CD5;&#x9996;&#x5148;&#x5C06;&#x6240;&#x6709;&#x70B9;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x7C07;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8BE5;&#x7C07;&#x4E00;&#x5206;&#x4E3A;&#x4E8C;&#x3002;<br>&#x4E4B;&#x540E;&#x9009;&#x62E9;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x7C07;&#x7EE7;&#x7EED;&#x8FDB;&#x884C;&#x5212;&#x5206;&#xFF0C;&#x9009;&#x62E9;&#x54EA;&#x4E00;&#x4E2A;&#x7C07;&#x8FDB;&#x884C;&#x5212;&#x5206;&#x53D6;&#x51B3;&#x4E8E;&#x5BF9;&#x5176;&#x5212;&#x5206;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x6700;&#x5927;&#x7A0B;&#x5EA6;&#x964D;&#x4F4E; SSE&#xFF08;&#x5E73;&#x65B9;&#x548C;&#x8BEF;&#x5DEE;&#xFF09;&#x7684;&#x503C;&#x3002;<br>&#x4E0A;&#x8FF0;&#x57FA;&#x4E8E; SSE &#x7684;&#x5212;&#x5206;&#x8FC7;&#x7A0B;&#x4E0D;&#x65AD;&#x91CD;&#x590D;&#xFF0C;&#x76F4;&#x5230;&#x5F97;&#x5230;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;&#x7C07;&#x6570;&#x76EE;&#x4E3A;&#x6B62;&#x3002;  </p>
+<h4 id="&#x4E8C;&#x5206;-k-means-&#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x4F2A;&#x4EE3;&#x7801;">&#x4E8C;&#x5206; K-Means &#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x4F2A;&#x4EE3;&#x7801;</h4>
+<ul>
+<li>&#x5C06;&#x6240;&#x6709;&#x70B9;&#x770B;&#x6210;&#x4E00;&#x4E2A;&#x7C07;</li>
+<li>&#x5F53;&#x7C07;&#x6570;&#x76EE;&#x5C0F;&#x4E8E; k &#x65F6;</li>
+<li>&#x5BF9;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A;&#x7C07;<ul>
+<li>&#x8BA1;&#x7B97;&#x603B;&#x8BEF;&#x5DEE;</li>
+<li>&#x5728;&#x7ED9;&#x5B9A;&#x7684;&#x7C07;&#x4E0A;&#x9762;&#x8FDB;&#x884C; KMeans &#x805A;&#x7C7B;&#xFF08;k=2&#xFF09;</li>
+<li>&#x8BA1;&#x7B97;&#x5C06;&#x8BE5;&#x7C07;&#x4E00;&#x5206;&#x4E3A;&#x4E8C;&#x4E4B;&#x540E;&#x7684;&#x603B;&#x8BEF;&#x5DEE;</li>
+</ul>
+</li>
+<li>&#x9009;&#x62E9;&#x4F7F;&#x5F97;&#x8BEF;&#x5DEE;&#x6700;&#x5C0F;&#x7684;&#x90A3;&#x4E2A;&#x7C07;&#x8FDB;&#x884C;&#x5212;&#x5206;&#x64CD;&#x4F5C;</li>
+</ul>
+<p>&#x53E6;&#x4E00;&#x79CD;&#x505A;&#x6CD5;&#x662F;&#x9009;&#x62E9; SSE &#x6700;&#x5927;&#x7684;&#x7C07;&#x8FDB;&#x884C;&#x5212;&#x5206;&#xFF0C;&#x76F4;&#x5230;&#x7C07;&#x6570;&#x76EE;&#x8FBE;&#x5230;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x76EE;&#x4F4D;&#x7F6E;&#x3002;
+&#x63A5;&#x4E0B;&#x6765;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x8BE5;&#x505A;&#x6CD5;&#x7684;python2&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</p>
+<h4 id="&#x4E8C;&#x5206;-k-means-&#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x4EE3;&#x7801;">&#x4E8C;&#x5206; K-Means &#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x4EE3;&#x7801;</h4>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x4E8C;&#x5206; KMeans &#x805A;&#x7C7B;&#x7B97;&#x6CD5;, &#x57FA;&#x4E8E; kMeans &#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x7684;&#x4F18;&#x5316;&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x9677;&#x5165;&#x5C40;&#x90E8;&#x6700;&#x5C0F;&#x503C;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">biKMeans</span><span class="hljs-params">(dataSet, k, distMeas=distEclud)</span>:</span>
+    m = shape(dataSet)[<span class="hljs-number">0</span>]
+    clusterAssment = mat(zeros((m,<span class="hljs-number">2</span>))) <span class="hljs-comment"># &#x4FDD;&#x5B58;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x70B9;&#x7684;&#x7C07;&#x5206;&#x914D;&#x7ED3;&#x679C;&#x548C;&#x5E73;&#x65B9;&#x8BEF;&#x5DEE;</span>
+    centroid0 = mean(dataSet, axis=<span class="hljs-number">0</span>).tolist()[<span class="hljs-number">0</span>] <span class="hljs-comment"># &#x8D28;&#x5FC3;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x6240;&#x6709;&#x6570;&#x636E;&#x70B9;&#x7684;&#x5747;&#x503C;</span>
+    centList =[centroid0] <span class="hljs-comment"># &#x521D;&#x59CB;&#x5316;&#x53EA;&#x6709; 1 &#x4E2A;&#x8D28;&#x5FC3;&#x7684; list</span>
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(m): <span class="hljs-comment"># &#x8BA1;&#x7B97;&#x6240;&#x6709;&#x6570;&#x636E;&#x70B9;&#x5230;&#x521D;&#x59CB;&#x8D28;&#x5FC3;&#x7684;&#x8DDD;&#x79BB;&#x5E73;&#x65B9;&#x8BEF;&#x5DEE;</span>
+        clusterAssment[j,<span class="hljs-number">1</span>] = distMeas(mat(centroid0), dataSet[j,:])**<span class="hljs-number">2</span>
+    <span class="hljs-keyword">while</span> (len(centList) &lt; k): <span class="hljs-comment"># &#x5F53;&#x8D28;&#x5FC3;&#x6570;&#x91CF;&#x5C0F;&#x4E8E; k &#x65F6;</span>
+        lowestSSE = inf
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(centList)): <span class="hljs-comment"># &#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;&#x8D28;&#x5FC3;</span>
+            ptsInCurrCluster = dataSet[nonzero(clusterAssment[:,<span class="hljs-number">0</span>].A==i)[<span class="hljs-number">0</span>],:] <span class="hljs-comment"># &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7C07; i &#x4E0B;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x70B9;</span>
+            centroidMat, splitClustAss = kMeans(ptsInCurrCluster, <span class="hljs-number">2</span>, distMeas) <span class="hljs-comment"># &#x5C06;&#x5F53;&#x524D;&#x7C07; i &#x8FDB;&#x884C;&#x4E8C;&#x5206; kMeans &#x5904;&#x7406;</span>
+            sseSplit = sum(splitClustAss[:,<span class="hljs-number">1</span>]) <span class="hljs-comment"># &#x5C06;&#x4E8C;&#x5206; kMeans &#x7ED3;&#x679C;&#x4E2D;&#x7684;&#x5E73;&#x65B9;&#x548C;&#x7684;&#x8DDD;&#x79BB;&#x8FDB;&#x884C;&#x6C42;&#x548C;</span>
+            sseNotSplit = sum(clusterAssment[nonzero(clusterAssment[:,<span class="hljs-number">0</span>].A!=i)[<span class="hljs-number">0</span>],<span class="hljs-number">1</span>]) <span class="hljs-comment"># &#x5C06;&#x672A;&#x53C2;&#x4E0E;&#x4E8C;&#x5206; kMeans &#x5206;&#x914D;&#x7ED3;&#x679C;&#x4E2D;&#x7684;&#x5E73;&#x65B9;&#x548C;&#x7684;&#x8DDD;&#x79BB;&#x8FDB;&#x884C;&#x6C42;&#x548C;</span>
+            <span class="hljs-keyword">print</span> <span class="hljs-string">&quot;sseSplit, and notSplit: &quot;</span>,sseSplit,sseNotSplit
+            <span class="hljs-keyword">if</span> (sseSplit + sseNotSplit) &lt; lowestSSE: <span class="hljs-comment"># &#x603B;&#x7684;&#xFF08;&#x672A;&#x62C6;&#x5206;&#x548C;&#x5DF2;&#x62C6;&#x5206;&#xFF09;&#x8BEF;&#x5DEE;&#x548C;&#x8D8A;&#x5C0F;&#xFF0C;&#x8D8A;&#x76F8;&#x4F3C;&#xFF0C;&#x6548;&#x679C;&#x8D8A;&#x4F18;&#x5316;&#xFF0C;&#x5212;&#x5206;&#x7684;&#x7ED3;&#x679C;&#x66F4;&#x597D;&#xFF08;&#x6CE8;&#x610F;: &#x8FD9;&#x91CC;&#x7684;&#x7406;&#x89E3;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x4E0D;&#x660E;&#x767D;&#x7684;&#x5730;&#x65B9;&#x53EF;&#x4EE5;&#x548C;&#x6211;&#x4EEC;&#x4E00;&#x8D77;&#x8BA8;&#x8BBA;&#xFF09;</span>
+                bestCentToSplit = i
+                bestNewCents = centroidMat
+                bestClustAss = splitClustAss.copy()
+                lowestSSE = sseSplit + sseNotSplit
+        <span class="hljs-comment"># &#x627E;&#x51FA;&#x6700;&#x597D;&#x7684;&#x7C07;&#x5206;&#x914D;&#x7ED3;&#x679C;    </span>
+        bestClustAss[nonzero(bestClustAss[:,<span class="hljs-number">0</span>].A == <span class="hljs-number">1</span>)[<span class="hljs-number">0</span>],<span class="hljs-number">0</span>] = len(centList) <span class="hljs-comment"># &#x8C03;&#x7528;&#x4E8C;&#x5206; kMeans &#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x9ED8;&#x8BA4;&#x7C07;&#x662F; 0,1. &#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x6539;&#x6210;&#x5176;&#x5B83;&#x7684;&#x6570;&#x5B57;</span>
+        bestClustAss[nonzero(bestClustAss[:,<span class="hljs-number">0</span>].A == <span class="hljs-number">0</span>)[<span class="hljs-number">0</span>],<span class="hljs-number">0</span>] = bestCentToSplit <span class="hljs-comment"># &#x66F4;&#x65B0;&#x4E3A;&#x6700;&#x4F73;&#x8D28;&#x5FC3;</span>
+        <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;the bestCentToSplit is: &apos;</span>,bestCentToSplit
+        <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;the len of bestClustAss is: &apos;</span>, len(bestClustAss)
+        <span class="hljs-comment"># &#x66F4;&#x65B0;&#x8D28;&#x5FC3;&#x5217;&#x8868;</span>
+        centList[bestCentToSplit] = bestNewCents[<span class="hljs-number">0</span>,:].tolist()[<span class="hljs-number">0</span>] <span class="hljs-comment"># &#x66F4;&#x65B0;&#x539F;&#x8D28;&#x5FC3; list &#x4E2D;&#x7684;&#x7B2C; i &#x4E2A;&#x8D28;&#x5FC3;&#x4E3A;&#x4F7F;&#x7528;&#x4E8C;&#x5206; kMeans &#x540E; bestNewCents &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8D28;&#x5FC3;</span>
+        centList.append(bestNewCents[<span class="hljs-number">1</span>,:].tolist()[<span class="hljs-number">0</span>]) <span class="hljs-comment"># &#x6DFB;&#x52A0; bestNewCents &#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x8D28;&#x5FC3;</span>
+        clusterAssment[nonzero(clusterAssment[:,<span class="hljs-number">0</span>].A == bestCentToSplit)[<span class="hljs-number">0</span>],:]= bestClustAss <span class="hljs-comment"># &#x91CD;&#x65B0;&#x5206;&#x914D;&#x6700;&#x597D;&#x7C07;&#x4E0B;&#x7684;&#x6570;&#x636E;&#xFF08;&#x8D28;&#x5FC3;&#xFF09;&#x4EE5;&#x53CA;SSE</span>
+    <span class="hljs-keyword">return</span> mat(centList), clusterAssment
+</code></pre>
+<h4 id="&#x6D4B;&#x8BD5;&#x4E8C;&#x5206;-kmeans-&#x805A;&#x7C7B;&#x7B97;&#x6CD5;">&#x6D4B;&#x8BD5;&#x4E8C;&#x5206; KMeans &#x805A;&#x7C7B;&#x7B97;&#x6CD5;</h4>
+<ul>
+<li>&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x4E8C;&#x5206; KMeans &#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#xFF0C;&#x8BF7;&#x770B;: <a href="https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/10.kmeans/kMeans.py" target="_blank">https://github.com/apachecn/AiLearning/blob/master/src/py2.x/ml/10.kmeans/kMeans.py</a></li>
+</ul>
+<p>&#x4E0A;&#x8FF0;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x591A;&#x6B21;&#xFF0C;&#x805A;&#x7C7B;&#x4F1A;&#x6536;&#x655B;&#x5230;&#x5168;&#x5C40;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x800C;&#x539F;&#x59CB;&#x7684; kMeans() &#x51FD;&#x6570;&#x5076;&#x5C14;&#x4F1A;&#x9677;&#x5165;&#x5C40;&#x90E8;&#x6700;&#x5C0F;&#x503C;&#x3002;<br>&#x8FD0;&#x884C;&#x53C2;&#x8003;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:<br><img src="http://data.apachecn.org/img/AiLearning/ml/10.KMeans/apachecn-bikmeans-run-result-1.jpg" alt="&#x4E8C;&#x5206; K-Means &#x8FD0;&#x884C;&#x7ED3;&#x679C;1"></p>
+<ul>
+<li><strong>&#x4F5C;&#x8005;: <a href="http://cwiki.apachecn.org/display/~xuxin" target="_blank">&#x90A3;&#x4F0A;&#x62B9;&#x5FAE;&#x7B11;</a>,  <a href="http://cwiki.apachecn.org/display/~xuzhaoqing" target="_blank">&#x6E05;&#x90FD;&#x6C5F;&#x6C34;&#x90CE;</a></strong> </li>
+<li><a href="https://github.com/apachecn/AiLearning" target="_blank">GitHub&#x5730;&#x5740;</a>: <a href="https://github.com/apachecn/AiLearning" target="_blank">https://github.com/apachecn/AiLearning</a></li>
+<li><strong>&#x7248;&#x6743;&#x58F0;&#x660E;: &#x6B22;&#x8FCE;&#x8F6C;&#x8F7D;&#x5B66;&#x4E60; =&gt; &#x8BF7;&#x6807;&#x6CE8;&#x4FE1;&#x606F;&#x6765;&#x6E90;&#x4E8E; <a href="http://www.apachecn.org/" target="_blank">ApacheCN</a></strong></li>
+</ul>
+<p><hr></p>
+<div align="center">
+    <p><a href="http://www.apachecn.org" target="_blank"><font face="KaiTi" size="6" color="red">&#x6211;&#x4EEC;&#x4E00;&#x76F4;&#x5728;&#x52AA;&#x529B;</font></a></p>
+    <p><a href="https://github.com/apachecn/AiLearning/" target="_blank">apachecn/AiLearning</a></p>
+    <p><iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=AiLearning&amp;type=watch&amp;count=true&amp;v=2" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=AiLearning&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=AiLearning&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <a target="_blank" href="../../shang.qq.com/wpa/qunwpa"><img border="0" src="http://data.apachecn.org/img/logo/ApacheCN-group.png" alt="ML | ApacheCN" title="ML | ApacheCN"></a></p>
+</div>
+ <div style="text-align:center;margin:0 0 10.5px;">
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3565452474788507" data-ad-slot="2543897000">
+     </ins>
+     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?33149aa6702022b1203201da06e23d81";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127082511-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127082511-1');
+    </script>
+</div>
+
+<p><meta name="google-site-verification" content="pyo9N70ZWyh8JB43bIu633mhxesJ1IcwWCZlM3jUfFo"></p>
+<p><iframe src="https://www.bilibili.com/read/cv2710377" style="display:none"></iframe>
+<img src="http://t.cn/AiCoDHwb" hidden="hidden"></p>
+<div>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+    <div id="gitalk-container"></div>
+    <script type="text/javascript">
+        const gitalk = new Gitalk({
+        clientID: '2e62dee5b9896e2eede6',
+        clientSecret: 'ca6819a54656af0d87960af15315320f8a628a53',
+        repo: 'AiLearning',
+        owner: 'apachecn',
+        admin: ['jiangzhonglian', 'wizardforcel'],
+        id: md5(location.pathname),
+        distractionFreeMode: false
+        })
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ibooker.org.cn 2019 all right reserved&#xFF0C;&#x7531; ApacheCN &#x56E2;&#x961F;&#x63D0;&#x4F9B;&#x652F;&#x6301;</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:  
+2020-10-19 13:02:43
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="9.html" class="navigation navigation-prev " aria-label="Previous page: 第9章_树回归">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="11.html" class="navigation navigation-next " aria-label="Next page: 第11章_Apriori算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第10章_KMeans聚类","level":"1.2.10","depth":2,"next":{"title":"第11章_Apriori算法","level":"1.2.11","depth":2,"path":"docs/ml/11.md","ref":"docs/ml/11.md","articles":[]},"previous":{"title":"第9章_树回归","level":"1.2.9","depth":2,"path":"docs/ml/9.md","ref":"docs/ml/9.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","github-buttons","-sharing","insert-logo","sharing-plus","back-to-top-button","code","copy-code-button","katex","pageview-count","edit-link","emphasize","alerts","auto-scroll-table","popup","hide-element","page-toc-button","tbfed-pagefooter","sitemap","advanced-emoji","expandable-chapters","splitter","search-pro"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy ibooker.org.cn 2019","modify_label":"该文件修订时间:  ","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"github":{"url":"https://github.com/apachecn/AiLearning"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sitemap":{"hostname":"http://pytorch.apachecn.org"},"page-toc-button":{"maxTocDepth":4,"minTocSize":4},"back-to-top-button":{},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"apachecn","repo":"AiLearning","type":"star","count":true,"size":"small"}]},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["qq","douban","facebook","google","linkedin","twitter","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"whatsapp":false,"twitter":false,"line":false,"google":false,"qzone":true},"edit-link":{"label":"编辑本页","base":"https://github.com/apachecn/AiLearning/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 150px; min-height: 150px","url":"http://data.apachecn.org/img/logo.jpg"},"expandable-chapters":{}},"my_links":{"sidebar":{"Home":"https://www.baidu.com"}},"theme":"default","author":"ApacheCN","my_plugins":["donate","todo","-lunr","-search","expandable-chapters-small","chapter-fold","expandable-chapters","expandable-chapters-small","back-to-top-button","ga","baidu","sitemap","tbfed-pagefooter","advanced-emoji","sectionx","page-treeview","simple-page-toc","ancre-navigation","theme-apachecn@git+https://github.com/apachecn/theme-apachecn#HEAD","pagefooter-apachecn@git+https://github.com/apachecn/gitbook-plugin-pagefooter-apachecn#HEAD"],"my_pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"ignores":["node_modules"],"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"page-copyright":{"wisdom":"Designer, Frontend Developer & overall web enthusiast","noPowered":false,"copyright":"Copyright &#169; 你的名字","style":"normal","timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"你的签名","copyrightColor":"#666","description":"modified at"},"donate":{"wechat":"微信收款的二维码URL","alipay":"支付宝收款的二维码URL","title":"","button":"赏","alipayText":"支付宝打赏","wechatText":"微信打赏"},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"apachecn","repo":"AiLearning","type":"star","count":true,"size":"small"},{"user":"apachecn","width":"160","type":"follow","count":true,"size":"small"}]},"ga":{"token":"UA-127082511-1"},"baidu":{"token":"75439e2cbd22bdd813226000e9dcc12f"},"pagefooter-apachecn":{"copyright":"Copyright &copy ibooker.org.cn 2019","modify_label":"该文件修订时间:  ","modify_format":"YYYY-MM-DD HH:mm:ss"}},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"AiLearning 中文文档","language":"zh-hans","gitbook":"*","description":"AiLearning 中文文档: 教程和文档"},"file":{"path":"docs/ml/10.md","mtime":"2020-10-19T13:02:43.836Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-19T13:03:33.421Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
